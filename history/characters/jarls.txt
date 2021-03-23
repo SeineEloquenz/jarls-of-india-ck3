@@ -1,0 +1,166 @@
+686500 = {
+	name="Ragnar"
+	dynasty=1043501 #Herse dynasty, in vanilla dies out 874.1.1
+	religion="norse_pagan"
+	culture="norse"
+	
+	trait= gregarious
+	trait= ambitious
+	trait= intellect_good_1
+	trait= hunter_1
+	trait= viking
+	trait= education_martial_3
+	
+	father=186501
+	
+	826.1.1={
+		birth=yes
+	}
+	848.1.1={
+		add_spouse=686503
+	}
+	867.1.2={
+		prestige = 1000 # Rich and prestigious from raiding
+		wealth = 500
+		effect = {
+			spawn_army = {
+				if = {
+					limit = { has_fp1_dlc_trigger = yes }
+					spawn_army = {
+						name = event_troop_default_name
+						levies = 600
+						men_at_arms = {
+							type = huscarl
+							stacks = 2
+						}
+						men_at_arms = {
+							type = varangian_veterans
+							stacks = 2
+						}
+						location = 1360
+						origin = 1360
+						inheritable = no
+					}
+				}
+				else = {
+					spawn_army = {
+						name = event_troop_default_name
+						levies = 600
+						men_at_arms = {
+							type = huscarl
+							stacks = 4
+						}
+						location = 1360
+						origin = 1360
+						inheritable = no
+					}
+				}
+			}
+		}
+	}
+	903.1.1={
+		death=yes
+	}
+}
+
+686503 = {
+	name="Freja"
+	female=yes
+	dynasty=1043500 #hrolfing dies out 874.1.1
+	religion="norse_pagan"
+	culture="norse"
+	
+	trait=beauty_good_2
+	trait= lustful
+	trait= ambitious
+	trait=deceitful
+	
+	#father=186500
+	
+	829.1.1={
+		birth=yes
+	}
+	903.1.1={
+		death=yes
+	}
+}
+
+686502 = {
+	name="Linda"
+	female=yes
+	dynasty=1043501
+	religion="norse_pagan"
+	culture="norse"
+	
+	trait=arbitrary
+	trait= education_learning_3
+	
+	father=686500
+	mother=686503
+	
+	849.1.1={
+		birth=yes
+	}
+	913.1.1={
+		death=yes
+	}
+}
+686501 = {
+	name="Styrkar"
+	dynasty=1043501
+	religion="norse_pagan"
+	culture="norse"
+	
+	trait= brave
+	trait= honest
+	trait= wrathful
+	trait= education_martial_3
+	
+	father=686500
+	mother=686503
+	
+	851.1.1={
+		birth=yes
+	}
+	906.1.1={
+		death=yes
+	}
+}
+686504 = {
+	name="Niklas"
+	dynasty=1043501
+	religion="norse_pagan"
+	culture="norse"
+	
+	trait=just
+	
+	father=686500
+	mother=686503
+	
+	853.1.1={
+		birth=yes
+	}
+	920.1.1={
+		death=yes
+	}
+}
+686505 = {
+	name="Inga"
+	female=yes
+	dynasty=1043501
+	religion="norse_pagan"
+	culture="norse"
+	
+	trait= beauty_good_2
+	trait= humble
+	
+	father= 686500
+	mother= 686503
+	
+	855.1.1={
+		birth=yes
+	}
+	925.1.1={
+		death=yes
+	}
+}
