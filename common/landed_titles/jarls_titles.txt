@@ -1,0 +1,39 @@
+d_lodbroks = {
+
+	color={ 60 60 60 }
+	color2={ 255 255 255 }
+	
+	graphical_culture = norseholygfx
+	
+	capital = c_maldives #Maldives
+
+	always_follows_primary_heir = yes
+	de_jure_drift_disabled = yes
+	no_automatic_claims = yes
+
+	# Always exists
+	landless = yes
+}
+
+d_wanderers = {
+
+	color={ 39 29 100 }
+	color2={ 255 255 255 }
+
+	capital = c_acalapura #Acalapura 1360 #Maldives
+
+	# Always exists
+	landless = yes
+	
+	always_follows_primary_heir = yes
+	de_jure_drift_disabled = yes
+	no_automatic_claims = yes
+	
+	# Hire Trigger
+	allow = {
+		OR = {
+			religion = germanic_religion
+			religion = hindu_germanic_religion
+		}
+	}
+}
