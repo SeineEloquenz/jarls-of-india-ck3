@@ -1,0 +1,221 @@
+##by fastrike 
+##8000000-8000040
+
+8000000=
+{
+	name="dynn_Sturdeviki"
+	culture="indo_norse"
+
+}
+8000001=
+{
+	name="dynn_Hvarti"
+	culture="indo_norse"
+
+}
+8000002=
+{
+	name="dynn_Sturdeviki"
+	culture="indo_norse"
+
+}
+8000003=
+{
+	name="dynn_Krakavarman"
+	culture="indo_norse"
+}
+8000004=
+{
+	name="dynn_Kjaldmider"
+	culture="indo_norse"
+}
+8000005=
+{
+	name="dynn_Bhvildr"
+	culture="indo_norse"
+}
+8000006=
+{
+	name="dynn_Kossavata"
+	culture="indo_norse"
+}
+8000007=
+{
+	name="dynn_Udavadir"
+	culture="indo_norse"
+}
+8000008=
+{
+	name="dynn_Ytradala"
+	culture="indo_norse"
+}
+8000009=
+{
+	name="dynn_Prasfringerd"
+	culture="indo_norse"
+}
+8000010=
+{
+	name="dynn_Vansö"
+	culture="indo_norse"
+}
+8000010=
+{
+	name="dynn_Fjodala"
+	culture="indo_norse"
+}
+8000011=
+{
+	name="dynn_Afvandalinger"
+	culture="indo_norse"	
+}
+8000012=
+{
+	name="dynn_Veøy"
+	culture="indo_norse"	
+}
+8000013=
+{
+	name="dynn_Airikarsson"
+	culture="indo_norse"	
+}
+8000014=
+{
+	name="dynn_Firdjilar"
+	culture="indo_norse"	
+}
+8000015=
+{
+	name="dynn_Vagansson"
+	culture="indo_norse"	
+}
+8000016=
+{
+	name="dynn_Baldarsson"
+	culture="indo_norse"	
+}
+8000017=
+{
+	name="dynn_Anundarsson"
+	culture="indo_norse"	
+}
+8000018=
+{
+	name="dynn_Waradreva"
+	culture="indo_norse"	
+}
+8000019=
+{
+	name="dynn_Omander"
+	culture="indo_norse"	
+}
+8000020=
+{
+	name="dynn_Biyornen"
+	culture="indo_norse"	
+}
+8000021=
+{
+	name="dynn_Ulvarnn"
+	culture="indo_norse"	
+}
+8000022=
+{
+	name="dynn_Wulfingarman"
+	culture="indo_norse"	
+}
+8000023=
+{
+	name="dynn_af Hestain"
+	culture="indo_norse"	
+}
+8000024=
+{
+	name="dynn_Phereyaldi"
+	culture="indo_norse"	
+}
+8000025=
+{
+	name="dynn_Hreysikottr"
+	culture="indo_norse"	
+}
+8000026=
+{
+	name="dynn_af Gujardr"
+	culture="indo_norse"	
+}
+8000027=
+{
+	name="dynn_Madvarydhi"
+	culture="indo_norse"	
+}
+8000028=
+{
+	name="dynn_af Ragnarssfall"
+	culture="indo_norse"	
+}
+8000029=
+{
+	name="dynn_Getara"
+	culture="indo_norse"	
+}
+8000030=
+{
+	name="dynn_Vendara"
+	culture="indo_norse"	
+}
+8000031=
+{
+	name="dynn_Vrodajka"
+	culture="indo_norse"	
+}
+8000032=
+{
+	name="dynn_Cedgnarkli"
+	culture="indo_norse"	
+}
+8000033=
+{
+	name="dynn_Kili"
+	culture="indo_norse"	
+}
+8000034=
+{
+	name="dynn_Cedgnarkli"
+	culture="indo_norse"	
+}
+8000035=
+{
+	name="dynn_Madhragar"
+	culture="indo_norse"	
+}
+8000036=
+{
+	name="dynn_Amundsimma"
+	culture="indo_norse"	
+}
+8000037=
+{
+	name="dynn_Agardvastra"
+	culture="indo_norse"	
+}
+8000037=
+{
+	name="dynn_Grimard"
+	culture="indo_norse"	
+}
+8000038=
+{
+	name="dynn_Odhimundar"
+	culture="indo_norse"	
+}
+8000039=
+{
+	name="dynn_Das"
+	culture="indo_norse"	
+}
+8000040=
+{
+	name="dynn_Satirik"
+	culture="indo_norse"	
+}
