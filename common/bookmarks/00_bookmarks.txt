@@ -1,0 +1,47 @@
+bm_rajas = {
+	start_date = 867.1.1
+	is_playable = yes
+
+	# Ragnar Herse ID: 686500
+	character = {
+		name = "bookmark_rajas_ragnar"
+		dynasty = 1043501
+		dynasty_splendor_level = 1
+		type = male
+		birth = 826.1.1
+		title = c_maldives
+		government = feudal_government
+		culture = norse
+		religion = norse_pagan
+		difficulty = "BOOKMARK_CHARACTER_DIFFICULTY_HARD"
+		history_id = 686500
+		position = { 700 620 }
+		animation = personality_bold
+	
+		# Freja, wife, ID: 686503
+		character = {
+			name = "bookmark_rajas_alt_gudfrid"
+			relation = "BOOKMARK_RELATION_WIFE"
+			dynasty = 7514
+			type = female
+			birth = 829.1.1
+			culture = norse
+			religion = norse_pagan
+			history_id = 686503
+			animation = worry
+		}
+
+		# Eldest child, Styrkar, ID: 686501
+		character = {
+			name = "bookmark_rajas_alt_saga"
+			relation = "BOOKMARK_RELATION_DAUGHTER"
+			dynasty = 7514
+			type = male
+			birth = 851.1.1
+			culture = norse
+			religion = norse_pagan
+			history_id = 686501
+			animation = personality_greedy
+		}
+	}
+}
