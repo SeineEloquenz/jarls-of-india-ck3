@@ -220,36 +220,36 @@
 		# R 128 G 204 B 128
 		
 		male_names = {Standarik_Achalraja Solavarman_Adityavarman Ale Alvar_Alf Alvagair_Alfgeir Vidhavarman_Anantavarman Anlauvar_Anlaufr 
-		Anundar_Anund Arnabiyorna_Arnbjצrn Arne Arnavasta_Arnfast Arnagirim_Arngrimr Asbiyorna_Asbjצrn Bagge Avalavarman_Balavarman 
+		Anundar_Anund Arnabiyorna_Arnbjyrn Arne Arnavasta_Arnfast Arnagirim_Arngrimr Asbiyorna_Asbjoern Bagge Avalavarman_Balavarman 
 		Baldar_Balder Barid Berse_Bersi Bertil Birgera_Birger Biyorna_Beorn Bo Borkavard_Borkvard Botulvar_Botulfr Brage_Brage 
-		Budhile_Buנli Manivarman_Chandravarman Karil_Charles Dag Dan Asirmundar_Devapala Vanirmunda_Devapala Asiravarman_Devavarman 
+		Budhile_Bujli Manivarman_Chandravarman Karil_Charles Dag Dan Asirmundar_Devapala Vanirmunda_Devapala Asiravarman_Devavarman 
 		Vaniravarman_Devavarman Dharmamunda_Dharmapala Dure_Dyre Yedvard_Edward Egill_Egil Agmundar_Egmund Ailiv_Eilif Ainar_Einar 
 		Emunda_Emund Airikar_Erik Eskilda_Eskild Phalki_Falki Phaste_Faste Pholke_Folke Vriderik_Frederick Vreyar_Frej Vrirek_Frirek 
 		Vrodhe_Frode Gandalvar_Gandalfr Gairar_Geirr Gunupa_Gnupa Gudhviridh_Godfrey Kurmundar_Gopala Gorma_Gorm Gormar_Gorm 
-		Greger_Gregory Grimar_Grim Gudhmundar_Gudmund Gudrodhar_Gudrצd Gunnar Gautrastavar_Gustav Hakon Halesten_Halsten 
-		Haraldar_Harold Haukar_Haukr Helge Hemming Holomger_Holmger Ravan_Hrafn Rane_Hrane Hestain_Hזsteinn Hiyalmar_Hjalmar 
-		Rodhogar_Hroנgar Rodhulvar_Hroנulfr Husing_Hysing Thormundar_Indrapala Thorarik_Indraraja Thoravarman_Indravarman Inge 
+		Greger_Gregory Grimar_Grim Gudhmundar_Gudmund Gudrodhar_Gudryd Gunnar Gautrastavar_Gustav Hakon Halesten_Halsten 
+		Haraldar_Harold Haukar_Haukr Helge Hemming Holomger_Holmger Ravan_Hrafn Rane_Hrane Hestain_Haesteinn Hiyalmar_Hjalmar 
+		Rodhogar_Hrothgar Rodhulvar_Hrothulfr Husing_Hysing Thormundar_Indrapala Thorarik_Indraraja Thoravarman_Indravarman Inge 
 		Ingemar Ingiyald_Ingjald Ivar_Ivar Sigmunda_Jayapala Sigasimma_Jayasimha Sigrik_Jayaraja Sigavarman_Jayavarman Yon_John 
 		Kettil Kettilmunda_Kettilmund Vramimunda_Kirtipala Vramirik_Kirtiraja Vramivarman_Kirtivarman Kiyartan_Kjartan Klas 
-		Harthakunutra_Knut Kunut_Knut Kol Kolbiyorna_Kolbjצrn Vreyarmunda_Lakshmipala Vreyaravarman_Lakshmivarman Harthormunda_Mahendrapala 
+		Harthakunutra_Knut Kunut_Knut Kol Kolbiyorna_Kolbjyrn Vreyarmunda_Lakshmipala Vreyaravarman_Lakshmivarman Harthormunda_Mahendrapala 
 		Harthorasimma_Mahendrasimha Harthorasimma_Mahendrasingha Harthoravarman_Mahendravarman Madhrasimma_Narasimha 
 		Madhrasimmavarman_Narasimhavarman Madhrasimma_Narasingha Madhravarman_Naravarman Vreyarmundar_Narayanapala 
 		Vreyaravarman_Narayanavarman Nordaravarman Nordarmundar Oddor_Odd Odhinavarman Ovaiga_Ofeig Alaivar_Olaf Olavar_Olaf 
 		Ormar_Orm Ottar_Ottar Philip_Philip Yordharik_Prithviraja Yordhavarman_Prithivarman Ragnar Rogonvaldar_Ragnvald 
 		Rikimundar_Rajyapala Revar_Refr Revil_Refil Rikulvar_Rikulfr Rolvar_Rolf Odhinmunda_Rudrapala Rorekar_Rurik 
-		Meginavarman_Saktivarman Egiravarman_Samudravarman Sigviridha_Siegfried Sigbiyorna_Sigbjצrn Sigmundar_Sigmund Sigtirig_Sigtrygg 
+		Meginavarman_Saktivarman Egiravarman_Samudravarman Sigviridha_Siegfried Sigbiyorna_Sigbjyrn Sigmundar_Sigmund Sigtirig_Sigtrygg 
 		Sigurdhar_Sigurd Skule_Skule Sonore_Snorri Starkadhar_Starkad Stain_Sten Sturla_Sturla Sune Sumarlidhe_Somerled Svain_Sven 
-		Sverker Stirbiyorna_Styrbjצrn Stirkar_Styrkar Semundar_Sהmund Solve_Sצlve Sorkever_Sצrkver Thormunda Thorolvar_Thorolf 
-		Tiyudmunda_Tjudmund Toke_Toke Tolir Thorbiyorna_Torbjצrn Thorbarandar_Torbrand Thordar_Tord Thorvin_Torfinn Thorgil_Torkel 
+		Sverker Stirbiyorna_Styrbjyrn Stirkar_Styrkar Semundar_Simund Solve_Sylve Sorkever_Syrkver Thormunda Thorolvar_Thorolf 
+		Tiyudmunda_Tjudmund Toke_Toke Tolir Thorbiyorna_Torbjyrn Thorbarandar_Torbrand Thordar_Tord Thorvin_Torfinn Thorgil_Torkel 
 		Thorestain_Torsten Toste Totil Triggava_Tryggve Turavarman Turmund Tuke_Tyke Ubbe_Ubbe Svellavarman_Udayavarman Ulvar_Ulf 
 		Vagan_Vagn Vaskarmadhrasimma_Viranarasimha Vaskaravarman_Viravarman Valdemar_Vladimir Vreyamundar Vreyavarman 
 		Agetivarman_Yasovarman Ake_Ake Ingvar_Ingvar Orvar_Orvar Eyustain_Eysteinn
 		}
 		female_names = {
-			Aleta Alvilda_Alfhild Alviridha_Alfridh Alvora_Alvצr Anna_Anna Asa_Asa Aslauga_Aslaug Asta_Asta Astirida_Astrid Beyata_Beata 
-			Birigitta_Brigid Biyorga_Bjצrg Bodila Bothilda_Bothild Sesiliya_Cecilia Asiravardhi_Devavati Vaniravardhi_Devavati 
-			Edela_Edla Elina_Elin Elisabeta_Elizabeth Vreya_Freja Gerdhara_Gerנr Golodha_Gloנ Grima Gunahilda_Gunhild Gurli 
-			Gudhuruna_Gudrun Gula_Gyla Guridha_Gyriנ Gudha_Gytha Havridha_Hafrid Halla Helena_Helen Holomvirida_Holmfrid Iliyana_Iliana 
+			Aleta Alvilda_Alfhild Alviridha_Alfridh Alvora_Alvyr Anna_Anna Asa_Asa Aslauga_Aslaug Asta_Asta Astirida_Astrid Beyata_Beata 
+			Birigitta_Brigid Biyorga_Bjyrg Bodila Bothilda_Bothild Sesiliya_Cecilia Asiravardhi_Devavati Vaniravardhi_Devavati 
+			Edela_Edla Elina_Elin Elisabeta_Elizabeth Vreya_Freja Gerdhara_Gerthr Golodha_Gloth Grima Gunahilda_Gunhild Gurli 
+			Gudhuruna_Gudrun Gula_Gyla Guridha_Gyrith Gudha_Gytha Havridha_Hafrid Halla Helena_Helen Holomvirida_Holmfrid Iliyana_Iliana 
 			Inga_Inga Ingvirida_Ingfrid Ingebiyorga_Ingeborg Ingiyerdha_Ingegerd Ingirida_Ingrid Selavardhi_Kalyanavati Karina_Catherine 
 			Karmavardhi_Karmavati Katarina_Catherine Kraka Kristina_Christina Linda Mera_Maer Malamviridha_Malmfrid Margareta_Margaret 
 			Mariya_Maria Mayurahilda Padmahilda Padmavardhi Skepiyavardhi_Prabhavati Rikissa Roginviridha_Ragnfrid Roginhilda_Ragnhild 
