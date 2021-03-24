@@ -1,4 +1,4 @@
-
+﻿
 form_the_lodbroks_decision = {
 	picture = "gfx/interface/illustrations/decisions/fp1_decision_forge_jomsvikings.dds"
 	major = yes
@@ -100,29 +100,29 @@ select_personal_deity_hindu_germanic_decision = {
 				desc = select_personal_deity_hindu_germanic_decision_tt
 				100 = {
 					show_chance = no
-					desc = select_personal_deity_hindu_germanic_decision.select_odin
+					desc = select_personal_deity_hindu_germanic_decision.select_thor
 					add_character_modifier = bhakti_hindu_germanic_thor
 				}
 				100 = {
 					trigger = { is_vaguely_danish_bhakti_trigger = no }
 					show_chance = no
-					desc = select_personal_deity_hindu_germanic_decision.select_ullr
+					desc = select_personal_deity_hindu_germanic_decision.select_odin
 					add_character_modifier = bhakti_hindu_germanic_odin
 				}
 				100 = {
 					trigger = { is_vaguely_danish_bhakti_trigger = yes }
 					show_chance = no
-					desc = select_personal_deity_hindu_germanic_decision.select_tyr
+					desc = select_personal_deity_hindu_germanic_decision.select_freyr
 					add_character_modifier = bhakti_hindu_germanic_freyr
 				}
 				100 = {
 					show_chance = no
-					desc = select_personal_deity_hindu_germanic_decision.select_thor
+					desc = select_personal_deity_hindu_germanic_decision.select_freyja
 					add_character_modifier = bhakti_hindu_germanic_freyja
 				}
 				100 = {
 					show_chance = no
-					desc = select_personal_deity_hindu_germanic_decision.select_freyr
+					desc = select_personal_deity_hindu_germanic_decision.select_njord
 					add_character_modifier = bhakti_hindu_germanic_njord
 				}
 			}
@@ -151,7 +151,7 @@ select_personal_deity_hindu_germanic_decision = {
 
 
 convert_to_hindu_germanic = {
-	only_playable = yes
+	
 	icon_religion = hindu_germanic_religion
 	
 	filter = self
@@ -164,7 +164,7 @@ convert_to_hindu_germanic = {
 		NOT = { religion = hindu_germanic_religion }
 		is_theocracy = no
 		#make sure it is enabled
-		has_global_flag = hindu_germanic_converts
+		has_global_variable = hindu_germanic_converts
 	}
 
 	allow = {
@@ -263,7 +263,7 @@ convert_to_hindu_germanic = {
 }
 
 become_emperor_of_india = {
-	only_independent = yes
+	is_independent_ruler = yes
 	is_high_prio = yes
 	
 	potential = {
@@ -288,21 +288,21 @@ become_emperor_of_india = {
 	allow = {
 		independent = yes
 		is_adult = yes
-		prisoner = no
+		
 		NOT = {	trait = incapable }
 		war = no
 		prestige = 1000
 		wealth = 500
 		OR = {
-			has_landed_title = e_rajastan
+			has_title = e_rajastan
 			e_rajastan = { has_holder = no }
 		}
 		OR = {
-			has_landed_title = e_bengal
+			has_title = e_bengal
 			e_bengal = { has_holder = no }
 		}
 		OR = {
-			has_landed_title = e_deccan
+			has_title = e_deccan
 			e_deccan = { has_holder = no }
 		}
 		completely_controls_region = world_india
@@ -332,7 +332,7 @@ become_emperor_of_india = {
 		if = {
 			limit = {
 				OR = {
-					has_landed_title = e_rajastan
+					has_title = e_rajastan
 					e_rajastan = { has_holder = no }
 				}
 			}
@@ -342,7 +342,7 @@ become_emperor_of_india = {
 		if = {
 			limit = {
 				OR = {
-					has_landed_title = e_bengal
+					has_title = e_bengal
 					e_bengal = { has_holder = no }
 				}
 			}
@@ -352,7 +352,7 @@ become_emperor_of_india = {
 		if = {
 			limit = {
 				OR = {
-					has_landed_title = e_deccan
+					has_title = e_deccan
 					e_deccan = { has_holder = no }
 				}
 			}
