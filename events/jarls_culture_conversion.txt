@@ -6,12 +6,12 @@ namespace = jarls_conversion
 
 # The indo_norse Melting Pot
 jarls_conversion.2 = {
+	type = character_event
 	desc = "EVTDESC_jarls_conversion.2"
 	picture = GFX_evt_viking_throneroom_oldgods
 	
-	
-	culture = culture:norse
-	
+	theme = culture_change
+
 	trigger = {
 		#had_global_flag = { flag = lodbroks_founded days = 14600 }
 		any_demesne_province = {
@@ -145,11 +145,11 @@ jarls_conversion.2 = {
 
 # It's spreading
 jarls_conversion.3 = {
+	type = character_event
 	desc = "EVTDESC_jarls_conversion.3"
 	picture = GFX_evt_stone_church
-	
-	
-	culture = culture:indo_norse
+
+	theme = culture_change
 
 	trigger = {
 		#had_global_flag = { flag = lodbroks_founded days = 14600 }
@@ -190,11 +190,12 @@ jarls_conversion.3 = {
 
 #Make my court speak indo_norse
 jarls_conversion.4 = {
+	type = character_event
 	desc = "EVTDESC_jarls_conversion.4"
 	picture = GFX_evt_throne_room
 	
+	theme = culture_change
 	only_rulers = yes
-	culture = culture:indo_norse
 
 	trigger = {
 		#had_global_flag = { flag = lodbroks_founded days = 14600 }
@@ -253,11 +254,11 @@ jarls_conversion.4 = {
 
 #Make my vassal speak indo_norse
 jarls_conversion.5 = {
+	type = character_event
 	desc = "EVTDESC_jarls_conversion.5"
 	picture = GFX_evt_throne_room
-	
-	
-	culture = culture:indo_norse
+
+	theme = culture_change
 
 	trigger = {
 		#had_global_flag = { flag = lodbroks_founded days = 14600 }
@@ -315,9 +316,11 @@ jarls_conversion.5 = {
 }
 
 jarls_conversion.6 = {
+	type = character_event
 	desc = "EVTDESC_jarls_conversion.6"
 	picture = GFX_evt_throne_room
 
+	theme = culture_change
 	is_triggered_only = yes
 
 	option = {
@@ -332,9 +335,8 @@ jarls_conversion.12 = {
 	desc = "EVTDESC_jarls_conversion.2"
 	picture = GFX_evt_viking_throneroom_oldgods
 	
-	
-	culture = culture:norse
-	
+	theme = culture_change
+
 	trigger = {
 		#had_global_flag = { flag = lodbroks_founded days = 14600 }
 		any_demesne_province = {
@@ -453,12 +455,12 @@ jarls_conversion.12 = {
 
 # It's spreading
 jarls_conversion.13 = {
+	type = character_event
 	desc = "EVTDESC_jarls_conversion.13"
 	picture = GFX_evt_stone_church
+	
+	theme = culture_change
 
-	
-	culture = culture:dravidian_norse
-	
 	trigger = {
 		#had_global_flag = { flag = lodbroks_founded days = 14600 }
 		any_demesne_province = {
@@ -491,11 +493,12 @@ jarls_conversion.13 = {
 
 #Make my court speak dravidian_norse
 jarls_conversion.14 = {
+	type = character_event
 	desc = "EVTDESC_jarls_conversion.14"
 	picture = GFX_evt_throne_room
 
+	theme = culture_change
 	only_rulers = yes
-	culture = culture:dravidian_norse
 		
 	trigger = {
 		#had_global_flag = { flag = lodbroks_founded days = 14600 }
@@ -543,12 +546,12 @@ jarls_conversion.14 = {
 
 #Make my vassal speak dravidian_norse
 jarls_conversion.15 = {
+	type = character_event
 	desc = "EVTDESC_jarls_conversion.5"
 	picture = GFX_evt_throne_room
+	
+	theme = culture_change
 
-	
-	culture = culture:dravidian_norse
-	
 	trigger = {
 		#had_global_flag = { flag = lodbroks_founded days = 14600 }
 		independent = no
@@ -594,9 +597,11 @@ jarls_conversion.15 = {
 }
 
 jarls_conversion.16 = {
+	type = character_event
 	desc = "EVTDESC_jarls_conversion.16"
 	picture = GFX_evt_throne_room
 
+	theme = culture_change
 	is_triggered_only = yes
 
 	option = {
