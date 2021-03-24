@@ -33,7 +33,7 @@ bm_rajas = {
 
 		# Eldest child, Styrkar, ID: 686501
 		character = {
-			name = "bookmark_rajas_alt_saga"
+			name = "bookmark_rajas_alt_styrkar"
 			relation = "BOOKMARK_RELATION_DAUGHTER"
 			dynasty = 1043501
 			type = male
