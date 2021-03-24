@@ -17,7 +17,7 @@ jarls_sacking.100 = {
 	
 	option = {
 		name = "EVTOPTA_jarls_sacking.100"
-		prestige = 100
+		add_prestige = 100
 	}
 }
 
@@ -30,7 +30,7 @@ jarls_sacking.101 = {
 	
 	option = {
 		name = "EVTOPTA_jarls_sacking.100"
-		prestige = 100
+		add_prestige = 100
 	}
 }
 
@@ -43,7 +43,7 @@ jarls_sacking.102 = {
 	
 	option = {
 		name = "EVTOPTA_jarls_sacking.100"
-		prestige = 100
+		add_prestige = 100
 	}
 }
 
@@ -56,7 +56,7 @@ jarls_sacking.103 = {
 	
 	option = {
 		name = "EVTOPTA_jarls_sacking.100"
-		prestige = 100
+		add_prestige = 100
 	}
 }
 
@@ -69,7 +69,7 @@ jarls_sacking.104 = {
 	
 	option = {
 		name = "EVTOPTA_jarls_sacking.100"
-		prestige = 100
+		add_prestige = 100
 	}
 }
 
@@ -82,7 +82,7 @@ jarls_sacking.105 = {
 	
 	option = {
 		name = "EVTOPTA_jarls_sacking.100"
-		prestige = 100
+		add_prestige = 100
 	}
 }
 
@@ -95,7 +95,7 @@ jarls_sacking.106 = {
 	
 	option = {
 		name = "EVTOPTA_jarls_sacking.100"
-		prestige = 100
+		add_prestige = 100
 	}
 }
 
@@ -108,7 +108,7 @@ jarls_sacking.107 = {
 	
 	option = {
 		name = "EVTOPTA_jarls_sacking.100"
-		prestige = 100
+		add_prestige = 100
 	}
 }
 
@@ -121,7 +121,7 @@ jarls_sacking.108 = {
 	
 	option = {
 		name = "EVTOPTA_jarls_sacking.100"
-		prestige = 100
+		add_prestige = 100
 	}
 }
 
@@ -134,7 +134,7 @@ jarls_sacking.109 = {
 	
 	option = {
 		name = "EVTOPTA_jarls_sacking.100"
-		prestige = 100
+		add_prestige = 100
 	}
 }
 
@@ -147,7 +147,7 @@ jarls_sacking.110 = {
 	
 	option = {
 		name = "EVTOPTA_jarls_sacking.100"
-		prestige = 100
+		add_prestige = 100
 	}
 }
 
@@ -160,7 +160,7 @@ jarls_sacking.111 = {
 	
 	option = {
 		name = "EVTOPTA_jarls_sacking.100"
-		prestige = 100
+		add_prestige = 100
 	}
 }
 
@@ -173,7 +173,7 @@ jarls_sacking.112 = {
 	
 	option = {
 		name = "EVTOPTA_jarls_sacking.100"
-		prestige = 100
+		add_prestige = 100
 	}
 }
 
@@ -186,7 +186,7 @@ jarls_sacking.113 = {
 	
 	option = {
 		name = "EVTOPTA_jarls_sacking.100"
-		prestige = 100
+		add_prestige = 100
 	}
 }
 
@@ -199,7 +199,7 @@ jarls_sacking.114 = {
 	
 	option = {
 		name = "EVTOPTA_jarls_sacking.100"
-		prestige = 100
+		add_prestige = 100
 	}
 }
 
@@ -212,6 +212,6 @@ jarls_sacking.115 = {
 	
 	option = {
 		name = "EVTOPTA_jarls_sacking.100"
-		prestige = 100
+		add_prestige = 100
 	}
 }
