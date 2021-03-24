@@ -1,4 +1,4 @@
-###################################
+﻿###################################
 # Jarls of India - Religious Events
 # Written by Riso, Blarghalt
 ###################################
@@ -15,7 +15,6 @@ jarls_religion.100 = {
 		animation = personality_rational
 	}
 
-	# Odin
 	option = {
 		name = jarls_religion.100.odin
 		trigger = {
@@ -24,7 +23,6 @@ jarls_religion.100 = {
 		set_bhakti_effect = { BHAKTI = bhakti_hindu_germanic_odin }
 	}
 
-	# Ullr
 	option = {
 		name = jarls_religion.100.thor
 		trigger = {
@@ -33,7 +31,6 @@ jarls_religion.100 = {
 		set_bhakti_effect = { BHAKTI = bhakti_hindu_germanic_thor }
 	}
 
-	# Tyr
 	option = {
 		name = jarls_religion.100.freyr
 		trigger = {
@@ -42,7 +39,6 @@ jarls_religion.100 = {
 		set_bhakti_effect = { BHAKTI = bhakti_hindu_germanic_freyr }
 	}
 
-	# Thor
 	option = {
 		name = jarls_religion.100.freyja
 		trigger = {
@@ -51,7 +47,6 @@ jarls_religion.100 = {
 		set_bhakti_effect = { BHAKTI = bhakti_hindu_germanic_freyja }
 	}
 
-	# Freyr
 	option = {
 		name = jarls_religion.100.njord
 		trigger = {
@@ -60,7 +55,6 @@ jarls_religion.100 = {
 		set_bhakti_effect = { BHAKTI = bhakti_hindu_germanic_njord }
 	}
 
-	# Opt-Out
 	option = {
 		name = religious_decision.0102.optout
 		flavor = religious_decision.0102.flavor
@@ -73,26 +67,21 @@ jarls_religion.100 = {
 
 
 #Convert to Hindu-Germanic, based on mongols
-narrative_event = {
-	id = jarls_religion.1
+jarls_religion.1 = {
 	title = EVTNAME_jarls_religion.1n
 	desc = EVTDESC_jarls_religion.1n
-	major = yes
 	
 	picture = "GFX_evt_viking_funeral_oldgods"
 	border = "GFX_event_narrative_frame_religion"
 	
-	only_playable = yes
-	only_independent = yes
-	only_capable = yes
-	min_age = 16
-	prisoner = no
-	
-	#is_triggered_only = yes
-	
 	trigger = {
 		#had_global_flag = { flag = lodbroks_founded days = 14600 }
-		NOT = { has_global_flag = hindu_germanic_converts }
+		NOT = { has_global_variable = hindu_germanic_converts }
+
+		is_independent_ruler = yes
+		is_incapable = no
+		age >= 16
+		
 		primary_title = {
 			OR = {
 				title = k_sindh
@@ -128,9 +117,9 @@ narrative_event = {
 					religion = hindu_germanic_religion
 				}
 				OR = {
-					culture = norse
-					culture = indo_norse
-					culture = dravidian_norse
+					has_culture = culture:norse
+					has_culture = culture:indo_norse
+					has_culture = culture:dravidian_norse
 				}
 			}
 		}
@@ -139,28 +128,25 @@ narrative_event = {
 			religion_family = rf_eastern
 		}
 	}
-
-	mean_time_to_happen = {
-		months = 960
-		modifier = {
-			factor = 0.75
-			any_demesne_province = {
-				is_capital = yes
-				#religion = hindu
-				religion_group = indian_group
-			}
-		}
-	}
 	
 	immediate = {
-		set_global_flag = hindu_germanic_converts
-		set_character_flag = converts_hindu_germanic
+		trigger_event = {
+			on_action = jarls_hindu_germanic_converts
+			months = {}
+		}
+		set_variable = {
+			name = hindu_germanic_converts
+			value = true
+		}
+		add_character_flag = {
+			flag = converts_hindu_germanic
+		}
 	}
 
 	option = {
 		name = "EVTOPTA_jarls_religion.1"
 		trigger = {
-			has_character_flag = converts_hindu_germanic
+			has_character_flag = hindu_germanic_converts
 		}
 		religion = hindu_germanic_religion
 		capital_scope = {
@@ -196,14 +182,14 @@ narrative_event = {
 		trigger = {
 			religion_family = rf_eastern
 			NOT = { religion = hindu_germanic_religion }
-			NOT = { has_character_flag = converts_hindu_germanic }
+			NOT = { has_character_flag = hindu_germanic_converts }
 		}
 	}
 	option = {
 		name = "EVTOPTD60010"
 		trigger = {
 			NOT = { religion_family = rf_eastern }
-			NOT = { has_character_flag = converts_hindu_germanic }
+			NOT = { has_character_flag = hindu_germanic_converts }
 		}
 	}
 }
