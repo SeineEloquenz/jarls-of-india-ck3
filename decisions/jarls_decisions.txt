@@ -1,0 +1,381 @@
+
+form_the_lodbroks_decision = {
+	picture = "gfx/interface/illustrations/decisions/fp1_decision_forge_jomsvikings.dds"
+	major = yes
+
+	ai_check_interval = 120
+
+	desc = form_the_lodbroks_decision_desc
+	selection_tooltip = form_the_lodbroks_decision_tooltip
+
+	is_shown = {
+		# Standard filter checks.
+		is_landed = yes
+		exists = dynasty
+		OR = {
+			has_government = tribal_government
+			has_government = feudal_government
+			has_government = clan_government
+		}
+		# Must follow an unreformed Germanic faith.
+		faith = { valid_norse_faith_for_lodbroks_trigger = yes }
+		# Jomsvikings cannot have existed already.
+		lodbroks_have_not_existed_trigger = yes
+	}
+
+	is_valid = {
+		# Must be independent.
+		is_independent_ruler = yes
+		# Should be decently famous in all fashions.
+		prestige_level >= high_prestige_level
+		piety_level >= medium_piety_level
+		# Repeat faith requirements
+		faith = { valid_norse_faith_for_lodbroks_trigger = yes }
+		# You hold land in a suitable region.
+		## Weird structure is to stop the decision window trying to parse duchies through the county filter, which it otherwise cannot be disuaded from doing.
+		any_held_title = {
+			trigger_if = {
+				limit = { tier = tier_county }
+				valid_county_for_lodbroks_trigger = yes
+			}
+			trigger_else = { always = no }
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		is_available_adult = yes
+	}
+
+	effect = {
+		save_scope_as = founder
+		# Show the results.
+		show_as_tooltip = { form_the_lodbroks_decision_tooltip_effect = yes }
+		# Send out events.
+		trigger_event = { id = fp1_major_decisions.0031 } #TODO
+		# Notification of other players is handled in the immediate block of scope:founder's event.
+		# Flag to stop this repeating is filed in the scripted effect, since we might forge them via event instead.
+	}
+
+	cost = {
+		piety = 500
+		prestige = 1000
+	}
+
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 100
+	}
+}
+
+
+select_personal_deity_hindu_germanic_decision = {
+	picture = "gfx/interface/illustrations/decisions/fp1_decisons_hold_bolt.dds"
+
+	desc = select_personal_deity_hindu_germanic_decision_desc
+	selection_tooltip = select_personal_deity_hindu_germanic_decision_tooltip
+
+	is_shown = {
+		# Following a valid religion & faith.
+		religion = religion:hindu_germanic_religion
+		faith = { has_doctrine_parameter = select_personal_god_active }
+	}
+
+	is_valid = {
+	}
+
+	is_valid_showing_failures_only = {
+		# Have to at _least_ not be in piety debt.
+		piety >= 0
+	}
+
+	cooldown = { years = 2 }
+
+	effect = {
+		# Show the possible options.
+		show_as_tooltip = {
+			random_list = {
+				desc = select_personal_deity_hindu_germanic_decision_tt
+				100 = {
+					show_chance = no
+					desc = select_personal_deity_hindu_germanic_decision.select_odin
+					add_character_modifier = bhakti_hindu_germanic_thor
+				}
+				100 = {
+					trigger = { is_vaguely_danish_bhakti_trigger = no }
+					show_chance = no
+					desc = select_personal_deity_hindu_germanic_decision.select_ullr
+					add_character_modifier = bhakti_hindu_germanic_odin
+				}
+				100 = {
+					trigger = { is_vaguely_danish_bhakti_trigger = yes }
+					show_chance = no
+					desc = select_personal_deity_hindu_germanic_decision.select_tyr
+					add_character_modifier = bhakti_hindu_germanic_freyr
+				}
+				100 = {
+					show_chance = no
+					desc = select_personal_deity_hindu_germanic_decision.select_thor
+					add_character_modifier = bhakti_hindu_germanic_freyja
+				}
+				100 = {
+					show_chance = no
+					desc = select_personal_deity_hindu_germanic_decision.select_freyr
+					add_character_modifier = bhakti_hindu_germanic_njord
+				}
+			}
+		}
+		# And the actual effect.
+		trigger_event = jarls_religion.100
+	}
+
+	ai_check_interval = 96
+	
+	ai_potential = {
+		piety >= minor_piety_value
+		NOR = {
+			has_character_modifier = bhakti_hindu_germanic_thor
+			has_character_modifier = bhakti_hindu_germanic_odin
+			has_character_modifier = bhakti_hindu_germanic_freyr
+			has_character_modifier = bhakti_hindu_germanic_freyja
+			has_character_modifier = bhakti_hindu_germanic_njord
+		}
+	}
+
+	ai_will_do = {
+		base = 100
+	}
+}
+
+
+convert_to_hindu_germanic = {
+	only_playable = yes
+	icon_religion = hindu_germanic_religion
+	
+	filter = self
+	ai_target_filter = self
+	
+	potential = {
+		ai = no
+		is_playable = yes
+		religion_family = rf_eastern
+		NOT = { religion = hindu_germanic_religion }
+		is_theocracy = no
+		#make sure it is enabled
+		has_global_flag = hindu_germanic_converts
+	}
+
+	allow = {
+		is_adult = yes
+		prestige = 500
+		NOT = { trait = zealous }
+		any_realm_province = {
+			religion = hindu_germanic_religion
+		}
+		custom_tooltip = {
+			text = indian_has_not_converted
+			NOT = { has_character_flag = india_converted }
+		}
+	}
+	effect = {
+		if = {
+			limit = { higher_tier_than = BARON }
+			religion_authority = {
+				modifier = ruler_converted_from
+			}
+		}
+		religion = hindu_germanic
+		if = {
+			limit = { higher_tier_than = BARON }
+			hidden_tooltip = {
+				religion_authority = {
+					modifier = ruler_converted_to
+				}
+			}
+		}
+		set_character_flag = india_converted
+		prestige = -500
+		piety = 100
+	}
+	revoke_allowed = {
+		always = no
+	}
+	ai_will_do = {
+		factor = 1
+
+		modifier = { # Slow down
+			factor = 0.1
+		}
+		modifier = { # Don't convert away from liege's religion
+			factor = 0
+			liege = { religion = ROOT }
+		}
+		modifier = { # Don't start rocking the boat if all your provinces are under foreign religious influence
+			factor = 0
+			NOT = {
+				any_realm_province = {
+					religion_group = indian_group
+				}
+			}
+		}
+		modifier = { # NEVER consider it unless your liege or, if independent, all your vassals are Hindu and they don't like you
+			factor = 0
+			NOT = {
+				OR = {
+					AND = {
+						independent = yes
+						NOT = {
+							any_vassal = {
+								NOT = { religion = hindu_germanic }
+							}
+						}
+						NOT = {
+							any_vassal = {
+								opinion = {
+									who = ROOT
+									value = 25
+								}
+							}
+						}
+					}
+					AND = {
+						liege = { religion = hindu_germanic }
+						opinion = {
+							who = liege
+							value = 25
+						}
+					}
+				}
+			}
+		}
+		modifier = { # More likely to do it sooner
+			factor = 3
+			trait = cynical
+		}
+		modifier = { # Sometimes you really need to hurry up
+			factor = 5
+			higher_tier_than = DUKE
+			num_of_vassals = 5
+		}
+	}
+}
+
+become_emperor_of_india = {
+	only_independent = yes
+	is_high_prio = yes
+	
+	potential = {
+		is_playable = yes
+		is_feudal = yes
+		#OR = {
+		#	religion = norse_pagan
+		#	religion = norse_pagan_reformed
+		#}
+		NOT = { has_dharmic_religion_trigger = yes }
+		primary_title = {
+			higher_tier_than = DUKE
+		}
+		capital_scope = {
+			region = world_india
+		}
+		e_india = {
+			has_holder = no
+		}
+	}
+
+	allow = {
+		independent = yes
+		is_adult = yes
+		prisoner = no
+		NOT = {	trait = incapable }
+		war = no
+		prestige = 1000
+		wealth = 500
+		OR = {
+			has_landed_title = e_rajastan
+			e_rajastan = { has_holder = no }
+		}
+		OR = {
+			has_landed_title = e_bengal
+			e_bengal = { has_holder = no }
+		}
+		OR = {
+			has_landed_title = e_deccan
+			e_deccan = { has_holder = no }
+		}
+		completely_controls_region = world_india
+	}
+	
+	effect = {
+		wealth = -500
+		prestige = 500
+		#piety = 1000
+		hidden_tooltip = {
+			any_title = {
+				limit = {
+					tier = KING
+					region = world_india
+				}
+				de_jure_liege = e_india
+			}
+		}
+		primary_title = {
+			e_india = {
+				grant_title = ROOT
+				copy_title_laws = PREV
+				copy_title_history = PREV
+			}
+		}
+		hidden_tooltip = { e_india = { make_primary_title = yes } }
+		if = {
+			limit = {
+				OR = {
+					has_landed_title = e_rajastan
+					e_rajastan = { has_holder = no }
+				}
+			}
+			e_rajastan = { destroy_landed_title = THIS }
+			activate_title = { title = e_rajastan status = no }
+		}
+		if = {
+			limit = {
+				OR = {
+					has_landed_title = e_bengal
+					e_bengal = { has_holder = no }
+				}
+			}
+			e_bengal = { destroy_landed_title = THIS }
+			activate_title = { title = e_bengal status = no }
+		}
+		if = {
+			limit = {
+				OR = {
+					has_landed_title = e_deccan
+					e_deccan = { has_holder = no }
+				}
+			}
+			e_deccan = { destroy_landed_title = THIS }
+			activate_title = { title = e_deccan status = no }
+		}
+		if = {
+			limit = { has_nickname = no }
+			give_nickname = nick_the_magnificent
+		}
+		if = {
+			limit = { ai = no }
+			set_character_flag = achievement_my_very_own_subcontinent
+		}
+		chronicle = {
+			entry = CHRONICLE_UNITED_INDIA
+			picture = GFX_evt_throne_room
+		}
+	}
+	revoke_allowed = {
+		always = no
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}

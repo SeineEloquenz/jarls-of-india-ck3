@@ -1,0 +1,209 @@
+###################################
+# Jarls of India - Religious Events
+# Written by Riso, Blarghalt
+###################################
+namespace = jarls_religion
+
+
+jarls_religion.100 = {
+	type = character_event
+	title = jarls_religion.100.t
+	desc = jarls_religion.100.desc
+	theme = faith
+	left_portrait = {
+		character = root
+		animation = personality_rational
+	}
+
+	# Odin
+	option = {
+		name = jarls_religion.100.odin
+		trigger = {
+			NOT = { has_character_modifier = bhakti_hindu_germanic_odin }
+		}
+		set_bhakti_effect = { BHAKTI = bhakti_hindu_germanic_odin }
+	}
+
+	# Ullr
+	option = {
+		name = jarls_religion.100.thor
+		trigger = {
+			NOT = { has_character_modifier = bhakti_hindu_germanic_thor }
+		}
+		set_bhakti_effect = { BHAKTI = bhakti_hindu_germanic_thor }
+	}
+
+	# Tyr
+	option = {
+		name = jarls_religion.100.freyr
+		trigger = {
+			NOT = { has_character_modifier = bhakti_hindu_germanic_freyr }
+		}
+		set_bhakti_effect = { BHAKTI = bhakti_hindu_germanic_freyr }
+	}
+
+	# Thor
+	option = {
+		name = jarls_religion.100.freyja
+		trigger = {
+			NOT = { has_character_modifier = bhakti_hindu_germanic_freyja }
+		}
+		set_bhakti_effect = { BHAKTI = bhakti_hindu_germanic_freyja }
+	}
+
+	# Freyr
+	option = {
+		name = jarls_religion.100.njord
+		trigger = {
+			NOT = { has_character_modifier = bhakti_hindu_germanic_njord }
+		}
+		set_bhakti_effect = { BHAKTI = bhakti_hindu_germanic_njord }
+	}
+
+	# Opt-Out
+	option = {
+		name = religious_decision.0102.optout
+		flavor = religious_decision.0102.flavor
+
+		ai_chance = {
+			base = 0
+		}		
+	}
+}
+
+
+#Convert to Hindu-Germanic, based on mongols
+narrative_event = {
+	id = jarls_religion.1
+	title = EVTNAME_jarls_religion.1n
+	desc = EVTDESC_jarls_religion.1n
+	major = yes
+	
+	picture = "GFX_evt_viking_funeral_oldgods"
+	border = "GFX_event_narrative_frame_religion"
+	
+	only_playable = yes
+	only_independent = yes
+	only_capable = yes
+	min_age = 16
+	prisoner = no
+	
+	#is_triggered_only = yes
+	
+	trigger = {
+		#had_global_flag = { flag = lodbroks_founded days = 14600 }
+		NOT = { has_global_flag = hindu_germanic_converts }
+		primary_title = {
+			OR = {
+				title = k_sindh
+				title = k_punjab
+				title = k_delhi
+				title = k_gujarat
+				title = k_rajputana
+				title = k_malwa
+				title = k_kosala
+				title = k_himalaya
+				title = k_kashmir
+				title = k_bengal
+				title = k_kamarupa
+				title = k_orissa
+				title = k_gondwana
+				title = k_bihar
+				title = k_pagan
+				title = k_maharastra
+				title = k_karnata
+				title = k_tamilakam
+				title = k_andhra
+				title = k_telingana
+				title = k_lanka
+				title = e_rajastan
+				title = e_bengal
+				title = e_deccan
+				title = e_india
+			}
+			holder_scope = {
+				NOT = { trait = zealous }
+				OR = {
+					religion = germanic_religion
+					religion = hindu_germanic_religion
+				}
+				OR = {
+					culture = norse
+					culture = indo_norse
+					culture = dravidian_norse
+				}
+			}
+		}
+		any_realm_province = {
+			#religion = hindu
+			religion_family = rf_eastern
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 960
+		modifier = {
+			factor = 0.75
+			any_demesne_province = {
+				is_capital = yes
+				#religion = hindu
+				religion_group = indian_group
+			}
+		}
+	}
+	
+	immediate = {
+		set_global_flag = hindu_germanic_converts
+		set_character_flag = converts_hindu_germanic
+	}
+
+	option = {
+		name = "EVTOPTA_jarls_religion.1"
+		trigger = {
+			has_character_flag = converts_hindu_germanic
+		}
+		religion = hindu_germanic_religion
+		capital_scope = {
+			religion = hindu_germanic_religion
+		}
+		#match holy orders
+		if = {
+			limit = { is_title_active = d_lodbroks }
+			d_lodbroks = { # This Holy Order now changes religion
+				religion = hindu_germanic_religion
+			}
+		}
+		
+		#subjects change religion
+		custom_tooltip = {
+			text = jarls_religion.vassalreligions
+			hidden_tooltip = {
+				any_realm_character = {
+					limit = { 
+						OR = {
+							religion = norse_pagan
+							religion = norse_pagan_reformed
+							religion = hindu
+						}
+					}
+					religion = hindu_germanic
+				}
+			}
+		}
+	}
+	option = {
+		name = "EXCELLENT"
+		trigger = {
+			religion_family = rf_eastern
+			NOT = { religion = hindu_germanic_religion }
+			NOT = { has_character_flag = converts_hindu_germanic }
+		}
+	}
+	option = {
+		name = "EVTOPTD60010"
+		trigger = {
+			NOT = { religion_family = rf_eastern }
+			NOT = { has_character_flag = converts_hindu_germanic }
+		}
+	}
+}
