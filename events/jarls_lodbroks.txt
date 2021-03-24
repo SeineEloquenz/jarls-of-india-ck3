@@ -1,4 +1,4 @@
-
+﻿
 ##################################################
 # Forge the Lodbroks
 # by Ewan Cowhig Croft
@@ -18,11 +18,6 @@ jarls_lodbroks.0031 = {
 	right_portrait = {
 		character = scope:leader
 		animation = personality_zealous
-	}
-
-	trigger = {
-		# DLC check.
-		has_fp1_dlc_trigger = yes
 	}
 
 	immediate = {
@@ -108,11 +103,6 @@ jarls_lodbroks.0032 = {
 		}
 	}
 
-	trigger = {
-		# DLC check.
-		has_fp1_dlc_trigger = yes
-	}
-
 	immediate = {
 		play_music_cue = "mx_cue_crusade_starts"
 		# Lodbroks founded.
@@ -190,11 +180,6 @@ jarls_lodbroks.0033 = {
 		}
 	}
 	lower_center_portrait = scope:victim
-
-	trigger = {
-		# DLC check.
-		has_fp1_dlc_trigger = yes
-	}
 
 	immediate = {
 		play_music_cue = "mx_cue_crusade_starts"
