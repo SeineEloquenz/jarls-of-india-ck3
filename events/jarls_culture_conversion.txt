@@ -546,7 +546,6 @@ jarls_conversion.15 = {
 	theme = culture_change
 
 	trigger = {
-		#had_global_flag = { flag = lodbroks_founded days = 14600 }
 		independent = no
 		top_liege = {
 			primary_title = {
