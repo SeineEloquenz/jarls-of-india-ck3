@@ -75,7 +75,6 @@ jarls_religion.1 = {
 	border = "GFX_event_narrative_frame_religion"
 	
 	trigger = {
-		#had_global_flag = { flag = lodbroks_founded days = 14600 }
 		NOT = { has_global_variable = hindu_germanic_converts }
 
 		is_independent_ruler = yes
@@ -151,13 +150,6 @@ jarls_religion.1 = {
 		religion = hindu_germanic_religion
 		capital_scope = {
 			religion = hindu_germanic_religion
-		}
-		#match holy orders
-		if = {
-			limit = { is_title_active = d_lodbroks }
-			d_lodbroks = { # This Holy Order now changes religion
-				religion = hindu_germanic_religion
-			}
 		}
 		
 		#subjects change religion

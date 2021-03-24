@@ -13,7 +13,6 @@ jarls_conversion.2 = {
 	theme = culture_change
 
 	trigger = {
-		#had_global_flag = { flag = lodbroks_founded days = 14600 }
 		any_demesne_province = {
 			OR = {
 				region = world_india_bengal
@@ -152,7 +151,6 @@ jarls_conversion.3 = {
 	theme = culture_change
 
 	trigger = {
-		#had_global_flag = { flag = lodbroks_founded days = 14600 }
 		#culture = culture:indo_norse
 		any_demesne_province = {
 			OR = {
@@ -198,7 +196,6 @@ jarls_conversion.4 = {
 	only_rulers = yes
 
 	trigger = {
-		#had_global_flag = { flag = lodbroks_founded days = 14600 }
 		#culture = culture:indo_norse
 		independent = no
 		top_liege = {
@@ -261,7 +258,6 @@ jarls_conversion.5 = {
 	theme = culture_change
 
 	trigger = {
-		#had_global_flag = { flag = lodbroks_founded days = 14600 }
 		#culture = culture:indo_norse
 		independent = no
 		top_liege = {
@@ -338,7 +334,6 @@ jarls_conversion.12 = {
 	theme = culture_change
 
 	trigger = {
-		#had_global_flag = { flag = lodbroks_founded days = 14600 }
 		any_demesne_province = {
 			region = world_india_deccan
 			NOT = { kingdom = { title = k_lanka } }
@@ -462,7 +457,6 @@ jarls_conversion.13 = {
 	theme = culture_change
 
 	trigger = {
-		#had_global_flag = { flag = lodbroks_founded days = 14600 }
 		any_demesne_province = {
 			region = world_india_deccan
 			NOT = { kingdom = { title = k_lanka } }
@@ -501,7 +495,6 @@ jarls_conversion.14 = {
 	only_rulers = yes
 		
 	trigger = {
-		#had_global_flag = { flag = lodbroks_founded days = 14600 }
 		independent = no
 		top_liege = {
 			primary_title = {

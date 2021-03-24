@@ -1,77 +1,4 @@
-﻿
-form_the_lodbroks_decision = {
-	picture = "gfx/interface/illustrations/decisions/fp1_decision_forge_jomsvikings.dds"
-	major = yes
-
-	ai_check_interval = 120
-
-	desc = form_the_lodbroks_decision_desc
-	selection_tooltip = form_the_lodbroks_decision_tooltip
-
-	is_shown = {
-		# Standard filter checks.
-		is_landed = yes
-		exists = dynasty
-		OR = {
-			has_government = tribal_government
-			has_government = feudal_government
-			has_government = clan_government
-		}
-		# Must follow an unreformed Germanic faith.
-		faith = { valid_norse_faith_for_lodbroks_trigger = yes }
-		# Jomsvikings cannot have existed already.
-		lodbroks_have_not_existed_trigger = yes
-	}
-
-	is_valid = {
-		# Must be independent.
-		is_independent_ruler = yes
-		# Should be decently famous in all fashions.
-		prestige_level >= high_prestige_level
-		piety_level >= medium_piety_level
-		# Repeat faith requirements
-		faith = { valid_norse_faith_for_lodbroks_trigger = yes }
-		# You hold land in a suitable region.
-		## Weird structure is to stop the decision window trying to parse duchies through the county filter, which it otherwise cannot be disuaded from doing.
-		any_held_title = {
-			trigger_if = {
-				limit = { tier = tier_county }
-				valid_county_for_lodbroks_trigger = yes
-			}
-			trigger_else = { always = no }
-		}
-	}
-
-	is_valid_showing_failures_only = {
-		is_available_adult = yes
-	}
-
-	effect = {
-		save_scope_as = founder
-		# Show the results.
-		show_as_tooltip = { form_the_lodbroks_decision_tooltip_effect = yes }
-		# Send out events.
-		trigger_event = { id = fp1_major_decisions.0031 } #TODO
-		# Notification of other players is handled in the immediate block of scope:founder's event.
-		# Flag to stop this repeating is filed in the scripted effect, since we might forge them via event instead.
-	}
-
-	cost = {
-		piety = 500
-		prestige = 1000
-	}
-
-	ai_potential = {
-		always = yes
-	}
-
-	ai_will_do = {
-		base = 100
-	}
-}
-
-
-select_personal_deity_hindu_germanic_decision = {
+﻿select_personal_deity_hindu_germanic_decision = {
 	picture = "gfx/interface/illustrations/decisions/fp1_decisons_hold_bolt.dds"
 
 	desc = select_personal_deity_hindu_germanic_decision_desc
@@ -148,7 +75,6 @@ select_personal_deity_hindu_germanic_decision = {
 		base = 100
 	}
 }
-
 
 convert_to_hindu_germanic = {
 	
