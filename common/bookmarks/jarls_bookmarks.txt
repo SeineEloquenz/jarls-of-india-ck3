@@ -15,7 +15,7 @@ bm_rajas = {
 		religion = norse_pagan
 		difficulty = "BOOKMARK_CHARACTER_DIFFICULTY_HARD"
 		history_id = 686500
-		position = { 700 620 }
+		position = { 850 770 }
 		animation = personality_bold
 	
 		# Freja, wife, ID: 686503
