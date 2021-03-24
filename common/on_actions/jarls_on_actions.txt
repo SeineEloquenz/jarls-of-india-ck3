@@ -19,9 +19,28 @@ on_siege_completion = {
 		jarls_sacking.14 # Norse sack bhillamala
 		jarls_sacking.15 # Norse sack mecca only if Mongols havent
 	}
-	random_events = {
-		400 = 0 # Nothing happens
-		50 = HF.46020 # Taking Saintly Burial Site
-		100 = SoA.5400 # Massacre at Beziers-type event		
+}
+
+jarls_culture_conversion = {
+	events = {
+		jarls_conversion.2
+		jarls_conversion.12
+	}
+}
+
+jarls_culture_liege_converts = {
+	events = {
+		jarls_conversion.3
+		jarls_conversion.4
+		jarls_conversion.5
+		jarls_conversion.13
+		jarls_conversion.14
+		jarls_conversion.15
+	}
+}
+
+jarls_religion_converts = {
+	events = {
+		jarls_religion.1
 	}
 }
