@@ -1,0 +1,18 @@
+867.1.1 = {
+	# default stuff
+	discover_innovation = innovation_barracks
+	discover_innovation = innovation_mustering_grounds
+	discover_innovation = innovation_quilted_armor
+	discover_innovation = innovation_gavelkind
+	discover_innovation = innovation_plenary_assemblies
+	discover_innovation = innovation_currency_01
+	# from norse
+	discover_innovation = innovation_longboats
+	discover_innovation = innovation_varangian_adventurers
+	discover_innovation = innovation_viking_tradition
+	discover_innovation = innovation_hird
+	discover_innovation = innovation_all_things
+	# from dravidians
+	discover_innovation = innovation_elephantry
+	discover_innovation = innovation_wootz_steel
+}
