@@ -1,4 +1,4 @@
-bhakti_hindu_germanic_odin = {	# God of... really, just an immense number of things. War, sorcery, death, and poetry are probably the major sphere divisions (or rather, major & misc, for poetry specifically).
+﻿bhakti_hindu_germanic_odin = {	# God of... really, just an immense number of things. War, sorcery, death, and poetry are probably the major sphere divisions (or rather, major & misc, for poetry specifically).
 	icon = asatru_raven_positive
 	intrigue = medium_skill_bonus
 	monthly_piety_gain_per_dread_add = 0.03

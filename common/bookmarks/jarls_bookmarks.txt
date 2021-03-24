@@ -1,4 +1,4 @@
-bm_rajas = {
+﻿bm_rajas = {
 	start_date = 867.1.1
 	is_playable = yes
 

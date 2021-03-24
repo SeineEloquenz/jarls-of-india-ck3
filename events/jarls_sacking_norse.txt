@@ -1,0 +1,217 @@
+﻿###################################
+# Jarls of India - Sacking - Norse side
+# Written by Riso based on Old Gods Mongol sacking
+###################################
+namespace = jarls_sacking
+
+#######################
+# Norse sack cities #
+#######################
+
+# Norse sack krishnajanmabhoomi
+jarls_sacking.100 = {
+	title = EVTNAME_jarls_sacking.100
+	desc = EVTDESC_jarls_sacking.100
+	picture = GFX_evt_mongols_pillage_oldgods
+	border = GFX_event_narrative_frame_war
+	
+	option = {
+		name = "EVTOPTA_jarls_sacking.100"
+		prestige = 100
+	}
+}
+
+# Norse sack dwarakadheesh
+jarls_sacking.101 = {
+	title = EVTNAME_jarls_sacking.101
+	desc = EVTDESC_jarls_sacking.101
+	picture = GFX_evt_mongols_pillage_oldgods
+	border = GFX_event_narrative_frame_war
+	
+	option = {
+		name = "EVTOPTA_jarls_sacking.100"
+		prestige = 100
+	}
+}
+
+# Norse sack mahakaleshwar
+jarls_sacking.102 = {
+	title = EVTNAME_jarls_sacking.102
+	desc = EVTDESC_jarls_sacking.102
+	picture = GFX_evt_mongols_pillage_oldgods
+	border = GFX_event_narrative_frame_war
+	
+	option = {
+		name = "EVTOPTA_jarls_sacking.100"
+		prestige = 100
+	}
+}
+
+# Norse sack ram_janmabhoomi
+jarls_sacking.103 = {
+	title = EVTNAME_jarls_sacking.103
+	desc = EVTDESC_jarls_sacking.103
+	picture = GFX_evt_mongols_pillage_oldgods
+	border = GFX_event_narrative_frame_war
+	
+	option = {
+		name = "EVTOPTA_jarls_sacking.100"
+		prestige = 100
+	}
+}
+
+# Norse sack varanasi
+jarls_sacking.104 = {
+	title = EVTNAME_jarls_sacking.104
+	desc = EVTDESC_jarls_sacking.104
+	picture = GFX_evt_mongols_pillage_oldgods
+	border = GFX_event_narrative_frame_war
+	
+	option = {
+		name = "EVTOPTA_jarls_sacking.100"
+		prestige = 100
+	}
+}
+
+# Norse sack sarnath
+jarls_sacking.105 = {
+	title = EVTNAME_jarls_sacking.105
+	desc = EVTDESC_jarls_sacking.105
+	picture = GFX_evt_mongols_pillage_oldgods
+	border = GFX_event_narrative_frame_war
+	
+	option = {
+		name = "EVTOPTA_jarls_sacking.100"
+		prestige = 100
+	}
+}
+
+# Norse sack sanchi
+jarls_sacking.106 = {
+	title = EVTNAME_jarls_sacking.106
+	desc = EVTDESC_jarls_sacking.106
+	picture = GFX_evt_mongols_pillage_oldgods
+	border = GFX_event_narrative_frame_war
+	
+	option = {
+		name = "EVTOPTA_jarls_sacking.100"
+		prestige = 100
+	}
+}
+
+# Norse sack gaya
+jarls_sacking.107 = {
+	title = EVTNAME_jarls_sacking.107
+	desc = EVTDESC_jarls_sacking.107
+	picture = GFX_evt_rome_falls
+	border = GFX_event_narrative_frame_war
+	
+	option = {
+		name = "EVTOPTA_jarls_sacking.100"
+		prestige = 100
+	}
+}
+
+# Norse sack ellora
+jarls_sacking.108 = {
+	title = EVTNAME_jarls_sacking.108
+	desc = EVTDESC_jarls_sacking.108
+	picture = GFX_evt_mongols_pillage_oldgods
+	border = GFX_event_narrative_frame_war
+	
+	option = {
+		name = "EVTOPTA_jarls_sacking.100"
+		prestige = 100
+	}
+}
+
+# Norse sack oddiyana
+jarls_sacking.109 = {
+	title = EVTNAME_jarls_sacking.109
+	desc = EVTDESC_jarls_sacking.109
+	picture = GFX_evt_mongols_pillage_oldgods
+	border = GFX_event_narrative_frame_war
+	
+	option = {
+		name = "EVTOPTA_jarls_sacking.100"
+		prestige = 100
+	}
+}
+
+# Norse sack rajrappa
+jarls_sacking.110 = {
+	title = EVTNAME_jarls_sacking.110
+	desc = EVTDESC_jarls_sacking.110
+	picture = GFX_evt_mongols_pillage_oldgods
+	border = GFX_event_narrative_frame_war
+	
+	option = {
+		name = "EVTOPTA_jarls_sacking.100"
+		prestige = 100
+	}
+}
+
+# Norse sack shravanabelagola
+jarls_sacking.111 = {
+	title = EVTNAME_jarls_sacking.111
+	desc = EVTDESC_jarls_sacking.111
+	picture = GFX_evt_mongols_pillage_oldgods
+	border = GFX_event_narrative_frame_war
+	
+	option = {
+		name = "EVTOPTA_jarls_sacking.100"
+		prestige = 100
+	}
+}
+
+# Norse sack vadnagar
+jarls_sacking.112 = {
+	title = EVTNAME_jarls_sacking.112
+	desc = EVTDESC_jarls_sacking.112
+	picture = GFX_evt_mongols_pillage_oldgods
+	border = GFX_event_narrative_frame_war
+	
+	option = {
+		name = "EVTOPTA_jarls_sacking.100"
+		prestige = 100
+	}
+}
+
+# Norse sack girnar
+jarls_sacking.113 = {
+	title = EVTNAME_jarls_sacking.113
+	desc = EVTDESC_jarls_sacking.113
+	picture = GFX_evt_mongols_pillage_oldgods
+	border = GFX_event_narrative_frame_war
+	
+	option = {
+		name = "EVTOPTA_jarls_sacking.100"
+		prestige = 100
+	}
+}
+
+# Norse sack bhillamala
+jarls_sacking.114 = {
+	title = EVTNAME_jarls_sacking.114
+	desc = EVTDESC_jarls_sacking.114
+	picture = GFX_evt_mongols_pillage_oldgods
+	border = GFX_event_narrative_frame_war
+	
+	option = {
+		name = "EVTOPTA_jarls_sacking.100"
+		prestige = 100
+	}
+}
+
+# Norse sack Mecca
+jarls_sacking.115 = {
+	title = EVTNAME_jarls_sacking.115
+	desc = EVTDESC_jarls_sacking.115
+	picture = GFX_evt_mecca_falls_soa
+	border = GFX_event_narrative_frame_war
+	
+	option = {
+		name = "EVTOPTA_jarls_sacking.100"
+		prestige = 100
+	}
+}

@@ -1,0 +1,607 @@
+﻿###################################
+# Jarls of India - Culture Conversion
+# Written by Riso, based on English MP
+###################################
+namespace = jarls_conversion
+
+# The indo_norse Melting Pot
+jarls_conversion.2 = {
+	desc = "EVTDESC_jarls_conversion.2"
+	picture = GFX_evt_viking_throneroom_oldgods
+	
+	
+	culture = culture:norse
+	
+	trigger = {
+		#had_global_flag = { flag = lodbroks_founded days = 14600 }
+		any_demesne_province = {
+			OR = {
+				region = world_india_bengal
+				region = world_india_rajastan
+				kingdom = { title = k_lanka }
+			}
+			has_culture_group = culture_group:indo_aryan_group
+			NOT = { has_culture = culture:indo_norse }
+			any_province_holding = {
+				NOT = { holding_type = nomad }
+			}
+		}
+		NOT = { government = chinese_imperial_government }
+	}
+
+	option = {
+		name = "EVTOPTA_jarls_conversion.2"
+		tooltip_info = learning
+		trigger = {
+			OR = {
+				trait = detached_priest
+				trait = martial_cleric
+				trait = scholarly_theologian
+				trait = mastermind_theologian
+			}
+		}
+		set_culture = culture:indo_norse
+		random_demesne_province = {
+			limit = {
+				OR = {
+					region = world_india_bengal
+					region = world_india_rajastan
+					kingdom = { title = k_lanka }
+				}
+				has_culture_group = culture_group:indo_aryan_group
+				NOT = { has_culture = culture:indo_norse }
+				any_province_holding = {
+					NOT = { holding_type = nomad }
+				}
+			}
+			set_culture = culture:indo_norse
+		}
+	}
+	option = {
+		name = "EVTOPTB_jarls_conversion.2"
+		tooltip_info = diplomacy
+		trigger = {
+			OR = {
+				trait = naive_appeaser
+				trait = underhanded_rogue
+				trait = charismatic_negotiator
+				trait = grey_eminence
+			}
+		}
+		set_culture = culture:indo_norse
+		random_demesne_province = {
+			limit = {
+				OR = {
+					region = world_india_bengal
+					region = world_india_rajastan
+					kingdom = { title = k_lanka }
+				}
+				has_culture_group = culture_group:indo_aryan_group
+				NOT = { has_culture = culture:indo_norse }
+				any_province_holding = {
+					NOT = { holding_type = nomad }
+				}
+			}
+			set_culture = culture:indo_norse
+		}
+	}
+	option = {
+		name = "EVTOPTC_jarls_conversion.2"
+		tooltip_info = martial
+		trigger = {
+			OR = {
+				trait = misguided_warrior
+				trait = tough_soldier
+				trait = skilled_tactician
+				trait = brilliant_strategist
+			}
+		}
+		set_culture = culture:indo_norse
+		random_demesne_province = {
+			limit = {
+				OR = {
+					region = world_india_bengal
+					region = world_india_rajastan
+					kingdom = { title = k_lanka }
+				}
+				has_culture_group = culture_group:indo_aryan_group
+				NOT = { has_culture = culture:indo_norse }
+				any_province_holding = {
+					NOT = { holding_type = nomad }
+				}
+			}
+			set_culture = culture:indo_norse
+		}
+	}
+	option = {
+		name = "EVTOPTD_jarls_conversion.2"
+		tooltip_info = stewardship
+		trigger = {
+			OR = {
+				trait = indulgent_wastrel
+				trait = thrifty_clerk
+				trait = fortune_builder
+				trait = midas_touched
+			}
+		}
+		set_culture = culture:indo_norse
+		random_demesne_province = {
+			limit = {
+				OR = {
+					region = world_india_bengal
+					region = world_india_rajastan
+					kingdom = { title = k_lanka }
+				}
+				has_culture_group = culture_group:indo_aryan_group
+				NOT = { has_culture = culture:indo_norse }
+				any_province_holding = {
+					NOT = { holding_type = nomad }
+				}
+			}
+			set_culture = culture:indo_norse
+		}
+	}
+}
+
+# It's spreading
+jarls_conversion.3 = {
+	desc = "EVTDESC_jarls_conversion.3"
+	picture = GFX_evt_stone_church
+	
+	
+	culture = culture:indo_norse
+
+	trigger = {
+		#had_global_flag = { flag = lodbroks_founded days = 14600 }
+		#culture = culture:indo_norse
+		any_demesne_province = {
+			OR = {
+				region = world_india_bengal
+				region = world_india_rajastan
+				kingdom = { title = k_lanka }
+			}
+			has_culture_group = culture_group:indo_aryan_group
+			NOT = { has_culture = culture:indo_norse }
+			any_province_holding = {
+				NOT = { holding_type = nomad }
+			}
+		}
+	}
+
+	option = {
+		name = "EVTOPTA_jarls_conversion.3"
+		random_demesne_province = {
+			limit = {
+				OR = {
+					region = world_india_bengal
+					region = world_india_rajastan
+					kingdom = { title = k_lanka }
+				}
+				has_culture_group = culture_group:indo_aryan_group
+				NOT = { has_culture = culture:indo_norse }
+				any_province_holding = {
+					NOT = { holding_type = nomad }
+				}
+			}
+			set_culture = culture:indo_norse
+		}
+	}
+}
+
+#Make my court speak indo_norse
+jarls_conversion.4 = {
+	desc = "EVTDESC_jarls_conversion.4"
+	picture = GFX_evt_throne_room
+	
+	only_rulers = yes
+	culture = culture:indo_norse
+
+	trigger = {
+		#had_global_flag = { flag = lodbroks_founded days = 14600 }
+		#culture = culture:indo_norse
+		independent = no
+		top_liege = {
+			primary_title = {
+				OR = {
+					title = k_sindh
+					title = k_punjab
+					title = k_delhi
+					title = k_gujarat
+					title = k_rajputana
+					title = k_malwa
+					title = k_kosala
+					title = k_gondwana
+					title = k_bengal
+					title = k_kamarupa
+					title = k_orissa
+					title = k_bihar
+					title = k_maharastra
+					title = k_lanka
+				}
+			}
+		}
+		any_courtier = {
+			OR = {
+				AND = {
+					has_culture_group = culture_group:indo_aryan_group
+					NOT = { has_culture = culture:indo_norse }
+				}
+				set_culture = culture:norse
+			}
+		}
+	}
+
+	option = {
+		name = "EVTOPTA_jarls_conversion.4"
+		random_courtier = {
+			limit = {
+				OR = {
+					AND = {
+						has_culture_group = culture_group:indo_aryan_group
+						NOT = { has_culture = culture:indo_norse }
+					}
+					set_culture = culture:norse
+				}
+			}
+			set_culture = culture:indo_norse
+			hidden_tooltip = {
+				character_event = { id = jarls_conversion.6 days = 3 }
+			}
+		}
+	}
+}
+
+#Make my vassal speak indo_norse
+jarls_conversion.5 = {
+	desc = "EVTDESC_jarls_conversion.5"
+	picture = GFX_evt_throne_room
+	
+	
+	culture = culture:indo_norse
+
+	trigger = {
+		#had_global_flag = { flag = lodbroks_founded days = 14600 }
+		#culture = culture:indo_norse
+		independent = no
+		top_liege = {
+			primary_title = {
+				OR = {
+					title = k_sindh
+					title = k_punjab
+					title = k_delhi
+					title = k_gujarat
+					title = k_rajputana
+					title = k_malwa
+					title = k_kosala
+					title = k_gondwana
+					title = k_bengal
+					title = k_kamarupa
+					title = k_orissa
+					title = k_bihar
+					title = k_maharastra
+					title = k_lanka
+				}
+			}
+		}
+		any_vassal = {
+			OR = {
+				AND = {
+					has_culture_group = culture_group:indo_aryan_group
+					NOT = { has_culture = culture:indo_norse }
+				}
+				set_culture = culture:norse
+			}
+		}
+	}
+
+	option = {
+		name = "EVTOPTA_jarls_conversion.5"
+		random_vassal = {
+			limit = {
+				OR = {
+					AND = {
+						has_culture_group = culture_group:indo_aryan_group
+						NOT = { has_culture = culture:indo_norse }
+					}
+					has_culture = culture:norse
+				}
+			}
+			set_culture = culture:indo_norse
+			hidden_tooltip = {
+				character_event = { id = jarls_conversion.6 days = 3 }
+			}
+		}
+	}
+}
+
+jarls_conversion.6 = {
+	desc = "EVTDESC_jarls_conversion.6"
+	picture = GFX_evt_throne_room
+
+	is_triggered_only = yes
+
+	option = {
+		name = "EVTOPTA_jarls_conversion.6"
+		set_culture = culture:indo_norse
+	}
+}
+
+
+# The dravidian_norse Melting Pot
+jarls_conversion.12 = {
+	desc = "EVTDESC_jarls_conversion.2"
+	picture = GFX_evt_viking_throneroom_oldgods
+	
+	
+	culture = culture:norse
+	
+	trigger = {
+		#had_global_flag = { flag = lodbroks_founded days = 14600 }
+		any_demesne_province = {
+			region = world_india_deccan
+			NOT = { kingdom = { title = k_lanka } }
+			has_culture_group = culture_group:dravidian_group
+			NOT = { has_culture = culture:dravidian_norse }
+			any_province_holding = {
+				NOT = { holding_type = nomad }
+			}
+		}
+		NOT = { government = chinese_imperial_government }
+	}
+
+	option = {
+		name = "EVTOPTA_jarls_conversion.2"
+		tooltip_info = learning
+		trigger = {
+			OR = {
+				trait = detached_priest
+				trait = martial_cleric
+				trait = scholarly_theologian
+				trait = mastermind_theologian
+			}
+		}
+		set_culture = culture:dravidian_norse
+		random_demesne_province = {
+			limit = {
+				region = world_india_deccan
+				NOT = { kingdom = { title = k_lanka } }
+				has_culture_group = culture_group:dravidian_group
+				NOT = { has_culture = culture:dravidian_norse }
+				any_province_holding = {
+					NOT = { holding_type = nomad }
+				}
+			}
+			set_culture = culture:dravidian_norse
+		}
+	}
+	option = {
+		name = "EVTOPTB_jarls_conversion.2"
+		tooltip_info = diplomacy
+		trigger = {
+			OR = {
+				trait = naive_appeaser
+				trait = underhanded_rogue
+				trait = charismatic_negotiator
+				trait = grey_eminence
+			}
+		}
+		set_culture = culture:dravidian_norse
+		random_demesne_province = {
+			limit = {
+				region = world_india_deccan
+				NOT = { kingdom = { title = k_lanka } }
+				has_culture_group = culture_group:dravidian_group
+				NOT = { has_culture = culture:dravidian_norse }
+				any_province_holding = {
+					NOT = { holding_type = nomad }
+				}
+			}
+			set_culture = culture:dravidian_norse
+		}
+	}
+	option = {
+		name = "EVTOPTC_jarls_conversion.2"
+		tooltip_info = martial
+		trigger = {
+			OR = {
+				trait = misguided_warrior
+				trait = tough_soldier
+				trait = skilled_tactician
+				trait = brilliant_strategist
+			}
+		}
+		set_culture = culture:dravidian_norse
+		random_demesne_province = {
+			limit = {
+				region = world_india_deccan
+				NOT = { kingdom = { title = k_lanka } }
+				has_culture_group = culture_group:dravidian_group
+				NOT = { has_culture = culture:dravidian_norse }
+				any_province_holding = {
+					NOT = { holding_type = nomad }
+				}
+			}
+			set_culture = culture:dravidian_norse
+		}
+	}
+	option = {
+		name = "EVTOPTD_jarls_conversion.2"
+		tooltip_info = stewardship
+		trigger = {
+			OR = {
+				trait = indulgent_wastrel
+				trait = thrifty_clerk
+				trait = fortune_builder
+				trait = midas_touched
+			}
+		}
+		set_culture = culture:dravidian_norse
+		random_demesne_province = {
+			limit = {
+				region = world_india_deccan
+				NOT = { kingdom = { title = k_lanka } }
+				has_culture_group = culture_group:dravidian_group
+				NOT = { has_culture = culture:dravidian_norse }
+				any_province_holding = {
+					NOT = { holding_type = nomad }
+				}
+			}
+			set_culture = culture:dravidian_norse
+		}
+	}
+}
+
+# It's spreading
+jarls_conversion.13 = {
+	desc = "EVTDESC_jarls_conversion.13"
+	picture = GFX_evt_stone_church
+
+	
+	culture = culture:dravidian_norse
+	
+	trigger = {
+		#had_global_flag = { flag = lodbroks_founded days = 14600 }
+		any_demesne_province = {
+			region = world_india_deccan
+			NOT = { kingdom = { title = k_lanka } }
+			has_culture_group = culture_group:dravidian_group
+			NOT = { has_culture = culture:dravidian_norse }
+			any_province_holding = {
+				NOT = { holding_type = nomad }
+			}
+		}
+	}
+
+	option = {
+		name = "EVTOPTA_jarls_conversion.3"
+		random_demesne_province = {
+			limit = {
+				region = world_india_deccan
+				NOT = { kingdom = { title = k_lanka } }
+				has_culture_group = culture_group:dravidian_group
+				NOT = { has_culture = culture:dravidian_norse }
+				any_province_holding = {
+					NOT = { holding_type = nomad }
+				}
+			}
+			set_culture = culture:dravidian_norse
+		}
+	}
+}
+
+#Make my court speak dravidian_norse
+jarls_conversion.14 = {
+	desc = "EVTDESC_jarls_conversion.14"
+	picture = GFX_evt_throne_room
+
+	only_rulers = yes
+	culture = culture:dravidian_norse
+		
+	trigger = {
+		#had_global_flag = { flag = lodbroks_founded days = 14600 }
+		independent = no
+		top_liege = {
+			primary_title = {
+				OR = {
+					title = k_karnata
+					title = k_tamilakam
+					title = k_andhra
+					title = k_telingana
+				}
+			}
+		}
+		any_courtier = {
+			OR = {
+				AND = {
+					has_culture_group = culture_group:dravidian_group
+					NOT = { has_culture = culture:dravidian_norse }
+				}
+				set_culture = culture:norse
+			}
+		}
+	}
+
+	option = {
+		name = "EVTOPTA_jarls_conversion.4"
+		random_courtier = {
+			limit = {
+				OR = {
+					AND = {
+						has_culture_group = culture_group:dravidian_group
+						NOT = { has_culture = culture:dravidian_norse }
+					}
+					set_culture = culture:norse
+				}
+			}
+			set_culture = culture:dravidian_norse
+			hidden_tooltip = {
+				character_event = { id = jarls_conversion.16 days = 3 }
+			}
+		}
+	}
+}
+
+#Make my vassal speak dravidian_norse
+jarls_conversion.15 = {
+	desc = "EVTDESC_jarls_conversion.5"
+	picture = GFX_evt_throne_room
+
+	
+	culture = culture:dravidian_norse
+	
+	trigger = {
+		#had_global_flag = { flag = lodbroks_founded days = 14600 }
+		independent = no
+		top_liege = {
+			primary_title = {
+				OR = {
+					title = k_karnata
+					title = k_tamilakam
+					title = k_andhra
+					title = k_telingana
+				}
+			}
+		}
+		any_vassal = {
+			OR = {
+				AND = {
+					has_culture_group = culture_group:dravidian_group
+					NOT = { has_culture = culture:dravidian_norse }
+				}
+				set_culture = culture:norse
+			}
+		}
+	}
+
+	option = {
+		name = "EVTOPTA_jarls_conversion.5"
+		random_vassal = {
+			limit = {
+				OR = {
+					AND = {
+						has_culture_group = culture_group:dravidian_group
+						NOT = { has_culture = culture:dravidian_norse }
+					}
+					set_culture = culture:norse
+				}
+			}
+			set_culture = culture:dravidian_norse
+			hidden_tooltip = {
+				character_event = { id = jarls_conversion.16 days = 3 }
+			}
+		}
+	}
+}
+
+jarls_conversion.16 = {
+	desc = "EVTDESC_jarls_conversion.16"
+	picture = GFX_evt_throne_room
+
+	is_triggered_only = yes
+
+	option = {
+		name = "EVTOPTA_jarls_conversion.6"
+		set_culture = culture:dravidian_norse
+	}
+}
+

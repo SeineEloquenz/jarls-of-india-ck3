@@ -1,4 +1,4 @@
-
+﻿
 # Fires for the owner of the winning unit (ROOT). The taken Holding title is in FROM.
 on_siege_completion = {
 	events = {
@@ -39,7 +39,7 @@ jarls_culture_liege_converts = {
 	}
 }
 
-jarls_religion_converts = {
+jarls_hindu_germanic_converts = {
 	events = {
 		jarls_religion.1
 	}

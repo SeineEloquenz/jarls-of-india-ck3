@@ -1,4 +1,4 @@
-d_lodbroks = {
+﻿d_lodbroks = {
 
 	color={ 60 60 60 }
 	color2={ 255 255 255 }

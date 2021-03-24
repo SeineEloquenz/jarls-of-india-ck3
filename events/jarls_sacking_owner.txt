@@ -1,0 +1,1430 @@
+﻿###################################
+# Jarls of India - Sacking - Owner side
+# Written by Riso, Blarghalt based on Mongol sacking
+###################################
+namespace = jarls_sacking
+
+### Norse sack Indian cities ###
+# Norse sack krishnajanmabhoomi
+jarls_sacking.0 = {
+	title = "EVTNAME_jarls_sacking.00"
+	desc = "EVTDESC_jarls_sacking.00"
+	major = yes
+	
+	picture = "GFX_evt_mongols_pillage_oldgods"
+	border = "GFX_event_narrative_frame_war"
+	
+	
+	
+	trigger = {
+		NOT = { has_global_variable = norse_sack_krishnajanmabhoomi }
+		OR = {
+			has_culture = culture:norse
+			liege = { has_culture = culture:norse }
+			top_liege = { has_culture = culture:norse }
+			has_culture = culture:indo_norse
+			liege = { has_culture = culture:indo_norse }
+			top_liege = { has_culture = culture:indo_norse }
+			has_culture = culture:dravidian_norse
+			liege = { has_culture = culture:dravidian_norse }
+			top_liege = { has_culture = culture:dravidian_norse }
+		}
+		FROM = { title = b_krishnajanmabhoomi }
+		NOT = {
+			FROM = {
+				owner = {
+					OR = {
+						has_culture = culture:norse
+						liege = { has_culture = culture:norse }
+						top_liege = { has_culture = culture:norse }
+						has_culture = culture:indo_norse
+						liege = { has_culture = culture:indo_norse }
+						top_liege = { has_culture = culture:indo_norse }
+						has_culture = culture:dravidian_norse
+						liege = { has_culture = culture:dravidian_norse }
+						top_liege = { has_culture = culture:dravidian_norse }
+					}
+				}
+			}
+		}		
+	}
+	
+	major_trigger = {
+		NOT = {
+			has_culture = culture:norse
+			liege = { has_culture = culture:norse }
+			top_liege = { has_culture = culture:norse }
+			has_culture = culture:indo_norse
+			liege = { has_culture = culture:indo_norse }
+			top_liege = { has_culture = culture:indo_norse }
+			has_culture = culture:dravidian_norse
+			liege = { has_culture = culture:dravidian_norse }
+			top_liege = { has_culture = culture:dravidian_norse }
+		}
+	}
+	
+	immediate = {
+		set_global_flag = norse_sack_krishnajanmabhoomi
+		any_playable_ruler = {
+			limit = {
+				ai = no
+				OR = {
+					has_culture = culture:norse
+					liege = { has_culture = culture:norse }
+					top_liege = { has_culture = culture:norse }
+					has_culture = culture:indo_norse
+					liege = { has_culture = culture:indo_norse }
+					top_liege = { has_culture = culture:indo_norse }
+					has_culture = culture:dravidian_norse
+					liege = { has_culture = culture:dravidian_norse }
+					top_liege = { has_culture = culture:dravidian_norse }
+				}
+			}
+			narrative_event = { id = jarls_sacking.100 }
+		}
+	}
+	
+	option = {
+		name = "EVTOPTA_jarls_sacking.00"
+		trigger = { religion_group = indian_group }
+	}
+	option = {
+		name = "EVTOPTB60100"
+		trigger = { NOT = { religion_group = indian_group } }
+	}
+}
+
+# Norse sack dwarakadheesh
+jarls_sacking.1 = {
+	title = "EVTNAME_jarls_sacking.01"
+	desc = "EVTDESC_jarls_sacking.01"
+	major = yes
+	
+	picture = "GFX_evt_mongols_pillage_oldgods"
+	border = "GFX_event_narrative_frame_war"
+	
+	
+	
+	trigger = {
+		NOT = { has_global_variable = norse_sack_dwarakadheesh }
+		OR = {
+			has_culture = culture:norse
+			liege = { has_culture = culture:norse }
+			top_liege = { has_culture = culture:norse }
+			has_culture = culture:indo_norse
+			liege = { has_culture = culture:indo_norse }
+			top_liege = { has_culture = culture:indo_norse }
+			has_culture = culture:dravidian_norse
+			liege = { has_culture = culture:dravidian_norse }
+			top_liege = { has_culture = culture:dravidian_norse }
+		}
+		FROM = { title = b_dwarakadheesh }
+		NOT = {
+			FROM = {
+				owner = {
+					OR = {
+						has_culture = culture:norse
+						liege = { has_culture = culture:norse }
+						top_liege = { has_culture = culture:norse }
+						has_culture = culture:indo_norse
+						liege = { has_culture = culture:indo_norse }
+						top_liege = { has_culture = culture:indo_norse }
+						has_culture = culture:dravidian_norse
+						liege = { has_culture = culture:dravidian_norse }
+						top_liege = { has_culture = culture:dravidian_norse }
+					}
+				}
+			}
+		}		
+	}
+	
+	major_trigger = {
+		NOT = {
+			has_culture = culture:norse
+			liege = { has_culture = culture:norse }
+			top_liege = { has_culture = culture:norse }
+			has_culture = culture:indo_norse
+			liege = { has_culture = culture:indo_norse }
+			top_liege = { has_culture = culture:indo_norse }
+			has_culture = culture:dravidian_norse
+			liege = { has_culture = culture:dravidian_norse }
+			top_liege = { has_culture = culture:dravidian_norse }
+		}
+	}
+	
+	immediate = {
+		set_global_flag = norse_sack_dwarakadheesh
+		any_playable_ruler = {
+			limit = {
+				ai = no
+				OR = {
+					has_culture = culture:norse
+					liege = { has_culture = culture:norse }
+					top_liege = { has_culture = culture:norse }
+					has_culture = culture:indo_norse
+					liege = { has_culture = culture:indo_norse }
+					top_liege = { has_culture = culture:indo_norse }
+					has_culture = culture:dravidian_norse
+					liege = { has_culture = culture:dravidian_norse }
+					top_liege = { has_culture = culture:dravidian_norse }
+				}
+			}
+			narrative_event = { id = jarls_sacking.101 }
+		}
+	}
+	
+	option = {
+		name = "EVTOPTA_jarls_sacking.01"
+		trigger = { religion_group = indian_group }
+	}
+	option = {
+		name = "EVTOPTB60101"
+		trigger = { NOT = { religion_group = indian_group } }
+	}
+}
+
+# Norse sack mahakaleshwar
+jarls_sacking.2 = {
+	title = "EVTNAME_jarls_sacking.02"
+	desc = "EVTDESC_jarls_sacking.02"
+	major = yes
+	
+	picture = "GFX_evt_mongols_pillage_oldgods"
+	border = "GFX_event_narrative_frame_war"
+	
+	
+	
+	trigger = {
+		NOT = { has_global_variable = norse_sack_mahakaleshwar }
+		OR = {
+			has_culture = culture:norse
+			liege = { has_culture = culture:norse }
+			top_liege = { has_culture = culture:norse }
+			has_culture = culture:indo_norse
+			liege = { has_culture = culture:indo_norse }
+			top_liege = { has_culture = culture:indo_norse }
+			has_culture = culture:dravidian_norse
+			liege = { has_culture = culture:dravidian_norse }
+			top_liege = { has_culture = culture:dravidian_norse }
+		}
+		FROM = { title = b_mahakaleshwar }
+		NOT = {
+			FROM = {
+				owner = {
+					OR = {
+						has_culture = culture:norse
+						liege = { has_culture = culture:norse }
+						top_liege = { has_culture = culture:norse }
+						has_culture = culture:indo_norse
+						liege = { has_culture = culture:indo_norse }
+						top_liege = { has_culture = culture:indo_norse }
+						has_culture = culture:dravidian_norse
+						liege = { has_culture = culture:dravidian_norse }
+						top_liege = { has_culture = culture:dravidian_norse }
+					}
+				}
+			}
+		}		
+	}
+	
+	major_trigger = {
+		NOT = {
+			has_culture = culture:norse
+			liege = { has_culture = culture:norse }
+			top_liege = { has_culture = culture:norse }
+			has_culture = culture:indo_norse
+			liege = { has_culture = culture:indo_norse }
+			top_liege = { has_culture = culture:indo_norse }
+			has_culture = culture:dravidian_norse
+			liege = { has_culture = culture:dravidian_norse }
+			top_liege = { has_culture = culture:dravidian_norse }
+		}
+	}
+	
+	immediate = {
+		set_global_flag = norse_sack_mahakaleshwar
+		any_playable_ruler = {
+			limit = {
+				ai = no
+				OR = {
+					has_culture = culture:norse
+					liege = { has_culture = culture:norse }
+					top_liege = { has_culture = culture:norse }
+					has_culture = culture:indo_norse
+					liege = { has_culture = culture:indo_norse }
+					top_liege = { has_culture = culture:indo_norse }
+					has_culture = culture:dravidian_norse
+					liege = { has_culture = culture:dravidian_norse }
+					top_liege = { has_culture = culture:dravidian_norse }
+				}
+			}
+			narrative_event = { id = jarls_sacking.102 }
+		}
+	}
+	
+	option = {
+		name = "EVTOPTA_jarls_sacking.02"
+		trigger = { religion_group = indian_group }
+	}
+	option = {
+		name = "EVTOPTB60102"
+		trigger = { NOT = { religion_group = indian_group } }
+	}
+}
+
+# Norse sack ram_janmabhoomi
+jarls_sacking.3 = {
+	title = "EVTNAME_jarls_sacking.03"
+	desc = "EVTDESC_jarls_sacking.03"
+	major = yes
+	
+	picture = "GFX_evt_mongols_pillage_oldgods"
+	border = "GFX_event_narrative_frame_war"
+	
+	
+	
+	trigger = {
+		NOT = { has_global_variable = norse_sack_ram_janmabhoomi }
+		OR = {
+			has_culture = culture:norse
+			liege = { has_culture = culture:norse }
+			top_liege = { has_culture = culture:norse }
+			has_culture = culture:indo_norse
+			liege = { has_culture = culture:indo_norse }
+			top_liege = { has_culture = culture:indo_norse }
+			has_culture = culture:dravidian_norse
+			liege = { has_culture = culture:dravidian_norse }
+			top_liege = { has_culture = culture:dravidian_norse }
+		}
+		FROM = { title = b_ram_janmabhoomi }
+		NOT = {
+			FROM = {
+				owner = {
+					OR = {
+						has_culture = culture:norse
+						liege = { has_culture = culture:norse }
+						top_liege = { has_culture = culture:norse }
+						has_culture = culture:indo_norse
+						liege = { has_culture = culture:indo_norse }
+						top_liege = { has_culture = culture:indo_norse }
+						has_culture = culture:dravidian_norse
+						liege = { has_culture = culture:dravidian_norse }
+						top_liege = { has_culture = culture:dravidian_norse }
+					}
+				}
+			}
+		}		
+	}
+	
+	major_trigger = {
+		NOT = {
+			has_culture = culture:norse
+			liege = { has_culture = culture:norse }
+			top_liege = { has_culture = culture:norse }
+			has_culture = culture:indo_norse
+			liege = { has_culture = culture:indo_norse }
+			top_liege = { has_culture = culture:indo_norse }
+			has_culture = culture:dravidian_norse
+			liege = { has_culture = culture:dravidian_norse }
+			top_liege = { has_culture = culture:dravidian_norse }
+		}
+	}
+	
+	immediate = {
+		set_global_flag = norse_sack_ram_janmabhoomi
+		any_playable_ruler = {
+			limit = {
+				ai = no
+				OR = {
+					has_culture = culture:norse
+					liege = { has_culture = culture:norse }
+					top_liege = { has_culture = culture:norse }
+					has_culture = culture:indo_norse
+					liege = { has_culture = culture:indo_norse }
+					top_liege = { has_culture = culture:indo_norse }
+					has_culture = culture:dravidian_norse
+					liege = { has_culture = culture:dravidian_norse }
+					top_liege = { has_culture = culture:dravidian_norse }
+				}
+			}
+			narrative_event = { id = jarls_sacking.103 }
+		}
+	}
+	
+	option = {
+		name = "EVTOPTA_jarls_sacking.03"
+		trigger = { religion_group = indian_group }
+	}
+	option = {
+		name = "EVTOPTB60103"
+		trigger = { NOT = { religion_group = indian_group } }
+	}
+}
+
+# Norse sack varanasi
+jarls_sacking.4 = {
+	title = "EVTNAME_jarls_sacking.04"
+	desc = "EVTDESC_jarls_sacking.04"
+	major = yes
+	
+	picture = "GFX_evt_mongols_pillage_oldgods"
+	border = "GFX_event_narrative_frame_war"
+	
+	
+	
+	trigger = {
+		NOT = { has_global_variable = norse_sack_varanasi }
+		OR = {
+			has_culture = culture:norse
+			liege = { has_culture = culture:norse }
+			top_liege = { has_culture = culture:norse }
+			has_culture = culture:indo_norse
+			liege = { has_culture = culture:indo_norse }
+			top_liege = { has_culture = culture:indo_norse }
+			has_culture = culture:dravidian_norse
+			liege = { has_culture = culture:dravidian_norse }
+			top_liege = { has_culture = culture:dravidian_norse }
+		}
+		FROM = { title = b_varanasi }
+		NOT = {
+			FROM = {
+				owner = {
+					OR = {
+						has_culture = culture:norse
+						liege = { has_culture = culture:norse }
+						top_liege = { has_culture = culture:norse }
+						has_culture = culture:indo_norse
+						liege = { has_culture = culture:indo_norse }
+						top_liege = { has_culture = culture:indo_norse }
+						has_culture = culture:dravidian_norse
+						liege = { has_culture = culture:dravidian_norse }
+						top_liege = { has_culture = culture:dravidian_norse }
+					}
+				}
+			}
+		}		
+	}
+	
+	major_trigger = {
+		NOT = {
+			has_culture = culture:norse
+			liege = { has_culture = culture:norse }
+			top_liege = { has_culture = culture:norse }
+			has_culture = culture:indo_norse
+			liege = { has_culture = culture:indo_norse }
+			top_liege = { has_culture = culture:indo_norse }
+			has_culture = culture:dravidian_norse
+			liege = { has_culture = culture:dravidian_norse }
+			top_liege = { has_culture = culture:dravidian_norse }
+		}
+	}
+	
+	immediate = {
+		set_global_flag = norse_sack_varanasi
+		any_playable_ruler = {
+			limit = {
+				ai = no
+				OR = {
+					has_culture = culture:norse
+					liege = { has_culture = culture:norse }
+					top_liege = { has_culture = culture:norse }
+					has_culture = culture:indo_norse
+					liege = { has_culture = culture:indo_norse }
+					top_liege = { has_culture = culture:indo_norse }
+					has_culture = culture:dravidian_norse
+					liege = { has_culture = culture:dravidian_norse }
+					top_liege = { has_culture = culture:dravidian_norse }
+				}
+			}
+			narrative_event = { id = jarls_sacking.104 }
+		}
+	}
+	
+	option = {
+		name = "EVTOPTA_jarls_sacking.04"
+		trigger = { religion_group = indian_group }
+	}
+	option = {
+		name = "EVTOPTB60104"
+		trigger = { NOT = { religion_group = indian_group } }
+	}
+}
+
+# Norse sack sarnath
+jarls_sacking.5 = {
+	title = "EVTNAME_jarls_sacking.05"
+	desc = "EVTDESC_jarls_sacking.05"
+	major = yes
+	
+	picture = "GFX_evt_mongols_pillage_oldgods"
+	border = "GFX_event_narrative_frame_war"
+	
+	
+	
+	trigger = {
+		NOT = { has_global_variable = norse_sack_sarnath }
+		OR = {
+			has_culture = culture:norse
+			liege = { has_culture = culture:norse }
+			top_liege = { has_culture = culture:norse }
+			has_culture = culture:indo_norse
+			liege = { has_culture = culture:indo_norse }
+			top_liege = { has_culture = culture:indo_norse }
+			has_culture = culture:dravidian_norse
+			liege = { has_culture = culture:dravidian_norse }
+			top_liege = { has_culture = culture:dravidian_norse }
+		}
+		FROM = { title = b_sarnath }
+		NOT = {
+			FROM = {
+				owner = {
+					OR = {
+						has_culture = culture:norse
+						liege = { has_culture = culture:norse }
+						top_liege = { has_culture = culture:norse }
+						has_culture = culture:indo_norse
+						liege = { has_culture = culture:indo_norse }
+						top_liege = { has_culture = culture:indo_norse }
+						has_culture = culture:dravidian_norse
+						liege = { has_culture = culture:dravidian_norse }
+						top_liege = { has_culture = culture:dravidian_norse }
+					}
+				}
+			}
+		}		
+	}
+	
+	major_trigger = {
+		NOT = {
+			has_culture = culture:norse
+			liege = { has_culture = culture:norse }
+			top_liege = { has_culture = culture:norse }
+			has_culture = culture:indo_norse
+			liege = { has_culture = culture:indo_norse }
+			top_liege = { has_culture = culture:indo_norse }
+			has_culture = culture:dravidian_norse
+			liege = { has_culture = culture:dravidian_norse }
+			top_liege = { has_culture = culture:dravidian_norse }
+		}
+	}
+	
+	immediate = {
+		set_global_flag = norse_sack_sarnath
+		any_playable_ruler = {
+			limit = {
+				ai = no
+				OR = {
+					has_culture = culture:norse
+					liege = { has_culture = culture:norse }
+					top_liege = { has_culture = culture:norse }
+					has_culture = culture:indo_norse
+					liege = { has_culture = culture:indo_norse }
+					top_liege = { has_culture = culture:indo_norse }
+					has_culture = culture:dravidian_norse
+					liege = { has_culture = culture:dravidian_norse }
+					top_liege = { has_culture = culture:dravidian_norse }
+				}
+			}
+			narrative_event = { id = jarls_sacking.105 }
+		}
+	}
+	
+	option = {
+		name = "EVTOPTA_jarls_sacking.05"
+		trigger = { religion_group = indian_group }
+	}
+	option = {
+		name = "EVTOPTB60105"
+		trigger = { NOT = { religion_group = indian_group } }
+	}
+}
+
+# Norse sack sanchi
+jarls_sacking.6 = {
+	title = "EVTNAME_jarls_sacking.06"
+	desc = "EVTDESC_jarls_sacking.06"
+	major = yes
+	
+	picture = "GFX_evt_mongols_pillage_oldgods"
+	border = "GFX_event_narrative_frame_war"
+	
+	
+	
+	trigger = {
+		NOT = { has_global_variable = norse_sack_sanchi }
+		OR = {
+			has_culture = culture:norse
+			liege = { has_culture = culture:norse }
+			top_liege = { has_culture = culture:norse }
+			has_culture = culture:indo_norse
+			liege = { has_culture = culture:indo_norse }
+			top_liege = { has_culture = culture:indo_norse }
+			has_culture = culture:dravidian_norse
+			liege = { has_culture = culture:dravidian_norse }
+			top_liege = { has_culture = culture:dravidian_norse }
+		}
+		FROM = { title = b_sanchi }
+		NOT = {
+			FROM = {
+				owner = {
+					OR = {
+						has_culture = culture:norse
+						liege = { has_culture = culture:norse }
+						top_liege = { has_culture = culture:norse }
+						has_culture = culture:indo_norse
+						liege = { has_culture = culture:indo_norse }
+						top_liege = { has_culture = culture:indo_norse }
+						has_culture = culture:dravidian_norse
+						liege = { has_culture = culture:dravidian_norse }
+						top_liege = { has_culture = culture:dravidian_norse }
+					}
+				}
+			}
+		}		
+	}
+	
+	major_trigger = {
+		NOT = {
+			has_culture = culture:norse
+			liege = { has_culture = culture:norse }
+			top_liege = { has_culture = culture:norse }
+			has_culture = culture:indo_norse
+			liege = { has_culture = culture:indo_norse }
+			top_liege = { has_culture = culture:indo_norse }
+			has_culture = culture:dravidian_norse
+			liege = { has_culture = culture:dravidian_norse }
+			top_liege = { has_culture = culture:dravidian_norse }
+		}
+	}
+	
+	immediate = {
+		set_global_flag = norse_sack_sanchi
+		any_playable_ruler = {
+			limit = {
+				ai = no
+				OR = {
+					has_culture = culture:norse
+					liege = { has_culture = culture:norse }
+					top_liege = { has_culture = culture:norse }
+					has_culture = culture:indo_norse
+					liege = { has_culture = culture:indo_norse }
+					top_liege = { has_culture = culture:indo_norse }
+					has_culture = culture:dravidian_norse
+					liege = { has_culture = culture:dravidian_norse }
+					top_liege = { has_culture = culture:dravidian_norse }
+				}
+			}
+			narrative_event = { id = jarls_sacking.106 }
+		}
+	}
+	
+	option = {
+		name = "EVTOPTA_jarls_sacking.06"
+		trigger = { religion_group = indian_group }
+	}
+	option = {
+		name = "EVTOPTB60106"
+		trigger = { NOT = { religion_group = indian_group } }
+	}
+}
+
+# Norse sack gaya
+jarls_sacking.7 = {
+	title = "EVTNAME_jarls_sacking.07"
+	desc = "EVTDESC_jarls_sacking.07"
+	major = yes
+	
+	picture = "GFX_evt_mongols_pillage_oldgods"
+	border = "GFX_event_narrative_frame_war"
+	
+	
+	
+	trigger = {
+		NOT = { has_global_variable = norse_sack_gaya }
+		OR = {
+			has_culture = culture:norse
+			liege = { has_culture = culture:norse }
+			top_liege = { has_culture = culture:norse }
+			has_culture = culture:indo_norse
+			liege = { has_culture = culture:indo_norse }
+			top_liege = { has_culture = culture:indo_norse }
+			has_culture = culture:dravidian_norse
+			liege = { has_culture = culture:dravidian_norse }
+			top_liege = { has_culture = culture:dravidian_norse }
+		}
+		FROM = { title = b_gaya }
+		NOT = {
+			FROM = {
+				owner = {
+					OR = {
+						has_culture = culture:norse
+						liege = { has_culture = culture:norse }
+						top_liege = { has_culture = culture:norse }
+						has_culture = culture:indo_norse
+						liege = { has_culture = culture:indo_norse }
+						top_liege = { has_culture = culture:indo_norse }
+						has_culture = culture:dravidian_norse
+						liege = { has_culture = culture:dravidian_norse }
+						top_liege = { has_culture = culture:dravidian_norse }
+					}
+				}
+			}
+		}		
+	}
+	
+	major_trigger = {
+		NOT = {
+			has_culture = culture:norse
+			liege = { has_culture = culture:norse }
+			top_liege = { has_culture = culture:norse }
+			has_culture = culture:indo_norse
+			liege = { has_culture = culture:indo_norse }
+			top_liege = { has_culture = culture:indo_norse }
+			has_culture = culture:dravidian_norse
+			liege = { has_culture = culture:dravidian_norse }
+			top_liege = { has_culture = culture:dravidian_norse }
+		}
+	}
+	
+	immediate = {
+		set_global_flag = norse_sack_gaya
+		any_playable_ruler = {
+			limit = {
+				ai = no
+				OR = {
+					has_culture = culture:norse
+					liege = { has_culture = culture:norse }
+					top_liege = { has_culture = culture:norse }
+					has_culture = culture:indo_norse
+					liege = { has_culture = culture:indo_norse }
+					top_liege = { has_culture = culture:indo_norse }
+					has_culture = culture:dravidian_norse
+					liege = { has_culture = culture:dravidian_norse }
+					top_liege = { has_culture = culture:dravidian_norse }
+				}
+			}
+			narrative_event = { id = jarls_sacking.107 }
+		}
+	}
+	
+	option = {
+		name = "EVTOPTA_jarls_sacking.07"
+		trigger = { religion_group = indian_group }
+	}
+	option = {
+		name = "EVTOPTB60107"
+		trigger = { NOT = { religion_group = indian_group } }
+	}
+}
+
+# Norse sack ellora
+jarls_sacking.8 = {
+	title = "EVTNAME_jarls_sacking.08"
+	desc = "EVTDESC_jarls_sacking.08"
+	major = yes
+	
+	picture = "GFX_evt_mongols_pillage_oldgods"
+	border = "GFX_event_narrative_frame_war"
+	
+	
+	
+	trigger = {
+		NOT = { has_global_variable = norse_sack_ellora }
+		OR = {
+			has_culture = culture:norse
+			liege = { has_culture = culture:norse }
+			top_liege = { has_culture = culture:norse }
+			has_culture = culture:indo_norse
+			liege = { has_culture = culture:indo_norse }
+			top_liege = { has_culture = culture:indo_norse }
+			has_culture = culture:dravidian_norse
+			liege = { has_culture = culture:dravidian_norse }
+			top_liege = { has_culture = culture:dravidian_norse }
+		}
+		FROM = { title = b_ellora }
+		NOT = {
+			FROM = {
+				owner = {
+					OR = {
+						has_culture = culture:norse
+						liege = { has_culture = culture:norse }
+						top_liege = { has_culture = culture:norse }
+						has_culture = culture:indo_norse
+						liege = { has_culture = culture:indo_norse }
+						top_liege = { has_culture = culture:indo_norse }
+						has_culture = culture:dravidian_norse
+						liege = { has_culture = culture:dravidian_norse }
+						top_liege = { has_culture = culture:dravidian_norse }
+					}
+				}
+			}
+		}		
+	}
+	
+	major_trigger = {
+		NOT = {
+			has_culture = culture:norse
+			liege = { has_culture = culture:norse }
+			top_liege = { has_culture = culture:norse }
+			has_culture = culture:indo_norse
+			liege = { has_culture = culture:indo_norse }
+			top_liege = { has_culture = culture:indo_norse }
+			has_culture = culture:dravidian_norse
+			liege = { has_culture = culture:dravidian_norse }
+			top_liege = { has_culture = culture:dravidian_norse }
+		}
+	}
+	
+	immediate = {
+		set_global_flag = norse_sack_ellora
+		any_playable_ruler = {
+			limit = {
+				ai = no
+				OR = {
+					has_culture = culture:norse
+					liege = { has_culture = culture:norse }
+					top_liege = { has_culture = culture:norse }
+					has_culture = culture:indo_norse
+					liege = { has_culture = culture:indo_norse }
+					top_liege = { has_culture = culture:indo_norse }
+					has_culture = culture:dravidian_norse
+					liege = { has_culture = culture:dravidian_norse }
+					top_liege = { has_culture = culture:dravidian_norse }
+				}
+			}
+			narrative_event = { id = jarls_sacking.108 }
+		}
+	}
+	
+	option = {
+		name = "EVTOPTA_jarls_sacking.08"
+		trigger = { religion_group = indian_group }
+	}
+	option = {
+		name = "EVTOPTB60108"
+		trigger = { NOT = { religion_group = indian_group } }
+	}
+}
+
+# Norse sack oddiyana
+jarls_sacking.9 = {
+	title = "EVTNAME_jarls_sacking.09"
+	desc = "EVTDESC_jarls_sacking.09"
+	major = yes
+	
+	picture = "GFX_evt_mongols_pillage_oldgods"
+	border = "GFX_event_narrative_frame_war"
+	
+	
+	
+	trigger = {
+		NOT = { has_global_variable = norse_sack_oddiyana }
+		OR = {
+			has_culture = culture:norse
+			liege = { has_culture = culture:norse }
+			top_liege = { has_culture = culture:norse }
+			has_culture = culture:indo_norse
+			liege = { has_culture = culture:indo_norse }
+			top_liege = { has_culture = culture:indo_norse }
+			has_culture = culture:dravidian_norse
+			liege = { has_culture = culture:dravidian_norse }
+			top_liege = { has_culture = culture:dravidian_norse }
+		}
+		FROM = { title = b_oddiyana }
+		NOT = {
+			FROM = {
+				owner = {
+					OR = {
+						has_culture = culture:norse
+						liege = { has_culture = culture:norse }
+						top_liege = { has_culture = culture:norse }
+						has_culture = culture:indo_norse
+						liege = { has_culture = culture:indo_norse }
+						top_liege = { has_culture = culture:indo_norse }
+						has_culture = culture:dravidian_norse
+						liege = { has_culture = culture:dravidian_norse }
+						top_liege = { has_culture = culture:dravidian_norse }
+					}
+				}
+			}
+		}		
+	}
+	
+	major_trigger = {
+		NOT = {
+			has_culture = culture:norse
+			liege = { has_culture = culture:norse }
+			top_liege = { has_culture = culture:norse }
+			has_culture = culture:indo_norse
+			liege = { has_culture = culture:indo_norse }
+			top_liege = { has_culture = culture:indo_norse }
+			has_culture = culture:dravidian_norse
+			liege = { has_culture = culture:dravidian_norse }
+			top_liege = { has_culture = culture:dravidian_norse }
+		}
+	}
+	
+	immediate = {
+		set_global_flag = norse_sack_oddiyana
+		any_playable_ruler = {
+			limit = {
+				ai = no
+				OR = {
+					has_culture = culture:norse
+					liege = { has_culture = culture:norse }
+					top_liege = { has_culture = culture:norse }
+					has_culture = culture:indo_norse
+					liege = { has_culture = culture:indo_norse }
+					top_liege = { has_culture = culture:indo_norse }
+					has_culture = culture:dravidian_norse
+					liege = { has_culture = culture:dravidian_norse }
+					top_liege = { has_culture = culture:dravidian_norse }
+				}
+			}
+			narrative_event = { id = jarls_sacking.109 }
+		}
+	}
+	
+	option = {
+		name = "EVTOPTA_jarls_sacking.09"
+		trigger = { religion_group = indian_group }
+	}
+	option = {
+		name = "EVTOPTB60109"
+		trigger = { NOT = { religion_group = indian_group } }
+	}
+}
+
+# Norse sack rajrappa
+jarls_sacking.10 = {
+	title = "EVTNAME_jarls_sacking.10"
+	desc = "EVTDESC_jarls_sacking.10"
+	major = yes
+	
+	picture = "GFX_evt_mongols_pillage_oldgods"
+	border = "GFX_event_narrative_frame_war"
+	
+	
+	
+	trigger = {
+		NOT = { has_global_variable = norse_sack_rajrappa }
+		OR = {
+			has_culture = culture:norse
+			liege = { has_culture = culture:norse }
+			top_liege = { has_culture = culture:norse }
+			has_culture = culture:indo_norse
+			liege = { has_culture = culture:indo_norse }
+			top_liege = { has_culture = culture:indo_norse }
+			has_culture = culture:dravidian_norse
+			liege = { has_culture = culture:dravidian_norse }
+			top_liege = { has_culture = culture:dravidian_norse }
+		}
+		FROM = { title = b_rajrappa }
+		NOT = {
+			FROM = {
+				owner = {
+					OR = {
+						has_culture = culture:norse
+						liege = { has_culture = culture:norse }
+						top_liege = { has_culture = culture:norse }
+						has_culture = culture:indo_norse
+						liege = { has_culture = culture:indo_norse }
+						top_liege = { has_culture = culture:indo_norse }
+						has_culture = culture:dravidian_norse
+						liege = { has_culture = culture:dravidian_norse }
+						top_liege = { has_culture = culture:dravidian_norse }
+					}
+				}
+			}
+		}		
+	}
+	
+	major_trigger = {
+		NOT = {
+			has_culture = culture:norse
+			liege = { has_culture = culture:norse }
+			top_liege = { has_culture = culture:norse }
+			has_culture = culture:indo_norse
+			liege = { has_culture = culture:indo_norse }
+			top_liege = { has_culture = culture:indo_norse }
+			has_culture = culture:dravidian_norse
+			liege = { has_culture = culture:dravidian_norse }
+			top_liege = { has_culture = culture:dravidian_norse }
+		}
+	}
+	
+	immediate = {
+		set_global_flag = norse_sack_rajrappa
+		any_playable_ruler = {
+			limit = {
+				ai = no
+				OR = {
+					has_culture = culture:norse
+					liege = { has_culture = culture:norse }
+					top_liege = { has_culture = culture:norse }
+					has_culture = culture:indo_norse
+					liege = { has_culture = culture:indo_norse }
+					top_liege = { has_culture = culture:indo_norse }
+					has_culture = culture:dravidian_norse
+					liege = { has_culture = culture:dravidian_norse }
+					top_liege = { has_culture = culture:dravidian_norse }
+				}
+			}
+			narrative_event = { id = jarls_sacking.110 }
+		}
+	}
+	
+	option = {
+		name = "EVTOPTA_jarls_sacking.10"
+		trigger = { religion_group = indian_group }
+	}
+	option = {
+		name = "EVTOPTB60110"
+		trigger = { NOT = { religion_group = indian_group } }
+	}
+}
+
+# Norse sack shravanabelagola
+jarls_sacking.11 = {
+	title = "EVTNAME_jarls_sacking.11"
+	desc = "EVTDESC_jarls_sacking.11"
+	major = yes
+	
+	picture = "GFX_evt_mongols_pillage_oldgods"
+	border = "GFX_event_narrative_frame_war"
+	
+	
+	
+	trigger = {
+		NOT = { has_global_variable = norse_sack_shravanabelagola }
+		OR = {
+			has_culture = culture:norse
+			liege = { has_culture = culture:norse }
+			top_liege = { has_culture = culture:norse }
+			has_culture = culture:indo_norse
+			liege = { has_culture = culture:indo_norse }
+			top_liege = { has_culture = culture:indo_norse }
+			has_culture = culture:dravidian_norse
+			liege = { has_culture = culture:dravidian_norse }
+			top_liege = { has_culture = culture:dravidian_norse }
+		}
+		FROM = { title = b_shravanabelagola }
+		NOT = {
+			FROM = {
+				owner = {
+					OR = {
+						has_culture = culture:norse
+						liege = { has_culture = culture:norse }
+						top_liege = { has_culture = culture:norse }
+						has_culture = culture:indo_norse
+						liege = { has_culture = culture:indo_norse }
+						top_liege = { has_culture = culture:indo_norse }
+						has_culture = culture:dravidian_norse
+						liege = { has_culture = culture:dravidian_norse }
+						top_liege = { has_culture = culture:dravidian_norse }
+					}
+				}
+			}
+		}		
+	}
+	
+	major_trigger = {
+		NOT = {
+			has_culture = culture:norse
+			liege = { has_culture = culture:norse }
+			top_liege = { has_culture = culture:norse }
+			has_culture = culture:indo_norse
+			liege = { has_culture = culture:indo_norse }
+			top_liege = { has_culture = culture:indo_norse }
+			has_culture = culture:dravidian_norse
+			liege = { has_culture = culture:dravidian_norse }
+			top_liege = { has_culture = culture:dravidian_norse }
+		}
+	}
+	
+	immediate = {
+		set_global_flag = norse_sack_shravanabelagola
+		any_playable_ruler = {
+			limit = {
+				ai = no
+				OR = {
+					has_culture = culture:norse
+					liege = { has_culture = culture:norse }
+					top_liege = { has_culture = culture:norse }
+					has_culture = culture:indo_norse
+					liege = { has_culture = culture:indo_norse }
+					top_liege = { has_culture = culture:indo_norse }
+					has_culture = culture:dravidian_norse
+					liege = { has_culture = culture:dravidian_norse }
+					top_liege = { has_culture = culture:dravidian_norse }
+				}
+			}
+			narrative_event = { id = jarls_sacking.111 }
+		}
+	}
+	
+	option = {
+		name = "EVTOPTA_jarls_sacking.11"
+		trigger = { religion_group = indian_group }
+	}
+	option = {
+		name = "EVTOPTB60111"
+		trigger = { NOT = { religion_group = indian_group } }
+	}
+}
+
+# Norse sack vadnagar
+jarls_sacking.12 = {
+	title = "EVTNAME_jarls_sacking.12"
+	desc = "EVTDESC_jarls_sacking.12"
+	major = yes
+	
+	picture = "GFX_evt_mongols_pillage_oldgods"
+	border = "GFX_event_narrative_frame_war"
+	
+	
+	
+	trigger = {
+		NOT = { has_global_variable = norse_sack_vadnagar }
+		OR = {
+			has_culture = culture:norse
+			liege = { has_culture = culture:norse }
+			top_liege = { has_culture = culture:norse }
+			has_culture = culture:indo_norse
+			liege = { has_culture = culture:indo_norse }
+			top_liege = { has_culture = culture:indo_norse }
+			has_culture = culture:dravidian_norse
+			liege = { has_culture = culture:dravidian_norse }
+			top_liege = { has_culture = culture:dravidian_norse }
+		}
+		FROM = { title = b_vadnagar }
+		NOT = {
+			FROM = {
+				owner = {
+					OR = {
+						has_culture = culture:norse
+						liege = { has_culture = culture:norse }
+						top_liege = { has_culture = culture:norse }
+						has_culture = culture:indo_norse
+						liege = { has_culture = culture:indo_norse }
+						top_liege = { has_culture = culture:indo_norse }
+						has_culture = culture:dravidian_norse
+						liege = { has_culture = culture:dravidian_norse }
+						top_liege = { has_culture = culture:dravidian_norse }
+					}
+				}
+			}
+		}		
+	}
+	
+	major_trigger = {
+		NOT = {
+			has_culture = culture:norse
+			liege = { has_culture = culture:norse }
+			top_liege = { has_culture = culture:norse }
+			has_culture = culture:indo_norse
+			liege = { has_culture = culture:indo_norse }
+			top_liege = { has_culture = culture:indo_norse }
+			has_culture = culture:dravidian_norse
+			liege = { has_culture = culture:dravidian_norse }
+			top_liege = { has_culture = culture:dravidian_norse }
+		}
+	}
+	
+	immediate = {
+		set_global_flag = norse_sack_vadnagar
+		any_playable_ruler = {
+			limit = {
+				ai = no
+				OR = {
+					has_culture = culture:norse
+					liege = { has_culture = culture:norse }
+					top_liege = { has_culture = culture:norse }
+					has_culture = culture:indo_norse
+					liege = { has_culture = culture:indo_norse }
+					top_liege = { has_culture = culture:indo_norse }
+					has_culture = culture:dravidian_norse
+					liege = { has_culture = culture:dravidian_norse }
+					top_liege = { has_culture = culture:dravidian_norse }
+				}
+			}
+			narrative_event = { id = jarls_sacking.112 }
+		}
+	}
+	
+	option = {
+		name = "EVTOPTA_jarls_sacking.12"
+		trigger = { religion_group = indian_group }
+	}
+	option = {
+		name = "EVTOPTB60112"
+		trigger = { NOT = { religion_group = indian_group } }
+	}
+}
+
+# Norse sack girnar
+jarls_sacking.13 = {
+	title = "EVTNAME_jarls_sacking.13"
+	desc = "EVTDESC_jarls_sacking.13"
+	major = yes
+	
+	picture = "GFX_evt_mongols_pillage_oldgods"
+	border = "GFX_event_narrative_frame_war"
+	
+	
+	
+	trigger = {
+		NOT = { has_global_variable = norse_sack_girnar }
+		OR = {
+			has_culture = culture:norse
+			liege = { has_culture = culture:norse }
+			top_liege = { has_culture = culture:norse }
+			has_culture = culture:indo_norse
+			liege = { has_culture = culture:indo_norse }
+			top_liege = { has_culture = culture:indo_norse }
+			has_culture = culture:dravidian_norse
+			liege = { has_culture = culture:dravidian_norse }
+			top_liege = { has_culture = culture:dravidian_norse }
+		}
+		FROM = { title = b_girnar }
+		NOT = {
+			FROM = {
+				owner = {
+					OR = {
+						has_culture = culture:norse
+						liege = { has_culture = culture:norse }
+						top_liege = { has_culture = culture:norse }
+						has_culture = culture:indo_norse
+						liege = { has_culture = culture:indo_norse }
+						top_liege = { has_culture = culture:indo_norse }
+						has_culture = culture:dravidian_norse
+						liege = { has_culture = culture:dravidian_norse }
+						top_liege = { has_culture = culture:dravidian_norse }
+					}
+				}
+			}
+		}		
+	}
+	
+	major_trigger = {
+		NOT = {
+			has_culture = culture:norse
+			liege = { has_culture = culture:norse }
+			top_liege = { has_culture = culture:norse }
+			has_culture = culture:indo_norse
+			liege = { has_culture = culture:indo_norse }
+			top_liege = { has_culture = culture:indo_norse }
+			has_culture = culture:dravidian_norse
+			liege = { has_culture = culture:dravidian_norse }
+			top_liege = { has_culture = culture:dravidian_norse }
+		}
+	}
+	
+	immediate = {
+		set_global_flag = norse_sack_girnar
+		any_playable_ruler = {
+			limit = {
+				ai = no
+				OR = {
+					has_culture = culture:norse
+					liege = { has_culture = culture:norse }
+					top_liege = { has_culture = culture:norse }
+					has_culture = culture:indo_norse
+					liege = { has_culture = culture:indo_norse }
+					top_liege = { has_culture = culture:indo_norse }
+					has_culture = culture:dravidian_norse
+					liege = { has_culture = culture:dravidian_norse }
+					top_liege = { has_culture = culture:dravidian_norse }
+				}
+			}
+			narrative_event = { id = jarls_sacking.113 }
+		}
+	}
+	
+	option = {
+		name = "EVTOPTA_jarls_sacking.13"
+		trigger = { religion_group = indian_group }
+	}
+	option = {
+		name = "EVTOPTB60113"
+		trigger = { NOT = { religion_group = indian_group } }
+	}
+}
+
+# Norse sack bhillamala
+jarls_sacking.14 = {
+	title = "EVTNAME_jarls_sacking.14"
+	desc = "EVTDESC_jarls_sacking.14"
+	major = yes
+	
+	picture = "GFX_evt_mongols_pillage_oldgods"
+	border = "GFX_event_narrative_frame_war"
+	
+	
+	
+	trigger = {
+		NOT = { has_global_variable = norse_sack_bhillamala }
+		OR = {
+			has_culture = culture:norse
+			liege = { has_culture = culture:norse }
+			top_liege = { has_culture = culture:norse }
+			has_culture = culture:indo_norse
+			liege = { has_culture = culture:indo_norse }
+			top_liege = { has_culture = culture:indo_norse }
+			has_culture = culture:dravidian_norse
+			liege = { has_culture = culture:dravidian_norse }
+			top_liege = { has_culture = culture:dravidian_norse }
+		}
+		FROM = { title = b_bhillamala }
+		NOT = {
+			FROM = {
+				owner = {
+					OR = {
+						has_culture = culture:norse
+						liege = { has_culture = culture:norse }
+						top_liege = { has_culture = culture:norse }
+						has_culture = culture:indo_norse
+						liege = { has_culture = culture:indo_norse }
+						top_liege = { has_culture = culture:indo_norse }
+						has_culture = culture:dravidian_norse
+						liege = { has_culture = culture:dravidian_norse }
+						top_liege = { has_culture = culture:dravidian_norse }
+					}
+				}
+			}
+		}		
+	}
+	
+	major_trigger = {
+		NOT = {
+			has_culture = culture:norse
+			liege = { has_culture = culture:norse }
+			top_liege = { has_culture = culture:norse }
+			has_culture = culture:indo_norse
+			liege = { has_culture = culture:indo_norse }
+			top_liege = { has_culture = culture:indo_norse }
+			has_culture = culture:dravidian_norse
+			liege = { has_culture = culture:dravidian_norse }
+			top_liege = { has_culture = culture:dravidian_norse }
+		}
+	}
+	
+	immediate = {
+		set_global_flag = norse_sack_bhillamala
+		any_playable_ruler = {
+			limit = {
+				ai = no
+				OR = {
+					has_culture = culture:norse
+					liege = { has_culture = culture:norse }
+					top_liege = { has_culture = culture:norse }
+					has_culture = culture:indo_norse
+					liege = { has_culture = culture:indo_norse }
+					top_liege = { has_culture = culture:indo_norse }
+					has_culture = culture:dravidian_norse
+					liege = { has_culture = culture:dravidian_norse }
+					top_liege = { has_culture = culture:dravidian_norse }
+				}
+			}
+			narrative_event = { id = jarls_sacking.114 }
+		}
+	}
+	
+	option = {
+		name = "EVTOPTA_jarls_sacking.14"
+		trigger = { religion_group = indian_group }
+	}
+	option = {
+		name = "EVTOPTB60114"
+		trigger = { NOT = { religion_group = indian_group } }
+	}
+}
+
+# Norse sack Mecca
+jarls_sacking.15 = {
+	title = "EVTNAME_jarls_sacking.15"
+	desc = "EVTDESC_jarls_sacking.15"
+	major = yes
+	
+	picture = "GFX_evt_mecca_falls_soa"
+	border = "GFX_event_narrative_frame_war"
+	
+	
+	
+	trigger = {
+		NOT = { has_global_variable = mongols_sack_mecca }
+		OR = {
+			has_culture = culture:norse
+			liege = { has_culture = culture:norse }
+			top_liege = { has_culture = culture:norse }
+			has_culture = culture:indo_norse
+			liege = { has_culture = culture:indo_norse }
+			top_liege = { has_culture = culture:indo_norse }
+			has_culture = culture:dravidian_norse
+			liege = { has_culture = culture:dravidian_norse }
+			top_liege = { has_culture = culture:dravidian_norse }
+		}
+		FROM = { title = b_mecca }
+		NOT = {
+			FROM = {
+				owner = {
+					OR = {
+						has_culture = culture:norse
+						liege = { has_culture = culture:norse }
+						top_liege = { has_culture = culture:norse }
+						has_culture = culture:indo_norse
+						liege = { has_culture = culture:indo_norse }
+						top_liege = { has_culture = culture:indo_norse }
+						has_culture = culture:dravidian_norse
+						liege = { has_culture = culture:dravidian_norse }
+						top_liege = { has_culture = culture:dravidian_norse }
+					}
+				}
+			}
+		}		
+	}
+	
+	major_trigger = {
+		NOT = {
+			has_culture = culture:norse
+			liege = { has_culture = culture:norse }
+			top_liege = { has_culture = culture:norse }
+			has_culture = culture:indo_norse
+			liege = { has_culture = culture:indo_norse }
+			top_liege = { has_culture = culture:indo_norse }
+			has_culture = culture:dravidian_norse
+			liege = { has_culture = culture:dravidian_norse }
+			top_liege = { has_culture = culture:dravidian_norse }
+		}
+	}
+	
+	immediate = {
+		set_global_flag = mongols_sack_mecca
+		any_playable_ruler = {
+			limit = {
+				ai = no
+				OR = {
+					has_culture = culture:norse
+					liege = { has_culture = culture:norse }
+					top_liege = { has_culture = culture:norse }
+					has_culture = culture:indo_norse
+					liege = { has_culture = culture:indo_norse }
+					top_liege = { has_culture = culture:indo_norse }
+					has_culture = culture:dravidian_norse
+					liege = { has_culture = culture:dravidian_norse }
+					top_liege = { has_culture = culture:dravidian_norse }
+				}
+			}
+			narrative_event = { id = jarls_sacking.115 }
+		}
+	}
+	
+	option = {
+		name = "EVTOPTA_jarls_sacking.15"
+		trigger = { religion_group = muslim }
+	}
+	option = {
+		name = "EVTOPTB60115"
+		trigger = { NOT = { religion_group = muslim } }
+	}
+}
