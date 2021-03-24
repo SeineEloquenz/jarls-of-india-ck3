@@ -20,7 +20,7 @@ bm_rajas = {
 	
 		# Freja, wife, ID: 686503
 		character = {
-			name = "bookmark_rajas_alt_gudfrid"
+			name = "bookmark_rajas_alt_freja"
 			relation = "BOOKMARK_RELATION_WIFE"
 			dynasty = 1043500
 			type = female
