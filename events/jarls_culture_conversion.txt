@@ -13,7 +13,7 @@ jarls_conversion.2 = {
 	theme = culture_change
 
 	trigger = {
-		any_demesne_province = {
+		any_province = {
 			OR = {
 				region = world_india_bengal
 				region = world_india_rajastan
@@ -21,9 +21,6 @@ jarls_conversion.2 = {
 			}
 			has_culture_group = culture_group:indo_aryan_group
 			NOT = { has_culture = culture:indo_norse }
-			any_province_holding = {
-				NOT = { holding_type = nomad }
-			}
 		}
 		NOT = { government = chinese_imperial_government }
 	}
@@ -49,9 +46,6 @@ jarls_conversion.2 = {
 				}
 				has_culture_group = culture_group:indo_aryan_group
 				NOT = { has_culture = culture:indo_norse }
-				any_province_holding = {
-					NOT = { holding_type = nomad }
-				}
 			}
 			set_culture = culture:indo_norse
 		}
@@ -77,9 +71,6 @@ jarls_conversion.2 = {
 				}
 				has_culture_group = culture_group:indo_aryan_group
 				NOT = { has_culture = culture:indo_norse }
-				any_province_holding = {
-					NOT = { holding_type = nomad }
-				}
 			}
 			set_culture = culture:indo_norse
 		}
@@ -105,9 +96,6 @@ jarls_conversion.2 = {
 				}
 				has_culture_group = culture_group:indo_aryan_group
 				NOT = { has_culture = culture:indo_norse }
-				any_province_holding = {
-					NOT = { holding_type = nomad }
-				}
 			}
 			set_culture = culture:indo_norse
 		}
@@ -133,9 +121,6 @@ jarls_conversion.2 = {
 				}
 				has_culture_group = culture_group:indo_aryan_group
 				NOT = { has_culture = culture:indo_norse }
-				any_province_holding = {
-					NOT = { holding_type = nomad }
-				}
 			}
 			set_culture = culture:indo_norse
 		}
@@ -152,7 +137,7 @@ jarls_conversion.3 = {
 
 	trigger = {
 		#culture = culture:indo_norse
-		any_demesne_province = {
+		any_province = {
 			OR = {
 				region = world_india_bengal
 				region = world_india_rajastan
@@ -160,9 +145,6 @@ jarls_conversion.3 = {
 			}
 			has_culture_group = culture_group:indo_aryan_group
 			NOT = { has_culture = culture:indo_norse }
-			any_province_holding = {
-				NOT = { holding_type = nomad }
-			}
 		}
 	}
 
@@ -177,9 +159,6 @@ jarls_conversion.3 = {
 				}
 				has_culture_group = culture_group:indo_aryan_group
 				NOT = { has_culture = culture:indo_norse }
-				any_province_holding = {
-					NOT = { holding_type = nomad }
-				}
 			}
 			set_culture = culture:indo_norse
 		}
@@ -199,23 +178,21 @@ jarls_conversion.4 = {
 		#culture = culture:indo_norse
 		independent = no
 		top_liege = {
-			primary_title = {
-				OR = {
-					title = k_sindh
-					title = k_punjab
-					title = k_delhi
-					title = k_gujarat
-					title = k_rajputana
-					title = k_malwa
-					title = k_kosala
-					title = k_gondwana
-					title = k_bengal
-					title = k_kamarupa
-					title = k_orissa
-					title = k_bihar
-					title = k_maharastra
-					title = k_lanka
-				}
+			OR = {
+				has_title = k_sindh
+				has_title = k_punjab
+				has_title = k_delhi
+				has_title = k_gujarat
+				has_title = k_rajputana
+				has_title = k_malwa
+				has_title = k_kosala
+				has_title = k_gondwana
+				has_title = k_bengal
+				has_title = k_kamarupa
+				has_title = k_orissa
+				has_title = k_bihar
+				has_title = k_maharastra
+				has_title = k_lanka
 			}
 		}
 		any_courtier = {
@@ -261,23 +238,21 @@ jarls_conversion.5 = {
 		#culture = culture:indo_norse
 		independent = no
 		top_liege = {
-			primary_title = {
-				OR = {
-					title = k_sindh
-					title = k_punjab
-					title = k_delhi
-					title = k_gujarat
-					title = k_rajputana
-					title = k_malwa
-					title = k_kosala
-					title = k_gondwana
-					title = k_bengal
-					title = k_kamarupa
-					title = k_orissa
-					title = k_bihar
-					title = k_maharastra
-					title = k_lanka
-				}
+			OR = {
+				has_title = k_sindh
+				has_title = k_punjab
+				has_title = k_delhi
+				has_title = k_gujarat
+				has_title = k_rajputana
+				has_title = k_malwa
+				has_title = k_kosala
+				has_title = k_gondwana
+				has_title = k_bengal
+				has_title = k_kamarupa
+				has_title = k_orissa
+				has_title = k_bihar
+				has_title = k_maharastra
+				has_title = k_lanka
 			}
 		}
 		any_vassal = {
@@ -334,14 +309,11 @@ jarls_conversion.12 = {
 	theme = culture_change
 
 	trigger = {
-		any_demesne_province = {
+		any_province = {
 			region = world_india_deccan
 			NOT = { kingdom = { title = k_lanka } }
 			has_culture_group = culture_group:dravidian_group
 			NOT = { has_culture = culture:dravidian_norse }
-			any_province_holding = {
-				NOT = { holding_type = nomad }
-			}
 		}
 		NOT = { government = chinese_imperial_government }
 	}
@@ -364,9 +336,6 @@ jarls_conversion.12 = {
 				NOT = { kingdom = { title = k_lanka } }
 				has_culture_group = culture_group:dravidian_group
 				NOT = { has_culture = culture:dravidian_norse }
-				any_province_holding = {
-					NOT = { holding_type = nomad }
-				}
 			}
 			set_culture = culture:dravidian_norse
 		}
@@ -389,9 +358,6 @@ jarls_conversion.12 = {
 				NOT = { kingdom = { title = k_lanka } }
 				has_culture_group = culture_group:dravidian_group
 				NOT = { has_culture = culture:dravidian_norse }
-				any_province_holding = {
-					NOT = { holding_type = nomad }
-				}
 			}
 			set_culture = culture:dravidian_norse
 		}
@@ -414,9 +380,6 @@ jarls_conversion.12 = {
 				NOT = { kingdom = { title = k_lanka } }
 				has_culture_group = culture_group:dravidian_group
 				NOT = { has_culture = culture:dravidian_norse }
-				any_province_holding = {
-					NOT = { holding_type = nomad }
-				}
 			}
 			set_culture = culture:dravidian_norse
 		}
@@ -439,9 +402,6 @@ jarls_conversion.12 = {
 				NOT = { kingdom = { title = k_lanka } }
 				has_culture_group = culture_group:dravidian_group
 				NOT = { has_culture = culture:dravidian_norse }
-				any_province_holding = {
-					NOT = { holding_type = nomad }
-				}
 			}
 			set_culture = culture:dravidian_norse
 		}
@@ -457,14 +417,11 @@ jarls_conversion.13 = {
 	theme = culture_change
 
 	trigger = {
-		any_demesne_province = {
+		any_province = {
 			region = world_india_deccan
 			NOT = { kingdom = { title = k_lanka } }
 			has_culture_group = culture_group:dravidian_group
 			NOT = { has_culture = culture:dravidian_norse }
-			any_province_holding = {
-				NOT = { holding_type = nomad }
-			}
 		}
 	}
 
@@ -476,9 +433,6 @@ jarls_conversion.13 = {
 				NOT = { kingdom = { title = k_lanka } }
 				has_culture_group = culture_group:dravidian_group
 				NOT = { has_culture = culture:dravidian_norse }
-				any_province_holding = {
-					NOT = { holding_type = nomad }
-				}
 			}
 			set_culture = culture:dravidian_norse
 		}
@@ -499,10 +453,10 @@ jarls_conversion.14 = {
 		top_liege = {
 			primary_title = {
 				OR = {
-					title = k_karnata
-					title = k_tamilakam
-					title = k_andhra
-					title = k_telingana
+					has_title = k_karnata
+					has_title = k_tamilakam
+					has_title = k_andhra
+					has_title = k_telingana
 				}
 			}
 		}
@@ -550,10 +504,10 @@ jarls_conversion.15 = {
 		top_liege = {
 			primary_title = {
 				OR = {
-					title = k_karnata
-					title = k_tamilakam
-					title = k_andhra
-					title = k_telingana
+					has_title = k_karnata
+					has_title = k_tamilakam
+					has_title = k_andhra
+					has_title = k_telingana
 				}
 			}
 		}
