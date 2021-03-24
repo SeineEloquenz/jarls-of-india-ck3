@@ -1,4 +1,4 @@
-686500 = {
+﻿686500 = {
 	name="Ragnar"
 	dynasty=1043501 #Herse dynasty, in vanilla dies out 874.1.1
 	religion="norse_pagan"
@@ -19,7 +19,7 @@
 	848.1.1={
 		add_spouse=686503
 	}
-	867.1.2={
+	867.1.1={
 		prestige = 1000 # Rich and prestigious from raiding
 		wealth = 500
 		effect = {
@@ -27,7 +27,7 @@
 				if = {
 					limit = { has_fp1_dlc_trigger = yes }
 					spawn_army = {
-						name = event_troop_default_name
+						name = jarls_start_army_name
 						levies = 600
 						men_at_arms = {
 							type = huscarl
@@ -44,7 +44,7 @@
 				}
 				else = {
 					spawn_army = {
-						name = event_troop_default_name
+						name = jarls_start_army_name
 						levies = 600
 						men_at_arms = {
 							type = huscarl
