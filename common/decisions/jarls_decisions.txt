@@ -1,0 +1,305 @@
+﻿select_personal_deity_hindu_germanic_decision = {
+	picture = "gfx/interface/illustrations/decisions/decision_personal_religious.dds"
+
+	major = yes
+	desc = select_personal_deity_hindu_germanic_decision_desc
+	selection_tooltip = select_personal_deity_hindu_germanic_decision_tooltip
+
+	is_shown = {
+		# Following a valid religion & faith.
+		has_religion = religion:hindu_germanic_religion
+		faith = { has_doctrine_parameter = select_personal_god_active }
+	}
+
+	is_valid = {
+	}
+
+	is_valid_showing_failures_only = {
+		# Have to at _least_ not be in piety debt.
+		piety >= 0
+	}
+
+	cooldown = { years = 2 }
+
+	effect = {
+		# Show the possible options.
+		show_as_tooltip = {
+			random_list = {
+				desc = select_personal_deity_hindu_germanic_decision_tt
+				100 = {
+					show_chance = no
+					desc = select_personal_deity_hindu_germanic_decision.select_thor
+					add_character_modifier = bhakti_hindu_germanic_thor
+				}
+				100 = {
+					trigger = { is_vaguely_danish_bhakti_trigger = no }
+					show_chance = no
+					desc = select_personal_deity_hindu_germanic_decision.select_odin
+					add_character_modifier = bhakti_hindu_germanic_odin
+				}
+				100 = {
+					trigger = { is_vaguely_danish_bhakti_trigger = yes }
+					show_chance = no
+					desc = select_personal_deity_hindu_germanic_decision.select_freyr
+					add_character_modifier = bhakti_hindu_germanic_freyr
+				}
+				100 = {
+					show_chance = no
+					desc = select_personal_deity_hindu_germanic_decision.select_freyja
+					add_character_modifier = bhakti_hindu_germanic_freyja
+				}
+				100 = {
+					show_chance = no
+					desc = select_personal_deity_hindu_germanic_decision.select_njord
+					add_character_modifier = bhakti_hindu_germanic_njord
+				}
+			}
+		}
+		# And the actual effect.
+		trigger_event = jarls_religion.100
+	}
+
+	ai_check_interval = 96
+	
+	ai_potential = {
+		piety >= minor_piety_value
+		NOR = {
+			has_character_modifier = bhakti_hindu_germanic_thor
+			has_character_modifier = bhakti_hindu_germanic_odin
+			has_character_modifier = bhakti_hindu_germanic_freyr
+			has_character_modifier = bhakti_hindu_germanic_freyja
+			has_character_modifier = bhakti_hindu_germanic_njord
+		}
+	}
+
+	ai_will_do = {
+		base = 100
+	}
+}
+
+found_hindu_germanic_religion = {
+	picture = "gfx/interface/illustrations/decisions/decision_personal_religious.dds"
+	major = yes
+	
+	is_shown = {
+		NOT = { has_global_variable = hindu_germanic_converts }
+		is_independent_ruler = yes
+		has_religion = religion:germanic_religion
+		NOT = { has_government = theocracy_government }
+		#any_realm_province = {
+		#	has_religion = religion:hinduism_religion
+		#}
+	}
+
+	is_valid = {
+		is_adult = yes
+		NOT = { has_trait = zealous }
+		prestige >= 500
+		OR = {
+			primary_title = title:k_sindh
+			primary_title = title:k_punjab
+			primary_title = title:k_delhi
+			primary_title = title:k_gujarat
+			primary_title = title:k_rajputana
+			primary_title = title:k_malwa
+			primary_title = title:k_kosala
+			primary_title = title:k_himalaya
+			primary_title = title:k_kashmir
+			primary_title = title:k_bengal
+			primary_title = title:k_kamarupa
+			primary_title = title:k_orissa
+			primary_title = title:k_gondwana
+			primary_title = title:k_bihar
+			primary_title = title:k_pagan
+			primary_title = title:k_maharastra
+			primary_title = title:k_karnata
+			primary_title = title:k_tamilakam
+			primary_title = title:k_andhra
+			primary_title = title:k_telingana
+			primary_title = title:k_lanka
+			primary_title = title:e_rajastan
+			primary_title = title:e_bengal
+			primary_title = title:e_deccan
+			primary_title = title:e_india
+		}
+	}
+	effect = {
+		add_prestige = -500
+		add_piety = 100
+		trigger_event = jarls_religion.1
+	}
+
+	ai_check_interval = 96
+
+	ai_will_do = {
+		factor = 1
+
+		modifier = { # Slow down
+			factor = 0.1
+		}
+		modifier = { # Don't start rocking the boat if all your provinces are under foreign religious influence
+			factor = 0
+			NOT = {
+				#any_realm_province = {
+				#	has_religion = religion:hinduism_religion
+				#}
+			}
+		}
+		modifier = { # More likely to do it sooner
+			factor = 3
+			has_trait = cynical
+		}
+		modifier = { # Sometimes you really need to hurry up
+			factor = 5
+			highest_held_title_tier	> tier_duchy
+			number_of_powerful_vassals > 1
+		}
+	}
+}
+
+convert_to_hindu_germanic = {
+	major = yes
+	picture = "gfx/interface/illustrations/decisions/decision_personal_religious.dds"
+	
+	is_shown = {
+		is_ai = no
+		has_religion = religion:hinduism_religion
+		NOT = { has_religion = religion:hindu_germanic_religion }
+		NOT = { has_government = theocracy_government }
+		#make sure it is enabled
+		has_global_variable = hindu_germanic_converts
+	}
+
+	is_valid = {
+		is_adult = yes
+		prestige = 500
+		NOT = { has_trait = zealous }
+		#any_realm_province = {
+		#	has_religion = religion:hindu_germanic_religion
+		#}
+	}
+	effect = {
+		set_character_faith_with_conversion	 = faith:hindu_germanic
+		add_character_flag = india_converted
+		add_prestige = -500
+		add_piety = 100
+	}
+
+	ai_check_interval = 96
+
+	ai_will_do = {
+		factor = 1
+
+		modifier = { # Slow down
+			factor = 0.1
+		}
+		modifier = { # More likely to do it sooner
+			factor = 3
+			has_trait = cynical
+		}
+		modifier = { # Sometimes you really need to hurry up
+			factor = 5
+			highest_held_title_tier	> tier_duchy
+			number_of_powerful_vassals > 1
+		}
+	}
+}
+
+become_emperor_of_india = {
+	major = yes
+
+	cost = {
+		gold = 500
+	}
+	
+	is_shown = {
+		is_independent_ruler = yes
+		has_religion = religion:hindu_germanic_religion
+		primary_title = {
+			highest_held_title_tier > tier_duchy
+		}
+		capital_province = {
+			geographical_region = world_india
+		}
+		title:e_india = {
+			is_title_created = no
+		}
+	}
+
+	is_valid = {
+		is_independent_ruler = yes
+		is_adult = yes
+		
+		NOT = {	has_trait = incapable }
+		war = no
+		prestige = 1000
+		gold = 500
+		OR = {
+			has_title = title:e_rajastan
+			title:e_rajastan = { is_title_created = no }
+		}
+		OR = {
+			has_title = title:e_bengal
+			title:e_bengal = { is_title_created = no }
+		}
+		OR = {
+			has_title = title:e_deccan
+			title:e_deccan = { is_title_created = no }
+		}
+		completely_controls_region = world_india
+	}
+	
+	effect = {
+		add_prestige = 500
+		#piety = 1000
+		save_scope_as = holder
+		primary_title = {
+			title:e_india = {
+				change_title_holder = {
+					holder = scope:holder
+				}
+				copy_title_history = PREV
+			}
+		}
+		hidden_effect = {
+			set_primary_title_to = title:e_india
+		}
+		if = {
+			limit = {
+				OR = {
+					has_title = title:e_rajastan
+					title:e_rajastan = { is_title_created = no }
+				}
+			}
+			destroy_title = title:e_rajastan
+		}
+		if = {
+			limit = {
+				OR = {
+					has_title = title:e_bengal
+					title:e_bengal = { is_title_created = no }
+				}
+			}
+			destroy_title = title:e_bengal
+		}
+		if = {
+			limit = {
+				OR = {
+					has_title = title:e_deccan
+					title:e_deccan = { is_title_created = no }
+				}
+			}
+			destroy_title = title:e_deccan
+		}
+		if = {
+			limit = { has_any_nickname = no }
+			give_nickname = nick_the_magnificent
+		}
+	}
+
+	ai_check_interval = 96
+	
+	ai_will_do = {
+		factor = 1
+	}
+}

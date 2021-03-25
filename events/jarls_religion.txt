@@ -66,7 +66,7 @@ jarls_religion.100 = {
 }
 
 
-#Convert to Hindu-Germanic, based on mongols
+#Convert to Hindu-Germanic
 jarls_religion.1 = {
 	title = EVTNAME_jarls_religion.1n
 	desc = EVTDESC_jarls_religion.1n
@@ -74,66 +74,12 @@ jarls_religion.1 = {
 	theme = faith
 	
 	trigger = {
-		NOT = { has_global_variable = hindu_germanic_converts }
-
-		is_independent_ruler = yes
-		is_incapable = no
-		age >= 16
-		
-		primary_title = {
-			holder = {
-				NOT = { has_trait = zealous }
-				OR = {
-					has_religion = religion:germanic_religion
-					has_religion = religion:hindu_germanic_religion
-				}
-				OR = {
-					has_culture = culture:norse
-					has_culture = culture:indo_norse
-					has_culture = culture:dravidian_norse
-				}
-			}
-		}
-
-		
-		OR = {
-			primary_title = title:k_sindh
-			primary_title = title:k_punjab
-			primary_title = title:k_delhi
-			primary_title = title:k_gujarat
-			primary_title = title:k_rajputana
-			primary_title = title:k_malwa
-			primary_title = title:k_kosala
-			primary_title = title:k_himalaya
-			primary_title = title:k_kashmir
-			primary_title = title:k_bengal
-			primary_title = title:k_kamarupa
-			primary_title = title:k_orissa
-			primary_title = title:k_gondwana
-			primary_title = title:k_bihar
-			primary_title = title:k_pagan
-			primary_title = title:k_maharastra
-			primary_title = title:k_karnata
-			primary_title = title:k_tamilakam
-			primary_title = title:k_andhra
-			primary_title = title:k_telingana
-			primary_title = title:k_lanka
-			primary_title = title:e_rajastan
-			primary_title = title:e_bengal
-			primary_title = title:e_deccan
-			primary_title = title:e_india
-		}
-
-		any_realm_province = {
-			#has_religion = religion:hindu
-			religion = religion:hinduism_religion
-		}
 	}
 	
 	immediate = {
 		set_global_variable = {
 			name = hindu_germanic_converts
-			value = true
+			value = yes
 		}
 		add_character_flag = {
 			flag = converts_hindu_germanic
@@ -143,8 +89,5 @@ jarls_religion.1 = {
 	option = {
 		name = "EVTOPTA_jarls_religion.1"
 		set_character_faith_with_conversion = faith:hindu_germanic
-	}
-	option = {
-		name = "EVTOPTA_jarls_religion.2"
 	}
 }
