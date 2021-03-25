@@ -215,9 +215,7 @@ become_emperor_of_india = {
 	is_shown = {
 		is_independent_ruler = yes
 		has_religion = religion:hindu_germanic_religion
-		primary_title = {
-			highest_held_title_tier > tier_duchy
-		}
+		highest_held_title_tier > tier_duchy
 		capital_province = {
 			geographical_region = world_india
 		}
