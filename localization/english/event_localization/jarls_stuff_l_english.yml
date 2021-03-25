@@ -1,8 +1,4 @@
 ﻿l_english:
- BM_RAJAS:0 "Old Gods and New Rajas"
- BM_RAJAS_DESC:0 "I, Ragnar Herse, have done what nobody dared! Leading my huscarls boldly for many years in the Mediterranean, I stole the gold of the Franks, the wheat of the Arabs and the holy icons of the Italians, wrought in jewels and precious metals. Eventually I heard of a land made of silk and gems, and I could not resist the idea of raiding there. I gathered my family and troops and set out to that far land. Now, after many battles, I rule a group of islands called the Maldives. From here raiding the land will be easy. Indians are no match for our warriors. Their women will be ours, their sons will lament their fathers and their riches will fill our boats. A great legacy by any measure! But when I look at my son Styrkar I ask myself: Why stop there? Why be content with pillaging the wealth of the land when we could take that very land for ourselves?"
- indo_norse:0 "Indo-Norse"
- dravidian_norse:0 "Dravidian-Norse"
  EVTNAME_jarls_coronation.1:0 "The New Scandinavia"
  EVTDESC_jarls_coronation.1:0 "It has been century upon century since Great India was last unified under a single banner. Not even Alexander the Great could fully conquer it, but we Northmen have accomplished what he could not. I, [Root.GetTitledFirstName], crown myself Emperor of all India, in the name Odin, in the name of Thor and in the name of Freyr."\n\nWhere they were once mere raiders, the Vikings have elevated themselves to the absolute rulers of the faraway subcontinent. One of their own, [Root.GetTitledFirstName], has been declared Emperor of India, a title not truly held since Ashoka the Great. [This.Religion.GetRandomGodNameCap] help us all."
  EVTOPTA_jarls_coronation.1:0 "For Odin! For Thor! For Freyr!"
