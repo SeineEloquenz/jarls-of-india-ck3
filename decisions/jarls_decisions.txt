@@ -1,11 +1,12 @@
 ﻿select_personal_deity_hindu_germanic_decision = {
+	picture = "gfx/interface/illustrations/decisions/decision_personal_religious.dds"
 
 	desc = select_personal_deity_hindu_germanic_decision_desc
 	selection_tooltip = select_personal_deity_hindu_germanic_decision_tooltip
 
 	is_shown = {
 		# Following a valid religion & faith.
-		has_religion = religion:religion:hindu_germanic_religion
+		has_religion = religion:hindu_germanic_religion
 		faith = { has_doctrine_parameter = select_personal_god_active }
 	}
 
@@ -150,7 +151,7 @@ convert_to_hindu_germanic = {
 						is_independent_ruler = yes
 						NOT = {
 							any_vassal = {
-								NOT = { has_religion = religion:hindu_germanic }
+								NOT = { has_religion = religion:hindu_germanic_religion }
 							}
 						}
 						NOT = {
@@ -163,7 +164,7 @@ convert_to_hindu_germanic = {
 						}
 					}
 					AND = {
-						liege = { has_religion = religion:hindu_germanic }
+						liege = { has_religion = religion:hindu_germanic_religion }
 						opinion = {
 							who = liege
 							value = 25
