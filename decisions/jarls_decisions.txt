@@ -1,12 +1,11 @@
 ﻿select_personal_deity_hindu_germanic_decision = {
-	picture = "gfx/interface/illustrations/decisions/fp1_decisons_hold_bolt.dds"
 
 	desc = select_personal_deity_hindu_germanic_decision_desc
 	selection_tooltip = select_personal_deity_hindu_germanic_decision_tooltip
 
 	is_shown = {
 		# Following a valid religion & faith.
-		religion = religion:hindu_germanic_religion
+		has_religion = religion:religion:hindu_germanic_religion
 		faith = { has_doctrine_parameter = select_personal_god_active }
 	}
 
@@ -86,7 +85,7 @@ convert_to_hindu_germanic = {
 	potential = {
 		ai = no
 		is_playable = yes
-		religion_family = rf_eastern
+		has_religion = religion:hinduism_religion
 		NOT = { religion = hindu_germanic_religion }
 		is_theocracy = no
 		#make sure it is enabled
@@ -95,15 +94,12 @@ convert_to_hindu_germanic = {
 
 	allow = {
 		is_adult = yes
-		prestige = 500
-		NOT = { trait = zealous }
+		add_prestige = 500
+		NOT = { has_trait = zealous }
 		any_realm_province = {
-			religion = hindu_germanic_religion
+			has_religion = religion:hindu_germanic_religion
 		}
-		custom_tooltip = {
-			text = indian_has_not_converted
-			NOT = { has_character_flag = india_converted }
-		}
+		custom_tooltip = indian_has_not_converted
 	}
 	effect = {
 		if = {
@@ -112,17 +108,17 @@ convert_to_hindu_germanic = {
 				modifier = ruler_converted_from
 			}
 		}
-		religion = hindu_germanic
+		has_religion = religion:hindu_germanic
 		if = {
 			limit = { higher_tier_than = BARON }
-			hidden_tooltip = {
+			hidden_effect = {
 				religion_authority = {
 					modifier = ruler_converted_to
 				}
 			}
 		}
 		set_character_flag = india_converted
-		prestige = -500
+		add_prestige = -500
 		piety = 100
 	}
 	revoke_allowed = {
@@ -136,13 +132,13 @@ convert_to_hindu_germanic = {
 		}
 		modifier = { # Don't convert away from liege's religion
 			factor = 0
-			liege = { religion = ROOT }
+			liege = { has_religion = religion:ROOT }
 		}
 		modifier = { # Don't start rocking the boat if all your provinces are under foreign religious influence
 			factor = 0
 			NOT = {
 				any_realm_province = {
-					religion_group = indian_group
+					has_religion = religion:hinduism_religion
 				}
 			}
 		}
@@ -151,10 +147,10 @@ convert_to_hindu_germanic = {
 			NOT = {
 				OR = {
 					AND = {
-						independent = yes
+						is_independent_ruler = yes
 						NOT = {
 							any_vassal = {
-								NOT = { religion = hindu_germanic }
+								NOT = { has_religion = religion:hindu_germanic }
 							}
 						}
 						NOT = {
@@ -167,7 +163,7 @@ convert_to_hindu_germanic = {
 						}
 					}
 					AND = {
-						liege = { religion = hindu_germanic }
+						liege = { has_religion = religion:hindu_germanic }
 						opinion = {
 							who = liege
 							value = 25
@@ -178,7 +174,7 @@ convert_to_hindu_germanic = {
 		}
 		modifier = { # More likely to do it sooner
 			factor = 3
-			trait = cynical
+			has_trait = cynical
 		}
 		modifier = { # Sometimes you really need to hurry up
 			factor = 5
@@ -196,15 +192,15 @@ become_emperor_of_india = {
 		is_playable = yes
 		is_feudal = yes
 		#OR = {
-		#	religion = norse_pagan
-		#	religion = norse_pagan_reformed
+		#	has_religion = religion:norse_pagan
+		#	has_religion = religion:norse_pagan_reformed
 		#}
 		NOT = { has_dharmic_religion_trigger = yes }
 		primary_title = {
 			higher_tier_than = DUKE
 		}
 		capital_scope = {
-			region = world_india
+			geographical_region = world_india
 		}
 		e_india = {
 			has_holder = no
@@ -212,23 +208,23 @@ become_emperor_of_india = {
 	}
 
 	allow = {
-		independent = yes
+		is_independent_ruler = yes
 		is_adult = yes
 		
-		NOT = {	trait = incapable }
+		NOT = {	has_trait = incapable }
 		war = no
-		prestige = 1000
+		add_prestige = 1000
 		wealth = 500
 		OR = {
-			has_title = e_rajastan
+			has_title = title:e_rajastan
 			e_rajastan = { has_holder = no }
 		}
 		OR = {
-			has_title = e_bengal
+			has_title = title:e_bengal
 			e_bengal = { has_holder = no }
 		}
 		OR = {
-			has_title = e_deccan
+			has_title = title:e_deccan
 			e_deccan = { has_holder = no }
 		}
 		completely_controls_region = world_india
@@ -236,9 +232,9 @@ become_emperor_of_india = {
 	
 	effect = {
 		wealth = -500
-		prestige = 500
+		add_prestige = 500
 		#piety = 1000
-		hidden_tooltip = {
+		hidden_effect = {
 			any_title = {
 				limit = {
 					tier = KING
@@ -254,11 +250,11 @@ become_emperor_of_india = {
 				copy_title_history = PREV
 			}
 		}
-		hidden_tooltip = { e_india = { make_primary_title = yes } }
+		hidden_effect = { e_india = { make_primary_title = yes } }
 		if = {
 			limit = {
 				OR = {
-					has_title = e_rajastan
+					has_title = title:e_rajastan
 					e_rajastan = { has_holder = no }
 				}
 			}
@@ -268,7 +264,7 @@ become_emperor_of_india = {
 		if = {
 			limit = {
 				OR = {
-					has_title = e_bengal
+					has_title = title:e_bengal
 					e_bengal = { has_holder = no }
 				}
 			}
@@ -278,7 +274,7 @@ become_emperor_of_india = {
 		if = {
 			limit = {
 				OR = {
-					has_title = e_deccan
+					has_title = title:e_deccan
 					e_deccan = { has_holder = no }
 				}
 			}

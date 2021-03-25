@@ -71,8 +71,7 @@ jarls_religion.1 = {
 	title = EVTNAME_jarls_religion.1n
 	desc = EVTDESC_jarls_religion.1n
 	
-	picture = "GFX_evt_viking_funeral_oldgods"
-	border = "GFX_event_narrative_frame_religion"
+	theme = faith
 	
 	trigger = {
 		NOT = { has_global_variable = hindu_germanic_converts }
@@ -82,38 +81,11 @@ jarls_religion.1 = {
 		age >= 16
 		
 		primary_title = {
-			OR = {
-				title = k_sindh
-				title = k_punjab
-				title = k_delhi
-				title = k_gujarat
-				title = k_rajputana
-				title = k_malwa
-				title = k_kosala
-				title = k_himalaya
-				title = k_kashmir
-				title = k_bengal
-				title = k_kamarupa
-				title = k_orissa
-				title = k_gondwana
-				title = k_bihar
-				title = k_pagan
-				title = k_maharastra
-				title = k_karnata
-				title = k_tamilakam
-				title = k_andhra
-				title = k_telingana
-				title = k_lanka
-				title = e_rajastan
-				title = e_bengal
-				title = e_deccan
-				title = e_india
-			}
-			holder_scope = {
-				NOT = { trait = zealous }
+			holder = {
+				NOT = { has_trait = zealous }
 				OR = {
-					religion = germanic_religion
-					religion = hindu_germanic_religion
+					has_religion = religion:germanic_religion
+					has_religion = religion:hindu_germanic_religion
 				}
 				OR = {
 					has_culture = culture:norse
@@ -122,18 +94,44 @@ jarls_religion.1 = {
 				}
 			}
 		}
+
+		
+		OR = {
+			primary_title = title:k_sindh
+			primary_title = title:k_punjab
+			primary_title = title:k_delhi
+			primary_title = title:k_gujarat
+			primary_title = title:k_rajputana
+			primary_title = title:k_malwa
+			primary_title = title:k_kosala
+			primary_title = title:k_himalaya
+			primary_title = title:k_kashmir
+			primary_title = title:k_bengal
+			primary_title = title:k_kamarupa
+			primary_title = title:k_orissa
+			primary_title = title:k_gondwana
+			primary_title = title:k_bihar
+			primary_title = title:k_pagan
+			primary_title = title:k_maharastra
+			primary_title = title:k_karnata
+			primary_title = title:k_tamilakam
+			primary_title = title:k_andhra
+			primary_title = title:k_telingana
+			primary_title = title:k_lanka
+			primary_title = title:e_rajastan
+			primary_title = title:e_bengal
+			primary_title = title:e_deccan
+			primary_title = title:e_india
+		}
+
 		any_realm_province = {
-			#religion = hindu
-			religion_family = rf_eastern
+			#has_religion = religion:hindu
+			religion = religion:hinduism_religion
 		}
 	}
 	
 	immediate = {
-		trigger_event = {
-			on_action = jarls_hindu_germanic_converts
-			months = {}
-		}
-		set_variable = {
+		set_global_variable = {
 			name = hindu_germanic_converts
 			value = true
 		}
@@ -144,44 +142,9 @@ jarls_religion.1 = {
 
 	option = {
 		name = "EVTOPTA_jarls_religion.1"
-		trigger = {
-			has_character_flag = hindu_germanic_converts
-		}
-		religion = hindu_germanic_religion
-		capital_scope = {
-			religion = hindu_germanic_religion
-		}
-		
-		#subjects change religion
-		custom_tooltip = {
-			text = jarls_religion.vassalreligions
-			hidden_tooltip = {
-				any_realm_character = {
-					limit = { 
-						OR = {
-							religion = norse_pagan
-							religion = norse_pagan_reformed
-							religion = hindu
-						}
-					}
-					religion = hindu_germanic
-				}
-			}
-		}
+		set_character_faith_with_conversion = faith:hindu_germanic
 	}
 	option = {
-		name = "EXCELLENT"
-		trigger = {
-			religion_family = rf_eastern
-			NOT = { religion = hindu_germanic_religion }
-			NOT = { has_character_flag = hindu_germanic_converts }
-		}
-	}
-	option = {
-		name = "EVTOPTD60010"
-		trigger = {
-			NOT = { religion_family = rf_eastern }
-			NOT = { has_character_flag = hindu_germanic_converts }
-		}
+		name = "EVTOPTA_jarls_religion.2"
 	}
 }
