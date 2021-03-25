@@ -139,7 +139,7 @@ jarls_conversion.4 = {
 			}
 			set_culture = culture:indo_norse
 			hidden_effect = {
-				character_event = { id = jarls_conversion.6 days = 3 }
+				trigger_event = { id = jarls_conversion.6 days = 3 }
 			}
 		}
 	}
@@ -198,7 +198,7 @@ jarls_conversion.5 = {
 			}
 			set_culture = culture:indo_norse
 			hidden_effect = {
-				character_event = { id = jarls_conversion.6 days = 3 }
+				trigger_event = { id = jarls_conversion.6 days = 3 }
 			}
 		}
 	}
@@ -327,7 +327,7 @@ jarls_conversion.14 = {
 			}
 			set_culture = culture:dravidian_norse
 			hidden_effect = {
-				character_event = { id = jarls_conversion.16 days = 3 }
+				trigger_event = { id = jarls_conversion.16 days = 3 }
 			}
 		}
 	}
@@ -375,7 +375,7 @@ jarls_conversion.15 = {
 			}
 			set_culture = culture:dravidian_norse
 			hidden_effect = {
-				character_event = { id = jarls_conversion.16 days = 3 }
+				trigger_event = { id = jarls_conversion.16 days = 3 }
 			}
 		}
 	}
