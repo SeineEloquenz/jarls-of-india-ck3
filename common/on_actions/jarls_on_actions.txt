@@ -1,26 +1,4 @@
 ﻿
-# Fires for the owner of the winning unit (ROOT). The taken Holding title is in FROM.
-on_siege_completion = {
-	events = {
-		jarls_sacking.0 # Norse sack krishnajanmabhoomi
-		jarls_sacking.1 # Norse sack dwarakadheesh
-		jarls_sacking.2 # Norse sack mahakaleshwar
-		jarls_sacking.3 # Norse sack ram_janmabhoomi
-		jarls_sacking.4 # Norse sack varanasi
-		jarls_sacking.5 # Norse sack sarnath
-		jarls_sacking.6 # Norse sack sanchi
-		jarls_sacking.7 # Norse sack gaya
-		jarls_sacking.8 # Norse sack ellora
-		jarls_sacking.9 # Norse sack oddiyana
-		jarls_sacking.10 # Norse sack rajrappa
-		jarls_sacking.11 # Norse sack shravanabelagola
-		jarls_sacking.12 # Norse sack vadnagar
-		jarls_sacking.13 # Norse sack girnar
-		jarls_sacking.14 # Norse sack bhillamala
-		jarls_sacking.15 # Norse sack mecca only if Mongols havent
-	}
-}
-
 jarls_culture_conversion = {
 	events = {
 		jarls_conversion.2
@@ -36,11 +14,5 @@ jarls_culture_liege_converts = {
 		jarls_conversion.13
 		jarls_conversion.14
 		jarls_conversion.15
-	}
-}
-
-jarls_hindu_germanic_converts = {
-	events = {
-		jarls_religion.1
 	}
 }
