@@ -25,6 +25,7 @@
 	dravidian_norse = {
 		graphical_cultures = {
 			norse_coa_gfx
+			indian_clothing_gfx
 			fp1_norse_clothing_gfx
 		}
 		
