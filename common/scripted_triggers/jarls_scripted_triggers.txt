@@ -1,4 +1,4 @@
-
+﻿
 fp1_can_raise_stele_trigger = {
 	OR = {
 		culture_group = culture_group:north_germanic_group
