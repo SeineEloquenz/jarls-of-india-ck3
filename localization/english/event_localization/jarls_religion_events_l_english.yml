@@ -1,4 +1,11 @@
 ﻿l_english:
+ jarls_religion.100.t:0 "Your Bhakti"
+ jarls_religion.100.desc:0 "I can choose my Bhakti. Which God should guide me?"
+ jarls_religion.100.odin:0 "Odhin"
+ jarls_religion.100.thor:0 "Thor"
+ jarls_religion.100.freyr:0 "Freyr"
+ jarls_religion.100.freyja:0 "Freyja"
+ jarls_religion.100.njord:0 "Njord"
  convert_to_spouse_hindu_germanic:0 "Convert to Hindu-Germanic"
  convert_to_spouse_hindu_germanic_desc:0 "The pillow talk of a spouse or concubine can be very persuasive. The syncretic Hindu-Germanic tradition with its many powerful gods is surely the the way forward..."
  convert_to_hindu_germanic:0 "Convert to Hindu-Germanic"
