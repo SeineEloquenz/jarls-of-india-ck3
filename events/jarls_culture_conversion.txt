@@ -8,12 +8,6 @@ jarls_conversion.01 = {
 	left_portrait = scope:indo_norse_founder
 
 	immediate = {
-		show_as_tooltip = {
-			custom_tooltip = global_culture.custom.merge_culture
-			culture:indo_norse = {
-				get_all_innovations_from = culture:bengali
-			}
-		}
 	}
 
 	option = {
@@ -29,12 +23,6 @@ jarls_conversion.02 = {
 	left_portrait = scope:indo_norse_founder
 
 	immediate = {
-		show_as_tooltip = {
-			custom_tooltip = global_culture.custom.merge_culture
-			culture:indo_norse = {
-				get_all_innovations_from = culture:bengali
-			}
-		}
 	}
 
 	option = {
@@ -50,12 +38,6 @@ jarls_conversion.11 = {
 	left_portrait = scope:dravidian_norse_founder
 
 	immediate = {
-		show_as_tooltip = {
-			custom_tooltip = global_culture.custom.merge_culture
-			culture:dravidian_norse = {
-				get_all_innovations_from = culture:tamil
-			}
-		}
 	}
 
 	option = {
@@ -71,12 +53,6 @@ jarls_conversion.12 = {
 	left_portrait = scope:dravidian_norse_founder
 
 	immediate = {
-		show_as_tooltip = {
-			custom_tooltip = global_culture.custom.merge_culture
-			culture:dravidian_norse = {
-				get_all_innovations_from = culture:tamil
-			}
-		}
 	}
 
 	option = {
