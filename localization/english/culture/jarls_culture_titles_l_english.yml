@@ -17,25 +17,6 @@
  emperor_theocracy_male_hindu_germanic_religion:0 "Kjárrgoði"
  emperor_theocracy_female_hindu_germanic_religion:0 "Kjárrgoði"
 
-# Dravidian-Norse
- baron_feudal_male_dravidian_norse:0 "Þegn-pati"
- baron_feudal_female_dravidian_norse:0 "Þegn-patni"
- barony_feudal_dravidian_norse:0 "Dama"
- count_feudal_male_dravidian_norse:0 "Lendermadhar"
- count_feudal_female_dravidian_norse:0 "Mervuru"
- county_feudal_dravidian_norse:0 "Thikana"
- duke_feudal_male_dravidian_norse:0 "Yaril"
- duke_feudal_female_dravidian_norse:0 "Harvuru"
- duchy_feudal_dravidian_norse:0 "Raj"
- king_feudal_male_dravidian_norse:0 "Konungar"
- king_feudal_female_dravidian_norse:0 "Drotnin"
- emperor_feudal_male_dravidian_norse:0 "Miklakonungar"
- emperor_feudal_female_dravidian_norse:0 "Mikladrotnin"
- prince_male_dravidian_norse:0 "Rajkumar"
- prince_female_dravidian_norse:0 "Rajkumari"
- prince_male_dravidian_norse_empire:0 "Rajkumar"
- prince_female_dravidian_norse_empire:0 "Rajkumari"
-
 # Indo-Norse
  baron_feudal_male_indo_norse:0 "Þegn-pati"
  baron_feudal_female_indo_norse:0 "Þegn-patni"
