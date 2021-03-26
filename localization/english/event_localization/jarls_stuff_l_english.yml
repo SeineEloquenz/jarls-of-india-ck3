@@ -7,6 +7,8 @@
  EVTOPTA_jarls_coronation.1:0 "For Odin! For Thor! For Freyr!"
  become_emperor_of_india:0 "Become High Emperor of India"
  become_emperor_of_india_desc:0 "It has been long since India has been united, but only one group of men possess the strength to do it once more: the Norse! If we can secure a strong enough position, the Rajas will have no choice but to recognize a Norseman as High Emperor of India."
+ form_hindugaard.tt:0 "India will be known as Hindugaard"
+ e_india_hindugaard:0 "Hindugaard"
  EVTNAMEmp.0:0 "Rise of the Indo-Norse:0 "The Rise of the Indo-Norse:0 "The Rise of the Indo-Norse:0 ":0 "The Rise of the Indo-Norse:0 ":0 ":0 ":0 ":0 ":0 ":0 ":0 ":0 "
  EVTDESCmp.0:0 "Long ago our ancestors arrived in this strange land of six-armed gods to conquer and pillage in the name of Odin. Children nowadays have only heard of Scandinavia in half-forgotten stories. We've adopted so much of the native culture as our own that we must ask ourselves: Are we Norse, or something...different?"
  EVTOPTA_MP_0:0 "If only these Indians knew how to make a good runestone."

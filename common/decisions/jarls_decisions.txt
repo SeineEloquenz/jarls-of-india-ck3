@@ -541,10 +541,15 @@ become_emperor_of_india = {
 			}
 		}
 		resolve_title_and_vassal_change = scope:change
+		title:e_india = {
+			hidden_effect = {
+				set_title_name = e_india_hindugaard
+			}
+			custom_tooltip = form_hindugaard.tt
+		}
 		
 		hidden_effect = {
 			set_primary_title_to = title:e_india
-
 			title:k_sindh = { set_de_jure_liege_title = title:e_india }
 			title:k_punjab = { set_de_jure_liege_title = title:e_india }
 			title:k_delhi = { set_de_jure_liege_title = title:e_india }
