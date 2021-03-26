@@ -485,6 +485,7 @@ establish_dravidian_norse_culture_decision = {
 }
 
 become_emperor_of_india = {
+	picture = "gfx/interface/illustrations/decisions/decision_dynasty_house.dds"
 	major = yes
 
 	cost = {
