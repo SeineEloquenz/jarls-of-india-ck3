@@ -100,13 +100,25 @@ found_hindu_germanic_religion = {
 	is_valid = {
 		is_adult = yes
 		NOT = { has_trait = zealous }
-		prestige >= 500
+		piety_level >= high_piety_level
 		holds_indian_king_or_higher_title = yes
 	}
 	effect = {
 		add_prestige = -500
 		add_piety = 100
 		trigger_event = jarls_religion.1
+		hidden_effect = {
+			religion:hinduism_religion = {
+				every_faith = {
+					add_doctrine = special_doctrine_hindu_likes_hindu_germanic
+				}
+			}
+			religion:germanic_religion = {
+				every_faith = {
+					add_doctrine = special_doctrine_norse_likes_hindu_germanic
+				}
+			}
+		}
 	}
 
 	ai_check_interval = 96
@@ -216,6 +228,7 @@ establish_indo_norse_culture_decision = {
 
 	is_valid = {
 		culture = culture:norse
+		prestige_level >= high_prestige_level
 		holds_indian_king_or_higher_title = yes
 	}
 
@@ -357,6 +370,7 @@ establish_dravidian_norse_culture_decision = {
 
 	is_valid = {
 		culture = culture:norse
+		prestige_level >= high_prestige_level
 		holds_indian_king_or_higher_title = yes
 	}
 

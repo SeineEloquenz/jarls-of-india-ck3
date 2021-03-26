@@ -1,0 +1,42 @@
+﻿hindu_likes_hindu_germanic = {
+	group = "special"
+	
+	is_available_on_create = {
+		has_doctrine = special_doctrine_hindu_likes_hindu_germanic
+	}
+
+	special_doctrine_hindu_likes_hindu_germanic = {
+		parameters = {
+			hostility_override_special_doctrine_is_hindu_germanic = 1
+		}
+	}
+}
+
+norse_likes_hindu_germanic = {
+	group = "special"
+	
+	is_available_on_create = {
+		has_doctrine = special_doctrine_norse_likes_hindu_germanic
+	}
+
+	special_doctrine_norse_likes_hindu_germanic = {
+		parameters = {
+			hostility_override_special_doctrine_is_hindu_germanic = 1
+		}
+	}
+}
+
+is_hindu_germanic = {
+	group = "special"
+	
+	is_available_on_create = {
+		has_doctrine = special_doctrine_is_hindu_germanic
+	}
+
+	special_doctrine_is_hindu_germanic = {
+		parameters = {
+			hostility_override_special_doctrine_hindu_likes_hindu_germanic = 2
+			hostility_override_special_doctrine_norse_likes_hindu_germanic = 1
+		}
+	}
+}
