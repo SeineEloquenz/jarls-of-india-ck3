@@ -64,8 +64,8 @@ jarls_religion.100 = {
 
 #Convert to Hindu-Germanic
 jarls_religion.1 = {
-	title = EVTNAME_jarls_religion.1n
-	desc = EVTDESC_jarls_religion.1n
+	title = jarls_religion.1.t
+	desc = jarls_religion.1.desc
 	
 	theme = faith
 	
@@ -83,7 +83,7 @@ jarls_religion.1 = {
 	}
 
 	option = {
-		name = "EVTOPTA_jarls_religion.1"
+		name = jarls_religion.1.a
 		set_character_faith_with_conversion = faith:hindu_germanic
 	}
 }
