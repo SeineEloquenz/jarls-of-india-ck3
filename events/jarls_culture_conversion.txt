@@ -1,395 +1,83 @@
-﻿###################################
-# Jarls of India - Culture Conversion
-# Written by Riso, based on English MP
-###################################
-namespace = jarls_conversion
-
-# The indo_norse Melting Pot
-jarls_conversion.2 = {
+﻿jarls_conversion.01 = {
 	type = character_event
-	desc = "EVTDESC_jarls_conversion.2"
-	
+	title = jarls_conversion.01.t
+	desc = jarls_conversion.01.desc
 	theme = culture_change
+	left_portrait = scope:indo_norse_founder
 
-	trigger = {
-		any_county = {
-			title_province = {
-				OR = {
-					geographical_region = world_india_bengal
-					geographical_region = world_india_rajastan
-				}
-			}
-			kingdom = title:k_lanka
-			culture_group = culture_group:indo_aryan_group
-			NOT = { culture = culture:indo_norse }
-		}
-	}
-
-	option = {
-		name = "EVTOPTA_jarls_conversion.2"
-		set_culture = culture:indo_norse
-		random_county = {
-			limit = {
-				title_province = {
-					OR = {
-						geographical_region = world_india_bengal
-						geographical_region = world_india_rajastan
-					}
-				}
-				kingdom = title:k_lanka
-				culture_group = culture_group:indo_aryan_group
-				NOT = { culture = culture:indo_norse }
-			}
-			set_county_culture	 = culture:indo_norse
-		}
-	}
-}
-
-# It's spreading
-jarls_conversion.3 = {
-	type = character_event
-	desc = "EVTDESC_jarls_conversion.3"
-
-	theme = culture_change
-
-	trigger = {
-		#culture = culture:indo_norse
-		any_county = {
-			title_province = {
-				OR = {
-					geographical_region = world_india_bengal
-					geographical_region = world_india_rajastan
-				}
-			}
-			kingdom = title:k_lanka
-			culture_group = culture_group:indo_aryan_group
-			NOT = { culture = culture:indo_norse }
-		}
-	}
-
-	option = {
-		name = "EVTOPTA_jarls_conversion.3"
-		random_county = {
-			limit = {
-				title_province = {
-					OR = {
-						geographical_region = world_india_bengal
-						geographical_region = world_india_rajastan
-					}
-				}
-				kingdom = title:k_lanka
-				culture_group = culture_group:indo_aryan_group
-				NOT = { culture = culture:indo_norse }
-			}
-			set_county_culture = culture:indo_norse
-		}
-	}
-}
-
-#Make my court speak indo_norse
-jarls_conversion.4 = {
-	type = character_event
-	desc = "EVTDESC_jarls_conversion.4"
-	
-	theme = culture_change
-
-	trigger = {
-		#culture = culture:indo_norse
-		is_independent_ruler = no
-		liege = {
-			OR = {
-				has_title = title:k_sindh
-				has_title = title:k_punjab
-				has_title = title:k_delhi
-				has_title = title:k_gujarat
-				has_title = title:k_rajputana
-				has_title = title:k_malwa
-				has_title = title:k_kosala
-				has_title = title:k_gondwana
-				has_title = title:k_bengal
-				has_title = title:k_kamarupa
-				has_title = title:k_orissa
-				has_title = title:k_bihar
-				has_title = title:k_maharastra
-				has_title = title:k_lanka
-			}
-		}
-		any_courtier = {
-			OR = {
-				AND = {
-					has_culture_group = culture_group:indo_aryan_group
-					NOT = { has_culture = culture:indo_norse }
-				}
-				has_culture = culture:norse
+	immediate = {
+		show_as_tooltip = {
+			custom_tooltip = global_culture.custom.merge_culture
+			culture:indo_norse = {
+				get_all_innovations_from = culture:bengali
 			}
 		}
 	}
 
 	option = {
-		name = "EVTOPTA_jarls_conversion.4"
-		random_courtier = {
-			limit = {
-				OR = {
-					AND = {
-						has_culture_group = culture_group:indo_aryan_group
-						NOT = { has_culture = culture:indo_norse }
-					}
-					has_culture = culture:norse
-				}
-			}
-			set_culture = culture:indo_norse
-			hidden_effect = {
-				trigger_event = { id = jarls_conversion.6 days = 3 }
-			}
-		}
+		name = jarls_conversion.01.a
 	}
 }
 
-#Make my vassal speak indo_norse
-jarls_conversion.5 = {
+jarls_conversion.02 = {
 	type = character_event
-	desc = "EVTDESC_jarls_conversion.5"
-
+	title = jarls_conversion.02.t
+	desc = jarls_conversion.02.desc
 	theme = culture_change
+	left_portrait = scope:indo_norse_founder
 
-	trigger = {
-		#culture = culture:indo_norse
-		is_independent_ruler = no
-		liege = {
-			OR = {
-				has_title = title:k_sindh
-				has_title = title:k_punjab
-				has_title = title:k_delhi
-				has_title = title:k_gujarat
-				has_title = title:k_rajputana
-				has_title = title:k_malwa
-				has_title = title:k_kosala
-				has_title = title:k_gondwana
-				has_title = title:k_bengal
-				has_title = title:k_kamarupa
-				has_title = title:k_orissa
-				has_title = title:k_bihar
-				has_title = title:k_maharastra
-				has_title = title:k_lanka
-			}
-		}
-		any_vassal = {
-			OR = {
-				AND = {
-					has_culture_group = culture_group:indo_aryan_group
-					NOT = { has_culture = culture:indo_norse }
-				}
-				has_culture = culture:norse
+	immediate = {
+		show_as_tooltip = {
+			custom_tooltip = global_culture.custom.merge_culture
+			culture:indo_norse = {
+				get_all_innovations_from = culture:bengali
 			}
 		}
 	}
 
 	option = {
-		name = "EVTOPTA_jarls_conversion.5"
-		random_vassal = {
-			limit = {
-				OR = {
-					AND = {
-						has_culture_group = culture_group:indo_aryan_group
-						NOT = { has_culture = culture:indo_norse }
-					}
-					has_culture = culture:norse
-				}
-			}
-			set_culture = culture:indo_norse
-			hidden_effect = {
-				trigger_event = { id = jarls_conversion.6 days = 3 }
+		name = jarls_conversion.02.a
+	}
+}
+
+jarls_conversion.11 = {
+	type = character_event
+	title = jarls_conversion.11.t
+	desc = jarls_conversion.11.desc
+	theme = culture_change
+	left_portrait = scope:dravidian_norse_founder
+
+	immediate = {
+		show_as_tooltip = {
+			custom_tooltip = global_culture.custom.merge_culture
+			culture:dravidian_norse = {
+				get_all_innovations_from = culture:tamil
 			}
 		}
 	}
-}
-
-jarls_conversion.6 = {
-	type = character_event
-	desc = "EVTDESC_jarls_conversion.6"
-
-	theme = culture_change
 
 	option = {
-		name = "EVTOPTA_jarls_conversion.6"
-		set_culture = culture:indo_norse
+		name = jarls_conversion.11.a
 	}
 }
 
-
-# The dravidian_norse Melting Pot
 jarls_conversion.12 = {
-	desc = "EVTDESC_jarls_conversion.2"
-	
-	theme = culture_change
-
-	trigger = {
-		any_county = {
-			title_province = {
-				geographical_region = world_india_deccan
-			}
-			NOT = { kingdom = title:k_lanka }
-			culture_group = culture_group:dravidian_group
-			NOT = { culture = culture:dravidian_norse }
-		}
-	}
-
-	option = {
-		name = "EVTOPTA_jarls_conversion.2"
-		set_culture = culture:dravidian_norse
-		random_county = {
-			limit = {
-				title_province = {
-					geographical_region = world_india_deccan
-				}
-				NOT = { kingdom = title:k_lanka }
-				culture_group = culture_group:dravidian_group
-				NOT = { culture = culture:dravidian_norse }
-			}
-			set_county_culture	 = culture:dravidian_norse
-		}
-	}
-}
-
-# It's spreading
-jarls_conversion.13 = {
 	type = character_event
-	desc = "EVTDESC_jarls_conversion.13"
-	
+	title = jarls_conversion.12.t
+	desc = jarls_conversion.12.desc
 	theme = culture_change
+	left_portrait = scope:dravidian_norse_founder
 
-	trigger = {
-		any_county = {
-			title_province = {
-				geographical_region = world_india_deccan
-			}
-			NOT = { kingdom = title:k_lanka }
-			culture_group = culture_group:dravidian_group
-			NOT = { culture = culture:dravidian_norse }
-		}
-	}
-
-	option = {
-		name = "EVTOPTA_jarls_conversion.3"
-		random_county = {
-			limit = {
-				title_province = {
-					geographical_region = world_india_deccan
-				}
-				NOT = { kingdom = title:k_lanka }
-				culture_group = culture_group:dravidian_group
-				NOT = { culture = culture:dravidian_norse }
-			}
-			set_county_culture	 = culture:dravidian_norse
-		}
-	}
-}
-
-#Make my court speak dravidian_norse
-jarls_conversion.14 = {
-	type = character_event
-	desc = "EVTDESC_jarls_conversion.14"
-
-	theme = culture_change
-		
-	trigger = {
-		is_independent_ruler = no
-		liege = {
-			OR = {
-				has_title = title:k_karnata
-				has_title = title:k_tamilakam
-				has_title = title:k_andhra
-				has_title = title:k_telingana
-			}
-		}
-		any_courtier = {
-			OR = {
-				AND = {
-					has_culture_group = culture_group:dravidian_group
-					NOT = { has_culture = culture:dravidian_norse }
-				}
-				has_culture = culture:norse
+	immediate = {
+		show_as_tooltip = {
+			custom_tooltip = global_culture.custom.merge_culture
+			culture:dravidian_norse = {
+				get_all_innovations_from = culture:tamil
 			}
 		}
 	}
 
 	option = {
-		name = "EVTOPTA_jarls_conversion.4"
-		random_courtier = {
-			limit = {
-				OR = {
-					AND = {
-						has_culture_group = culture_group:dravidian_group
-						NOT = { has_culture = culture:dravidian_norse }
-					}
-					has_culture = culture:norse
-				}
-			}
-			set_culture = culture:dravidian_norse
-			hidden_effect = {
-				trigger_event = { id = jarls_conversion.16 days = 3 }
-			}
-		}
+		name = jarls_conversion.12.a
 	}
 }
-
-#Make my vassal speak dravidian_norse
-jarls_conversion.15 = {
-	type = character_event
-	desc = "EVTDESC_jarls_conversion.5"
-	
-	theme = culture_change
-
-	trigger = {
-		is_independent_ruler = no
-		liege = {
-			OR = {
-				has_title = title:k_karnata
-				has_title = title:k_tamilakam
-				has_title = title:k_andhra
-				has_title = title:k_telingana
-			}
-		}
-		any_vassal = {
-			OR = {
-				AND = {
-					has_culture_group = culture_group:dravidian_group
-					NOT = { has_culture = culture:dravidian_norse }
-				}
-				has_culture = culture:norse
-			}
-		}
-	}
-
-	option = {
-		name = "EVTOPTA_jarls_conversion.5"
-		random_vassal = {
-			limit = {
-				OR = {
-					AND = {
-						has_culture_group = culture_group:dravidian_group
-						NOT = { has_culture = culture:dravidian_norse }
-					}
-					has_culture = culture:norse
-				}
-			}
-			set_culture = culture:dravidian_norse
-			hidden_effect = {
-				trigger_event = { id = jarls_conversion.16 days = 3 }
-			}
-		}
-	}
-}
-
-jarls_conversion.16 = {
-	type = character_event
-	desc = "EVTDESC_jarls_conversion.16"
-
-	theme = culture_change
-
-	option = {
-		name = "EVTOPTA_jarls_conversion.6"
-		set_culture = culture:dravidian_norse
-	}
-}
-

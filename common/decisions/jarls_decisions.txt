@@ -1,4 +1,4 @@
-select_personal_deity_hindu_germanic_decision = {
+﻿select_personal_deity_hindu_germanic_decision = {
 	picture = "gfx/interface/illustrations/decisions/decision_personal_religious.dds"
 
 	major = yes
@@ -82,10 +82,16 @@ found_hindu_germanic_religion = {
 	major = yes
 	
 	is_shown = {
-		NOT = { has_global_variable = hindu_germanic_converts }
+		NOT = {	
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:flag_formed_hindu_germanic_religion
+			}
+		}
 		is_independent_ruler = yes
 		has_religion = religion:germanic_religion
 		NOT = { has_government = theocracy_government }
+		capital_province = { geographical_region = world_india }
 		#any_realm_province = {
 		#	has_religion = religion:hinduism_religion
 		#}
@@ -96,7 +102,7 @@ found_hindu_germanic_religion = {
 		NOT = { has_trait = zealous }
 		prestige >= 500
 		holds_indian_king_or_higher_title = yes
-		}
+	}
 	effect = {
 		add_prestige = -500
 		add_piety = 100
@@ -140,8 +146,11 @@ convert_to_hindu_germanic = {
 		has_religion = religion:hinduism_religion
 		NOT = { has_religion = religion:hindu_germanic_religion }
 		NOT = { has_government = theocracy_government }
-		#make sure it is enabled
-		has_global_variable = hindu_germanic_converts
+		#make sure it has been founded
+		is_target_in_global_variable_list = {
+			name = unavailable_unique_decisions
+			target = flag:flag_formed_hindu_germanic_religion
+		}
 	}
 
 	is_valid = {
@@ -175,6 +184,288 @@ convert_to_hindu_germanic = {
 			factor = 5
 			highest_held_title_tier	> tier_duchy
 			number_of_powerful_vassals > 1
+		}
+	}
+}
+
+establish_indo_norse_culture_decision = {
+	picture = "gfx/interface/illustrations/decisions/decision_realm.dds"
+	major = yes
+
+	ai_check_interval = 120
+
+	desc = establish_indo_norse_culture_decision_desc
+	selection_tooltip = establish_indo_norse_culture_decision_tooltip
+
+	is_shown = {
+		culture = culture:norse
+		any_sub_realm_county = {
+			culture_group = culture_group:indo_aryan_group
+		}
+		NOT = {	
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:flag_formed_indo_norse_culture
+			}
+		}
+		is_target_in_global_variable_list = {
+			name = unavailable_unique_decisions
+			target = flag:flag_formed_hindu_germanic_religion
+		}
+	}
+
+	is_valid = {
+		culture = culture:norse
+		holds_indian_king_or_higher_title = yes
+	}
+
+	is_valid_showing_failures_only = {
+		is_at_war = no
+		is_imprisoned = no
+	}
+
+	effect = {
+		hidden_effect = {
+			# Generate a list of counties we want to flip to the new culture.
+			every_sub_realm_title = {
+				limit = {
+					tier = tier_county
+				}
+				if = {
+					limit = {
+						title_province = { geographical_region = world_india }
+						OR = {
+							culture_group = culture_group:indo_aryan_group
+							culture = culture:norse
+						}
+					}
+					add_to_list = indo_norse_counties
+				}
+			}
+
+			# Perform the culture flip.
+			every_in_list = {
+				list = indo_norse_counties
+				set_county_culture = culture:indo_norse
+			}
+
+			# Send all players in the game a notification event about the flip.
+			save_scope_as = indo_norse_founder
+			every_player = {
+				if = {
+					limit = {
+						NOT = { this = root }
+						OR = {
+							culture_group = culture_group:indo_aryan_group
+							culture = culture:norse
+						}
+						exists = capital_province
+						capital_province = { geographical_region = world_india }
+					}
+					trigger_event = jarls_conversion.01
+				}
+				else_if = {
+					limit = { this = root }
+					trigger_event = jarls_conversion.02
+				}
+			}
+		}
+
+		# Player changes culture
+		set_culture = culture:indo_norse
+		add_character_flag = converted_culture_this_lifetime
+		hidden_effect = {
+			every_in_list = {
+				list = indo_norse_counties
+				limit = {
+					holder.capital_county = { is_in_list = indo_norse_counties }
+				}
+				holder = {
+					add_to_list = mass_melting_pot_list
+					every_courtier = { add_to_list = mass_melting_pot_list }
+					every_courtier_away = { add_to_list = mass_melting_pot_list }
+				}
+				every_in_list = {
+					list = mass_melting_pot_list
+					limit = {
+						OR = {
+							culture_group = culture_group:indo_aryan_group
+							culture = culture:norse
+						}
+					}
+					set_culture = culture:indo_norse
+				}
+			}
+		}
+
+		# Summary of above hidden effects to inform players of the decision's impact.
+		show_as_tooltip = {
+			custom_tooltip = establish_indo_norse_culture_decision_effect.tt
+		}
+
+		add_to_global_variable_list = {
+			name = unavailable_unique_decisions
+			target = flag:flag_formed_indo_norse_culture
+		}
+	}
+
+	cost = {
+	}
+
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 0
+
+		modifier = {
+			add = 100
+			any_sub_realm_county = {
+				percent >= 0.5
+				culture_group = culture_group:indo_aryan_group
+			}
+		}
+	}
+}
+
+establish_dravidian_norse_culture_decision = {
+	picture = "gfx/interface/illustrations/decisions/decision_realm.dds"
+	major = yes
+
+	ai_check_interval = 120
+
+	desc = establish_dravidian_norse_culture_decision_desc
+	selection_tooltip = establish_dravidian_norse_culture_decision_tooltip
+
+	is_shown = {
+		culture = culture:norse
+		any_sub_realm_county = {
+			culture_group = culture_group:dravidian_group
+		}
+		NOT = {	
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:flag_formed_dravidian_norse_culture
+			}
+		}
+		is_target_in_global_variable_list = {
+			name = unavailable_unique_decisions
+			target = flag:flag_formed_hindu_germanic_religion
+		}
+	}
+
+	is_valid = {
+		culture = culture:norse
+		holds_indian_king_or_higher_title = yes
+	}
+
+	is_valid_showing_failures_only = {
+		is_at_war = no
+		is_imprisoned = no
+	}
+
+	effect = {
+		hidden_effect = {
+			# Generate a list of counties we want to flip to the new culture.
+			every_sub_realm_title = {
+				limit = {
+					tier = tier_county
+				}
+				if = {
+					limit = {
+						title_province = { geographical_region = world_india }
+						OR = {
+							culture_group = culture_group:dravidian_group
+							culture = culture:norse
+						}
+					}
+					add_to_list = dravidian_norse_counties
+				}
+			}
+
+			# Perform the culture flip.
+			every_in_list = {
+				list = dravidian_norse_counties
+				set_county_culture = culture:dravidian_norse
+			}
+
+			# Send all players in the game a notification event about the flip.
+			save_scope_as = dravidian_norse_founder
+			every_player = {
+				if = {
+					limit = {
+						NOT = { this = root }
+						OR = {
+							culture_group = culture_group:dravidian_group
+							culture = culture:norse
+						}
+						exists = capital_province
+						capital_province = { geographical_region = world_india }
+					}
+					trigger_event = jarls_conversion.11
+				}
+				else_if = {
+					limit = { this = root }
+					trigger_event = jarls_conversion.12
+				}
+			}
+		}
+
+		# Player changes culture
+		set_culture = culture:dravidian_norse
+		add_character_flag = converted_culture_this_lifetime
+		hidden_effect = {
+			every_in_list = {
+				list = dravidian_norse_counties
+				limit = {
+					holder.capital_county = { is_in_list = dravidian_norse_counties }
+				}
+				holder = {
+					add_to_list = mass_melting_pot_list
+					every_courtier = { add_to_list = mass_melting_pot_list }
+					every_courtier_away = { add_to_list = mass_melting_pot_list }
+				}
+				every_in_list = {
+					list = mass_melting_pot_list
+					limit = {
+						OR = {
+							culture_group = culture_group:dravidian_group
+							culture = culture:norse
+						}
+					}
+					set_culture = culture:dravidian_norse
+				}
+			}
+		}
+
+		# Summary of above hidden effects to inform players of the decision's impact.
+		show_as_tooltip = {
+			custom_tooltip = establish_dravidian_norse_culture_decision_effect.tt
+		}
+
+		add_to_global_variable_list = {
+			name = unavailable_unique_decisions
+			target = flag:flag_formed_dravidian_norse_culture
+		}
+	}
+
+	cost = {
+	}
+
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 0
+
+		modifier = {
+			add = 100
+			any_sub_realm_county = {
+				percent >= 0.5
+				culture_group = culture_group:dravidian_group
+			}
 		}
 	}
 }

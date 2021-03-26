@@ -77,9 +77,9 @@ jarls_religion.1 = {
 	}
 	
 	immediate = {
-		set_global_variable = {
-			name = hindu_germanic_converts
-			value = yes
+		add_to_global_variable_list = {
+			name = unavailable_unique_decisions
+			target = flag:flag_formed_hindu_germanic_religion
 		}
 		add_character_flag = {
 			flag = converts_hindu_germanic
