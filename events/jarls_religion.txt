@@ -1,8 +1,4 @@
-﻿###################################
-# Jarls of India - Religious Events
-# Written by Riso, Blarghalt
-###################################
-namespace = jarls_religion
+﻿namespace = jarls_religion
 
 
 jarls_religion.100 = {

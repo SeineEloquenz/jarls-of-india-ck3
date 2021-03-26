@@ -1,4 +1,6 @@
-﻿jarls_conversion.01 = {
+﻿namespace = jarls_conversion
+
+jarls_conversion.01 = {
 	type = character_event
 	title = jarls_conversion.01.t
 	desc = jarls_conversion.01.desc
