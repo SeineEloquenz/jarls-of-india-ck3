@@ -510,7 +510,7 @@ become_emperor_of_india = {
 		
 		prestige_level >= high_prestige_level
 		NOT = {	has_trait = incapable }
-		war = no
+		is_at_war = no
 		OR = {
 			has_title = title:e_rajastan
 			title:e_rajastan = { is_title_created = no }
