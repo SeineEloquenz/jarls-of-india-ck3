@@ -34,7 +34,7 @@
 		# Eldest child, Styrkar, ID: 686501
 		character = {
 			name = "bookmark_rajas_alt_styrkar"
-			relation = "BOOKMARK_RELATION_DAUGHTER"
+			relation = "BOOKMARK_RELATION_SON"
 			dynasty = 1043501
 			type = male
 			birth = 851.1.1
