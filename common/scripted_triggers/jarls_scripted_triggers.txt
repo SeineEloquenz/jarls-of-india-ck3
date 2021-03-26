@@ -34,3 +34,33 @@ fp1_valid_norse_faith_for_jomsvikings_trigger = {
 	religion = religion:hindu_germanic_religion
 	has_doctrine = unreformed_faith_doctrine
 }
+
+holds_indian_king_or_higher_title = {
+	OR = {
+		primary_title = title:k_sindh
+		primary_title = title:k_punjab
+		primary_title = title:k_delhi
+		primary_title = title:k_gujarat
+		primary_title = title:k_rajputana
+		primary_title = title:k_malwa
+		primary_title = title:k_kosala
+		primary_title = title:k_himalaya
+		primary_title = title:k_kashmir
+		primary_title = title:k_bengal
+		primary_title = title:k_kamarupa
+		primary_title = title:k_orissa
+		primary_title = title:k_gondwana
+		primary_title = title:k_bihar
+		primary_title = title:k_pagan
+		primary_title = title:k_maharastra
+		primary_title = title:k_karnata
+		primary_title = title:k_tamilakam
+		primary_title = title:k_andhra
+		primary_title = title:k_telingana
+		primary_title = title:k_lanka
+		primary_title = title:e_rajastan
+		primary_title = title:e_bengal
+		primary_title = title:e_deccan
+		primary_title = title:e_india
+	}
+}
