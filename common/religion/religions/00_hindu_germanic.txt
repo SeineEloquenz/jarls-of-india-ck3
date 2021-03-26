@@ -96,6 +96,7 @@
 		custom_faith_fp1_thors_hammer
 		custom_faith_fp1_valknut
 		custom_faith_fp1_yggdrasil
+		hindu_germanic
 	}
 
 	holy_order_names = {
@@ -254,7 +255,7 @@
 	faiths = {
 		hindu_germanic = {
 			color = { 0.4 0.4 0.4 }
-			icon = germanic
+			icon = hindu_germanic
 
 			holy_site = varanasi
 			holy_site = ayodhya
