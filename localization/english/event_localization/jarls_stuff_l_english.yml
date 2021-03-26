@@ -1,6 +1,7 @@
 ﻿l_english:
  holds_indian_king_or_higher_title:0 "Holds a Kingdom or Empire in India"
  holds_indian_king_or_higher_title_trigger:0 "Holds a Kingdom or Empire in India"
+ jarls_start_army_name:0 "Ragnar Herses Host"
  EVTNAME_jarls_coronation.1:0 "The New Scandinavia"
  EVTDESC_jarls_coronation.1:0 "It has been century upon century since Great India was last unified under a single banner. Not even Alexander the Great could fully conquer it, but we Northmen have accomplished what he could not. I, [Root.GetTitledFirstName], crown myself Emperor of all India, in the name Odin, in the name of Thor and in the name of Freyr."\n\nWhere they were once mere raiders, the Vikings have elevated themselves to the absolute rulers of the faraway subcontinent. One of their own, [Root.GetTitledFirstName], has been declared Emperor of India, a title not truly held since Ashoka the Great. [This.Religion.GetRandomGodNameCap] help us all."
  EVTOPTA_jarls_coronation.1:0 "For Odin! For Thor! For Freyr!"
