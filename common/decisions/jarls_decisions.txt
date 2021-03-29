@@ -377,6 +377,7 @@ establish_dravidian_norse_culture_decision = {
 
 	is_valid = {
 		culture = culture:norse
+		is_independent_ruler = yes
 		prestige_level >= high_prestige_level
 		holds_indian_king_or_higher_title = yes
 	}
