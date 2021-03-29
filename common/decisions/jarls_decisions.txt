@@ -88,7 +88,6 @@ found_hindu_germanic_religion = {
 				target = flag:flag_formed_hindu_germanic_religion
 			}
 		}
-		is_independent_ruler = yes
 		has_religion = religion:germanic_religion
 		NOT = { has_government = theocracy_government }
 		capital_province = { geographical_region = world_india }
@@ -99,10 +98,17 @@ found_hindu_germanic_religion = {
 
 	is_valid = {
 		is_adult = yes
+		is_independent_ruler = yes
 		NOT = { has_trait = zealous }
 		piety_level >= high_piety_level
 		holds_indian_king_or_higher_title = yes
 	}
+
+	is_valid_showing_failures_only = {
+		is_at_war = no
+		is_imprisoned = no
+	}
+
 	effect = {
 		add_prestige = -500
 		add_piety = 100
@@ -228,6 +234,7 @@ establish_indo_norse_culture_decision = {
 
 	is_valid = {
 		culture = culture:norse
+		is_independent_ruler = yes
 		prestige_level >= high_prestige_level
 		holds_indian_king_or_higher_title = yes
 	}
