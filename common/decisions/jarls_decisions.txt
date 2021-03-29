@@ -226,10 +226,6 @@ establish_indo_norse_culture_decision = {
 				target = flag:flag_formed_indo_norse_culture
 			}
 		}
-		is_target_in_global_variable_list = {
-			name = unavailable_unique_decisions
-			target = flag:flag_formed_hindu_germanic_religion
-		}
 	}
 
 	is_valid = {
@@ -368,10 +364,6 @@ establish_dravidian_norse_culture_decision = {
 				name = unavailable_unique_decisions
 				target = flag:flag_formed_dravidian_norse_culture
 			}
-		}
-		is_target_in_global_variable_list = {
-			name = unavailable_unique_decisions
-			target = flag:flag_formed_hindu_germanic_religion
 		}
 	}
 
