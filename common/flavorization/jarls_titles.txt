@@ -183,3 +183,10 @@ emperor_feudal_female_indo_norse = {
 	governments = { feudal_government }
 	cultures = { indo_norse dravidian_norse}
 }
+empire_feudal_indo_norse = {
+	type = title
+	tier = empire
+	priority = 1000
+	governments = { feudal_government }
+	cultures = { indo_norse dravidian_norse}
+}
