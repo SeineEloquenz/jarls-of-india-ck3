@@ -1,7 +1,6 @@
 ﻿select_personal_deity_hindu_germanic_decision = {
 	picture = "gfx/interface/illustrations/decisions/decision_personal_religious.dds"
 
-	major = yes
 	desc = select_personal_deity_hindu_germanic_decision_desc
 	selection_tooltip = select_personal_deity_hindu_germanic_decision_tooltip
 
