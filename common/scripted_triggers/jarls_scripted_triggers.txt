@@ -29,12 +29,6 @@ basic_can_have_trial_by_combat_trigger = {
 	}
 }
 
-fp1_valid_norse_faith_for_jomsvikings_trigger = {
-	religion = religion:germanic_religion
-	religion = religion:hindu_germanic_religion
-	has_doctrine = unreformed_faith_doctrine
-}
-
 holds_indian_king_or_higher_title = {
 	OR = {
 		has_title = title:k_sindh
